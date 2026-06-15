@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    name: Validate registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install test dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install -r tests/requirements.txt
+
+      - name: Validate manifests against JSON Schema
+        run: .venv/bin/python -m unittest discover -s tests

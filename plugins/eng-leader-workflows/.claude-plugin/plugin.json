@@ -6,8 +6,8 @@
   "author": {
     "name": "Agent Packs contributors"
   },
-  "homepage": "https://github.com/sandeshh/agent-packs",
-  "repository": "https://github.com/sandeshh/agent-packs",
+  "homepage": "https://github.com/agent-packs/registry",
+  "repository": "https://github.com/agent-packs/registry",
   "license": "Apache-2.0",
   "keywords": [
     "engineering-leadership",

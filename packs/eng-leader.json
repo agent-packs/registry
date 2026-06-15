@@ -80,14 +80,14 @@
     {
       "id": "eng-leader-workflows",
       "name": "Engineering Leader Workflows",
-      "source": "https://github.com/sandeshh/agent-packs/tree/main/registry/plugins/eng-leader-workflows",
+      "source": "https://github.com/agent-packs/registry/tree/main/plugins/eng-leader-workflows",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json"
     },
     {
       "id": "github-pr-inspection",
       "name": "GitHub PR Inspection",
-      "source": "https://github.com/sandeshh/agent-packs/tree/main/registry/plugins/github-pr-inspection",
+      "source": "https://github.com/agent-packs/registry/tree/main/plugins/github-pr-inspection",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json"
     }
