@@ -1,0 +1,80 @@
+{
+  "id": "nextjs-vercel",
+  "name": "Next.js & Vercel Pack",
+  "version": "0.1.0",
+  "description": "Build and ship modern React/Next.js apps on Vercel — React best practices, composition patterns, web design guidelines, deploys, and runtime optimization — using Vercel's official agent skills.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-15",
+  "reviewStatus": "draft",
+  "tags": [
+    "frontend",
+    "react",
+    "nextjs",
+    "vercel",
+    "deploy",
+    "performance"
+  ],
+  "skills": [
+    {
+      "id": "react-best-practices",
+      "name": "React best practices",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/vercel-labs/agent-skills"
+    },
+    {
+      "id": "composition-patterns",
+      "name": "Composition patterns",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/vercel-labs/agent-skills"
+    },
+    {
+      "id": "web-design-guidelines",
+      "name": "Web design guidelines",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/vercel-labs/agent-skills"
+    },
+    {
+      "id": "deploy-to-vercel",
+      "name": "Deploy to Vercel",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/vercel-labs/agent-skills"
+    },
+    {
+      "id": "vercel-optimize",
+      "name": "Vercel optimize",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-optimize",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/vercel-labs/agent-skills"
+    }
+  ],
+  "categories": [
+    "frontend",
+    "engineering"
+  ],
+  "tools": [
+    "codex",
+    "claude-code"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}

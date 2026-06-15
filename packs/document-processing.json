@@ -1,0 +1,72 @@
+{
+  "id": "document-processing",
+  "name": "Document Processing Pack",
+  "version": "0.1.0",
+  "description": "Create, edit, and extract content from office documents — PDF, Word, PowerPoint, and Excel — using Anthropic's official document skills.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-15",
+  "reviewStatus": "draft",
+  "tags": [
+    "documents",
+    "pdf",
+    "docx",
+    "pptx",
+    "xlsx",
+    "office",
+    "content"
+  ],
+  "skills": [
+    {
+      "id": "pdf",
+      "name": "PDF",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "docx",
+      "name": "Word documents (docx)",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/docx",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "pptx",
+      "name": "PowerPoint (pptx)",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "xlsx",
+      "name": "Excel spreadsheets (xlsx)",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    }
+  ],
+  "categories": [
+    "productivity",
+    "content"
+  ],
+  "tools": [
+    "codex",
+    "claude-code"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}
