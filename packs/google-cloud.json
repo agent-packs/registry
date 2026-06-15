@@ -1,0 +1,105 @@
+{
+  "id": "google-cloud",
+  "name": "Google Cloud Pack",
+  "version": "0.1.0",
+  "description": "Work with Google Cloud Platform — Cloud Run, GKE, BigQuery, Cloud SQL, Firebase, gcloud, and Well-Architected security — using Google's official agent skills.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-15",
+  "reviewStatus": "draft",
+  "tags": [
+    "cloud",
+    "gcp",
+    "google-cloud",
+    "kubernetes",
+    "bigquery",
+    "infrastructure"
+  ],
+  "skills": [
+    {
+      "id": "gcloud",
+      "name": "gcloud CLI",
+      "source": "https://github.com/google/skills/tree/main/skills/cloud/gcloud",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/google/skills"
+    },
+    {
+      "id": "cloud-run-basics",
+      "name": "Cloud Run basics",
+      "source": "https://github.com/google/skills/tree/main/skills/cloud/cloud-run-basics",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/google/skills"
+    },
+    {
+      "id": "gke-basics",
+      "name": "GKE basics",
+      "source": "https://github.com/google/skills/tree/main/skills/cloud/gke-basics",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/google/skills"
+    },
+    {
+      "id": "bigquery-basics",
+      "name": "BigQuery basics",
+      "source": "https://github.com/google/skills/tree/main/skills/cloud/bigquery-basics",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/google/skills"
+    },
+    {
+      "id": "cloud-sql-basics",
+      "name": "Cloud SQL basics",
+      "source": "https://github.com/google/skills/tree/main/skills/cloud/cloud-sql-basics",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/google/skills"
+    },
+    {
+      "id": "firebase-basics",
+      "name": "Firebase basics",
+      "source": "https://github.com/google/skills/tree/main/skills/cloud/firebase-basics",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/google/skills"
+    },
+    {
+      "id": "google-cloud-waf-security",
+      "name": "Google Cloud WAF security",
+      "source": "https://github.com/google/skills/tree/main/skills/cloud/google-cloud-waf-security",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/google/skills"
+    }
+  ],
+  "categories": [
+    "cloud",
+    "infrastructure"
+  ],
+  "tools": [
+    "codex",
+    "claude-code"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}

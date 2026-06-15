@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T17:00:58.039939Z",
+  "generatedAt": "2026-06-15T14:59:55.354859Z",
   "packs": [
     {
       "id": "ai-engineer",
@@ -136,6 +136,45 @@
         "documentation-and-adrs"
       ],
       "capabilities": 6
+    },
+    {
+      "id": "content-design",
+      "name": "Content \u0026 Design Pack",
+      "version": "0.1.0",
+      "description": "Produce on-brand visual and written content — brand guidelines, canvas/poster design, generative art, themes, and shareable web artifacts — using Anthropic's official design skills.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-15",
+      "reviewStatus": "draft",
+      "tags": [
+        "design",
+        "branding",
+        "content",
+        "creative",
+        "artifacts"
+      ],
+      "categories": [
+        "design",
+        "content"
+      ],
+      "tools": [
+        "codex",
+        "claude-code"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "brand-guidelines",
+        "canvas-design",
+        "algorithmic-art",
+        "theme-factory",
+        "web-artifacts-builder"
+      ],
+      "capabilities": 5
     },
     {
       "id": "data-engineer",
@@ -276,6 +315,46 @@
         "code-review-and-quality"
       ],
       "capabilities": 6
+    },
+    {
+      "id": "document-processing",
+      "name": "Document Processing Pack",
+      "version": "0.1.0",
+      "description": "Create, edit, and extract content from office documents — PDF, Word, PowerPoint, and Excel — using Anthropic's official document skills.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-15",
+      "reviewStatus": "draft",
+      "tags": [
+        "documents",
+        "pdf",
+        "docx",
+        "pptx",
+        "xlsx",
+        "office",
+        "content"
+      ],
+      "categories": [
+        "productivity",
+        "content"
+      ],
+      "tools": [
+        "codex",
+        "claude-code"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "pdf",
+        "docx",
+        "pptx",
+        "xlsx"
+      ],
+      "capabilities": 4
     },
     {
       "id": "eng-leader",
@@ -496,6 +575,48 @@
       "capabilities": 28
     },
     {
+      "id": "google-cloud",
+      "name": "Google Cloud Pack",
+      "version": "0.1.0",
+      "description": "Work with Google Cloud Platform — Cloud Run, GKE, BigQuery, Cloud SQL, Firebase, gcloud, and Well-Architected security — using Google's official agent skills.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-15",
+      "reviewStatus": "draft",
+      "tags": [
+        "cloud",
+        "gcp",
+        "google-cloud",
+        "kubernetes",
+        "bigquery",
+        "infrastructure"
+      ],
+      "categories": [
+        "cloud",
+        "infrastructure"
+      ],
+      "tools": [
+        "codex",
+        "claude-code"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "gcloud",
+        "cloud-run-basics",
+        "gke-basics",
+        "bigquery-basics",
+        "cloud-sql-basics",
+        "firebase-basics",
+        "google-cloud-waf-security"
+      ],
+      "capabilities": 7
+    },
+    {
       "id": "implementation-core",
       "name": "Implementation Core Pack",
       "version": "0.2.0",
@@ -630,6 +751,46 @@
         "debugging-and-error-recovery"
       ],
       "capabilities": 6
+    },
+    {
+      "id": "nextjs-vercel",
+      "name": "Next.js \u0026 Vercel Pack",
+      "version": "0.1.0",
+      "description": "Build and ship modern React/Next.js apps on Vercel — React best practices, composition patterns, web design guidelines, deploys, and runtime optimization — using Vercel's official agent skills.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-15",
+      "reviewStatus": "draft",
+      "tags": [
+        "frontend",
+        "react",
+        "nextjs",
+        "vercel",
+        "deploy",
+        "performance"
+      ],
+      "categories": [
+        "frontend",
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "react-best-practices",
+        "composition-patterns",
+        "web-design-guidelines",
+        "deploy-to-vercel",
+        "vercel-optimize"
+      ],
+      "capabilities": 5
     },
     {
       "id": "open-source-maintainer",

@@ -1,0 +1,79 @@
+{
+  "id": "content-design",
+  "name": "Content & Design Pack",
+  "version": "0.1.0",
+  "description": "Produce on-brand visual and written content — brand guidelines, canvas/poster design, generative art, themes, and shareable web artifacts — using Anthropic's official design skills.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-15",
+  "reviewStatus": "draft",
+  "tags": [
+    "design",
+    "branding",
+    "content",
+    "creative",
+    "artifacts"
+  ],
+  "skills": [
+    {
+      "id": "brand-guidelines",
+      "name": "Brand guidelines",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "canvas-design",
+      "name": "Canvas design",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "algorithmic-art",
+      "name": "Algorithmic art",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "theme-factory",
+      "name": "Theme factory",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/theme-factory",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "web-artifacts-builder",
+      "name": "Web artifacts builder",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder",
+      "format": "agent-skill",
+      "entry": "SKILL.md",
+      "trust": "official",
+      "repository": "https://github.com/anthropics/skills"
+    }
+  ],
+  "categories": [
+    "design",
+    "content"
+  ],
+  "tools": [
+    "codex",
+    "claude-code"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}
