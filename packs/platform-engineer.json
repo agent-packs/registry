@@ -24,7 +24,8 @@
     "monorepo-workflows",
     "security-and-hardening",
     "deprecation-and-migration",
-    "documentation-and-adrs"
+    "documentation-and-adrs",
+    "infrastructure-as-code"
   ],
   "categories": [
     "platform",

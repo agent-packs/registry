@@ -1,0 +1,45 @@
+{
+  "id": "accessibility-engineer",
+  "name": "Accessibility Engineer Pack",
+  "version": "0.1.0",
+  "description": "Workflows for coding agents shipping accessible UIs: WCAG 2.2 AA auditing and remediation, accessible component implementation, browser-based verification, and clear documentation of accessibility decisions.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-16",
+  "reviewStatus": "reviewed",
+  "tags": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "frontend",
+    "ui",
+    "testing"
+  ],
+  "skills": [
+    "accessibility-audit",
+    "frontend-ui-engineering",
+    "frontend-implementation-guidance",
+    "browser-testing-with-devtools",
+    "code-review-and-quality",
+    "technical-writing"
+  ],
+  "categories": [
+    "frontend",
+    "quality",
+    "engineering"
+  ],
+  "tools": [
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "opencode"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}
