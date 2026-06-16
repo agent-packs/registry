@@ -1,6 +1,51 @@
 {
-  "generatedAt": "2026-06-15T14:59:55.354859Z",
+  "generatedAt": "2026-06-16T19:47:06.208537Z",
   "packs": [
+    {
+      "id": "accessibility-engineer",
+      "name": "Accessibility Engineer Pack",
+      "version": "0.1.0",
+      "description": "Workflows for coding agents shipping accessible UIs: WCAG 2.2 AA auditing and remediation, accessible component implementation, browser-based verification, and clear documentation of accessibility decisions.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-16",
+      "reviewStatus": "reviewed",
+      "tags": [
+        "accessibility",
+        "a11y",
+        "wcag",
+        "frontend",
+        "ui",
+        "testing"
+      ],
+      "categories": [
+        "frontend",
+        "quality",
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "accessibility-audit",
+        "frontend-ui-engineering",
+        "frontend-implementation-guidance",
+        "browser-testing-with-devtools",
+        "code-review-and-quality",
+        "technical-writing"
+      ],
+      "capabilities": 6
+    },
     {
       "id": "ai-engineer",
       "name": "AI Engineer Pack",
@@ -41,9 +86,55 @@
         "api-and-interface-design",
         "test-driven-development",
         "observability-and-monitoring",
-        "security-and-hardening"
+        "security-and-hardening",
+        "source-driven-development"
       ],
-      "capabilities": 6
+      "capabilities": 7
+    },
+    {
+      "id": "api-platform-engineer",
+      "name": "API Platform Engineer Pack",
+      "version": "0.1.0",
+      "description": "Workflows for coding agents building API platforms: GraphQL and REST schema design, stable interface contracts, contract testing, source-grounded implementation, and security hardening.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-16",
+      "reviewStatus": "reviewed",
+      "tags": [
+        "api",
+        "graphql",
+        "rest",
+        "contracts",
+        "testing",
+        "security"
+      ],
+      "categories": [
+        "backend",
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "graphql-api",
+        "api-and-interface-design",
+        "api-contract-testing",
+        "source-driven-development",
+        "security-and-hardening",
+        "test-driven-development",
+        "observability-and-monitoring"
+      ],
+      "capabilities": 7
     },
     {
       "id": "backend-engineer",
@@ -265,9 +356,10 @@
         "performance-optimization",
         "debugging-and-error-recovery",
         "security-and-hardening",
-        "documentation-and-adrs"
+        "documentation-and-adrs",
+        "deprecation-and-migration"
       ],
-      "capabilities": 6
+      "capabilities": 7
     },
     {
       "id": "devex-engineer",
@@ -448,6 +540,51 @@
       "capabilities": 6
     },
     {
+      "id": "event-driven-architect",
+      "name": "Event-Driven Architect Pack",
+      "version": "0.1.0",
+      "description": "Workflows for coding agents designing event-driven and distributed systems: messaging and event-flow patterns, resilient interface contracts, schema evolution, observability across services, and debugging eventual-consistency failures.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-16",
+      "reviewStatus": "reviewed",
+      "tags": [
+        "event-driven",
+        "distributed-systems",
+        "messaging",
+        "architecture",
+        "observability",
+        "resilience"
+      ],
+      "categories": [
+        "backend",
+        "architecture",
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "event-driven-architecture",
+        "api-and-interface-design",
+        "database-schema-design",
+        "observability-and-monitoring",
+        "debugging-and-error-recovery",
+        "infrastructure-as-code"
+      ],
+      "capabilities": 6
+    },
+    {
       "id": "frontend-engineer",
       "name": "Frontend Engineer Pack",
       "version": "0.2.0",
@@ -481,12 +618,15 @@
       "skills": [
         "frontend-implementation-guidance",
         "accessibility-audit",
-        "typescript-best-practices"
+        "typescript-best-practices",
+        "frontend-ui-engineering",
+        "browser-testing-with-devtools",
+        "test-driven-development"
       ],
       "plugins": [
         "browser-verification-workflow"
       ],
-      "capabilities": 4
+      "capabilities": 7
     },
     {
       "id": "frontend-quality",
@@ -834,9 +974,53 @@
         "security-and-hardening",
         "deprecation-and-migration",
         "documentation-and-adrs",
-        "git-workflow-and-versioning"
+        "git-workflow-and-versioning",
+        "dependency-management"
       ],
-      "capabilities": 6
+      "capabilities": 7
+    },
+    {
+      "id": "performance-engineer",
+      "name": "Performance Engineer Pack",
+      "version": "0.1.0",
+      "description": "Workflows for coding agents optimizing performance: profiling and hotspot analysis, load testing, Core Web Vitals via browser devtools, observability-driven measurement, and root-cause debugging of regressions.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-16",
+      "reviewStatus": "reviewed",
+      "tags": [
+        "performance",
+        "profiling",
+        "load-testing",
+        "web-vitals",
+        "observability",
+        "debugging"
+      ],
+      "categories": [
+        "performance",
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "performance-optimization",
+        "load-testing",
+        "browser-testing-with-devtools",
+        "observability-and-monitoring",
+        "debugging-and-error-recovery"
+      ],
+      "capabilities": 5
     },
     {
       "id": "platform-engineer",
@@ -879,9 +1063,10 @@
         "monorepo-workflows",
         "security-and-hardening",
         "deprecation-and-migration",
-        "documentation-and-adrs"
+        "documentation-and-adrs",
+        "infrastructure-as-code"
       ],
-      "capabilities": 6
+      "capabilities": 7
     },
     {
       "id": "popular-agent-starter",
@@ -1077,12 +1262,13 @@
         "project"
       ],
       "skills": [
-        "code-review-workflow"
+        "code-review-workflow",
+        "code-review-and-quality"
       ],
       "plugins": [
         "github-pr-inspection"
       ],
-      "capabilities": 2
+      "capabilities": 3
     },
     {
       "id": "product-discovery",
@@ -1387,9 +1573,10 @@
         "ci-cd-and-automation",
         "security-and-hardening",
         "performance-optimization",
-        "debugging-and-error-recovery"
+        "debugging-and-error-recovery",
+        "load-testing"
       ],
-      "capabilities": 7
+      "capabilities": 8
     },
     {
       "id": "superpowers",
@@ -1631,6 +1818,93 @@
         "superpowers-systematic-debugging"
       ],
       "capabilities": 1
+    },
+    {
+      "id": "technical-writer",
+      "name": "Technical Writer Pack",
+      "version": "0.1.0",
+      "description": "Workflows for coding agents producing engineering documentation: clear technical writing, architecture decision records, codebase archaeology and onboarding guides, and source-grounded, accurate references.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-16",
+      "reviewStatus": "reviewed",
+      "tags": [
+        "documentation",
+        "technical-writing",
+        "adr",
+        "onboarding",
+        "knowledge"
+      ],
+      "categories": [
+        "documentation",
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "technical-writing",
+        "documentation-and-adrs",
+        "onboarding-and-archaeology",
+        "source-driven-development",
+        "spec-driven-development"
+      ],
+      "capabilities": 5
+    },
+    {
+      "id": "typescript-engineer",
+      "name": "TypeScript Engineer Pack",
+      "version": "0.1.0",
+      "description": "Workflows for coding agents writing production TypeScript: strict typing and precise type contracts, test-driven development, interface design, dependency hygiene, and monorepo-aware change scoping.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-16",
+      "reviewStatus": "reviewed",
+      "tags": [
+        "typescript",
+        "types",
+        "testing",
+        "monorepo",
+        "dependencies",
+        "code-quality"
+      ],
+      "categories": [
+        "frontend",
+        "backend",
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "typescript-best-practices",
+        "test-driven-development",
+        "api-and-interface-design",
+        "code-review-and-quality",
+        "dependency-management",
+        "monorepo-workflows"
+      ],
+      "capabilities": 6
     }
   ]
 }

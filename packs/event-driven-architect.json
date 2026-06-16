@@ -1,0 +1,45 @@
+{
+  "id": "event-driven-architect",
+  "name": "Event-Driven Architect Pack",
+  "version": "0.1.0",
+  "description": "Workflows for coding agents designing event-driven and distributed systems: messaging and event-flow patterns, resilient interface contracts, schema evolution, observability across services, and debugging eventual-consistency failures.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-16",
+  "reviewStatus": "reviewed",
+  "tags": [
+    "event-driven",
+    "distributed-systems",
+    "messaging",
+    "architecture",
+    "observability",
+    "resilience"
+  ],
+  "skills": [
+    "event-driven-architecture",
+    "api-and-interface-design",
+    "database-schema-design",
+    "observability-and-monitoring",
+    "debugging-and-error-recovery",
+    "infrastructure-as-code"
+  ],
+  "categories": [
+    "backend",
+    "architecture",
+    "engineering"
+  ],
+  "tools": [
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "opencode"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}

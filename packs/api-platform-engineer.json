@@ -1,0 +1,45 @@
+{
+  "id": "api-platform-engineer",
+  "name": "API Platform Engineer Pack",
+  "version": "0.1.0",
+  "description": "Workflows for coding agents building API platforms: GraphQL and REST schema design, stable interface contracts, contract testing, source-grounded implementation, and security hardening.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-16",
+  "reviewStatus": "reviewed",
+  "tags": [
+    "api",
+    "graphql",
+    "rest",
+    "contracts",
+    "testing",
+    "security"
+  ],
+  "skills": [
+    "graphql-api",
+    "api-and-interface-design",
+    "api-contract-testing",
+    "source-driven-development",
+    "security-and-hardening",
+    "test-driven-development",
+    "observability-and-monitoring"
+  ],
+  "categories": [
+    "backend",
+    "engineering"
+  ],
+  "tools": [
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "opencode"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}

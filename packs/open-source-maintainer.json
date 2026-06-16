@@ -25,7 +25,8 @@
     "security-and-hardening",
     "deprecation-and-migration",
     "documentation-and-adrs",
-    "git-workflow-and-versioning"
+    "git-workflow-and-versioning",
+    "dependency-management"
   ],
   "categories": [
     "open-source",

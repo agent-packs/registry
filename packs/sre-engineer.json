@@ -26,7 +26,8 @@
     "ci-cd-and-automation",
     "security-and-hardening",
     "performance-optimization",
-    "debugging-and-error-recovery"
+    "debugging-and-error-recovery",
+    "load-testing"
   ],
   "categories": [
     "infrastructure",

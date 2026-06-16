@@ -18,7 +18,8 @@
     "code-review"
   ],
   "skills": [
-    "code-review-workflow"
+    "code-review-workflow",
+    "code-review-and-quality"
   ],
   "plugins": [
     "github-pr-inspection"

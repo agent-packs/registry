@@ -1,0 +1,42 @@
+{
+  "id": "technical-writer",
+  "name": "Technical Writer Pack",
+  "version": "0.1.0",
+  "description": "Workflows for coding agents producing engineering documentation: clear technical writing, architecture decision records, codebase archaeology and onboarding guides, and source-grounded, accurate references.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-16",
+  "reviewStatus": "reviewed",
+  "tags": [
+    "documentation",
+    "technical-writing",
+    "adr",
+    "onboarding",
+    "knowledge"
+  ],
+  "skills": [
+    "technical-writing",
+    "documentation-and-adrs",
+    "onboarding-and-archaeology",
+    "source-driven-development",
+    "spec-driven-development"
+  ],
+  "categories": [
+    "documentation",
+    "engineering"
+  ],
+  "tools": [
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "opencode"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}

@@ -21,7 +21,10 @@
   "skills": [
     "frontend-implementation-guidance",
     "accessibility-audit",
-    "typescript-best-practices"
+    "typescript-best-practices",
+    "frontend-ui-engineering",
+    "browser-testing-with-devtools",
+    "test-driven-development"
   ],
   "plugins": [
     "browser-verification-workflow"

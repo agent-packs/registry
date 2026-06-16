@@ -1,0 +1,45 @@
+{
+  "id": "typescript-engineer",
+  "name": "TypeScript Engineer Pack",
+  "version": "0.1.0",
+  "description": "Workflows for coding agents writing production TypeScript: strict typing and precise type contracts, test-driven development, interface design, dependency hygiene, and monorepo-aware change scoping.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-16",
+  "reviewStatus": "reviewed",
+  "tags": [
+    "typescript",
+    "types",
+    "testing",
+    "monorepo",
+    "dependencies",
+    "code-quality"
+  ],
+  "skills": [
+    "typescript-best-practices",
+    "test-driven-development",
+    "api-and-interface-design",
+    "code-review-and-quality",
+    "dependency-management",
+    "monorepo-workflows"
+  ],
+  "categories": [
+    "frontend",
+    "backend",
+    "engineering"
+  ],
+  "tools": [
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "opencode"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}

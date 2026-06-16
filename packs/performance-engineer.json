@@ -1,0 +1,43 @@
+{
+  "id": "performance-engineer",
+  "name": "Performance Engineer Pack",
+  "version": "0.1.0",
+  "description": "Workflows for coding agents optimizing performance: profiling and hotspot analysis, load testing, Core Web Vitals via browser devtools, observability-driven measurement, and root-cause debugging of regressions.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-16",
+  "reviewStatus": "reviewed",
+  "tags": [
+    "performance",
+    "profiling",
+    "load-testing",
+    "web-vitals",
+    "observability",
+    "debugging"
+  ],
+  "skills": [
+    "performance-optimization",
+    "load-testing",
+    "browser-testing-with-devtools",
+    "observability-and-monitoring",
+    "debugging-and-error-recovery"
+  ],
+  "categories": [
+    "performance",
+    "engineering"
+  ],
+  "tools": [
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "opencode"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}

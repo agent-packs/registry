@@ -26,7 +26,8 @@
     "performance-optimization",
     "debugging-and-error-recovery",
     "security-and-hardening",
-    "documentation-and-adrs"
+    "documentation-and-adrs",
+    "deprecation-and-migration"
   ],
   "categories": [
     "database",
