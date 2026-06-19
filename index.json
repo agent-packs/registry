@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T19:47:06.208537Z",
+  "generatedAt": "2026-06-19T12:59:37.493Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -1529,6 +1529,48 @@
         "documentation-and-adrs"
       ],
       "capabilities": 5
+    },
+    {
+      "id": "social-signal-research",
+      "name": "Social Signal Research Pack",
+      "version": "0.1.0",
+      "description": "Workflows for coding agents researching public X and social media signals with source capture, duplicate checks, evidence normalization, and concise reports.",
+      "maintainers": [
+        "Xquik-dev"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-19",
+      "reviewStatus": "draft",
+      "tags": [
+        "social-media",
+        "x",
+        "research",
+        "signals",
+        "support",
+        "product"
+      ],
+      "categories": [
+        "research",
+        "product",
+        "support"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "social-signal-research",
+        "source-driven-development",
+        "technical-writing"
+      ],
+      "capabilities": 3
     },
     {
       "id": "sre-engineer",

@@ -1,0 +1,43 @@
+{
+  "id": "social-signal-research",
+  "name": "Social Signal Research Pack",
+  "version": "0.1.0",
+  "description": "Workflows for coding agents researching public X and social media signals with source capture, duplicate checks, evidence normalization, and concise reports.",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "Xquik-dev"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-06-19",
+  "reviewStatus": "draft",
+  "tags": [
+    "social-media",
+    "x",
+    "research",
+    "signals",
+    "support",
+    "product"
+  ],
+  "skills": [
+    "social-signal-research",
+    "source-driven-development",
+    "technical-writing"
+  ],
+  "upstreamSource": "https://github.com/Xquik-dev/x-twitter-scraper",
+  "categories": [
+    "research",
+    "product",
+    "support"
+  ],
+  "tools": [
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "opencode"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ]
+}
