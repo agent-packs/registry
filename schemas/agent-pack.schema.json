@@ -96,7 +96,23 @@
     "categories": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "enum": [
+          "engineering",
+          "frontend",
+          "backend",
+          "infrastructure",
+          "platform",
+          "data",
+          "ml",
+          "security",
+          "quality",
+          "testing",
+          "reliability",
+          "documentation",
+          "product",
+          "devex"
+        ]
       }
     },
     "tools": {
