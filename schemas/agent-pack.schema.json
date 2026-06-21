@@ -329,7 +329,8 @@
         {
           "type": "object",
           "required": [
-            "id"
+            "id",
+            "trust"
           ],
           "properties": {
             "id": {
@@ -370,9 +371,8 @@
               "type": "string",
               "enum": [
                 "official",
-                "verified",
                 "community",
-                "unknown"
+                "verified"
               ]
             }
           }
@@ -387,7 +387,8 @@
         {
           "type": "object",
           "required": [
-            "id"
+            "id",
+            "trust"
           ],
           "properties": {
             "id": {
@@ -432,9 +433,8 @@
               "type": "string",
               "enum": [
                 "official",
-                "verified",
                 "community",
-                "unknown"
+                "verified"
               ]
             }
           }

@@ -64,6 +64,23 @@ than inventing one-off labels.
 | `product` | Product discovery, planning, leadership, and community |
 | `devex` | Developer experience and collaboration workflows |
 
+## Trust levels
+
+Every skill/plugin **object ref** in a pack (refs written as objects with an
+`id`, not bare strings) must declare a `trust` value from this allowlist. Trust
+records the provenance of the upstream source so installers and reviewers can
+reason about how much vetting a capability has received.
+
+| Trust | Use for |
+| --- | --- |
+| `official` | Maintained by the source tool's own vendor org, or first-party content shipped from the `agent-packs/registry` repo itself. Examples: `anthropics/skills`, `google/skills`, `vercel-labs/agent-skills`, Anthropic's first-party `claude-plugins-official` plugins, and registry-authored plugins such as `claude-code-review`. |
+| `verified` | Third-party integrations packaged and curated by a trusted vendor (e.g. the external integrations under `anthropics/claude-plugins-official/external_plugins/*` like GitHub, GitLab, Terraform). Vendor-reviewed, but not authored by the vendor whose tool they integrate. |
+| `community` | Independent third-party community sources that are referenced but not vendor-maintained (e.g. `addyosmani/agent-skills`, `obra/superpowers`). |
+
+`trust` is **required** on object refs and validated against this enum by the
+JSON schema and by `agent-packs validate` / `lint` / `publish --check`. Bare
+string skill refs (which carry no provenance metadata) are unaffected.
+
 ## Contributing a pack
 
 1. `agent-packs new pack my-pack --dir packs`

@@ -16,7 +16,8 @@
       "name": "Remote planning skill",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/planning-and-task-breakdown",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community"
     }
   ],
   "plugins": [
@@ -26,7 +27,8 @@
       "name": "Remote code review plugin",
       "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
       "format": "anthropic-plugin",
-      "entry": ".claude-plugin/plugin.json"
+      "entry": ".claude-plugin/plugin.json",
+      "trust": "official"
     }
   ]
 }
