@@ -28,14 +28,24 @@
     "git-workflow-and-versioning",
     "dependency-management"
   ],
+  "plugins": [
+    {
+      "id": "claude-code-review",
+      "name": "Claude Code Review",
+      "source": "https://github.com/agent-packs/registry/tree/main/plugins/claude-code-review",
+      "format": "anthropic-plugin",
+      "entry": ".claude-plugin/plugin.json",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "trust": "official"
+    }
+  ],
   "categories": [
-    "open-source",
-    "community",
+    "product",
     "engineering"
   ],
   "tools": [
-    "claude-code",
     "codex",
+    "claude-code",
     "cursor",
     "gemini",
     "opencode"

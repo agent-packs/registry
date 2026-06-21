@@ -41,6 +41,29 @@ agent-packs validate plugins
 AGENT_PACKS_REGISTRY=./packs agent-packs index --output index.json
 ```
 
+## Categories
+
+Each pack's `categories` array must use values from this canonical allowlist.
+Keep categories meaningful and map new packs to the nearest existing term rather
+than inventing one-off labels.
+
+| Category | Use for |
+| --- | --- |
+| `engineering` | General software engineering craft and workflows |
+| `frontend` | UI, web, mobile, and design-facing work |
+| `backend` | Server-side, APIs, architecture, and systems |
+| `infrastructure` | Cloud, provisioning, and operational infrastructure |
+| `platform` | Internal platforms, plugins, integrations, and distribution |
+| `data` | Data engineering, pipelines, and databases |
+| `ml` | Machine learning and AI engineering |
+| `security` | Security, hardening, and risk |
+| `quality` | Code review and quality gates |
+| `testing` | Test authoring and QA |
+| `reliability` | SRE, performance, debugging, releases, and operations |
+| `documentation` | Technical writing, ADRs, and content/authoring |
+| `product` | Product discovery, planning, leadership, and community |
+| `devex` | Developer experience and collaboration workflows |
+
 ## Contributing a pack
 
 1. `agent-packs new pack my-pack --dir packs`

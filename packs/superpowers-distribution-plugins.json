@@ -109,8 +109,7 @@
   ],
   "upstreamSource": "https://github.com/obra/superpowers",
   "categories": [
-    "plugins",
-    "distribution"
+    "platform"
   ],
   "tools": [
     "codex",

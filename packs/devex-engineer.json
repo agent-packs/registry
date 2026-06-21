@@ -30,12 +30,12 @@
   ],
   "categories": [
     "platform",
-    "developer-experience",
+    "devex",
     "engineering"
   ],
   "tools": [
-    "claude-code",
     "codex",
+    "claude-code",
     "cursor",
     "gemini",
     "opencode"

@@ -28,13 +28,12 @@
     "debugging-and-error-recovery"
   ],
   "categories": [
-    "mobile",
     "frontend",
     "engineering"
   ],
   "tools": [
-    "claude-code",
     "codex",
+    "claude-code",
     "cursor",
     "gemini",
     "opencode"
