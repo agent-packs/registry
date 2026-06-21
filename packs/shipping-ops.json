@@ -24,8 +24,7 @@
     "documentation-and-adrs"
   ],
   "categories": [
-    "release",
-    "operations"
+    "reliability"
   ],
   "tools": [
     "codex",

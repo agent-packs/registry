@@ -34,8 +34,8 @@
     "engineering"
   ],
   "tools": [
-    "claude-code",
     "codex",
+    "claude-code",
     "cursor",
     "gemini",
     "opencode"

@@ -28,13 +28,12 @@
     "security-and-hardening"
   ],
   "categories": [
-    "systems",
     "backend",
     "engineering"
   ],
   "tools": [
-    "claude-code",
     "codex",
+    "claude-code",
     "cursor",
     "gemini",
     "opencode"

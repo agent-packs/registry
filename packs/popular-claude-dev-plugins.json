@@ -170,8 +170,8 @@
   ],
   "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins",
   "categories": [
-    "plugins",
-    "development"
+    "platform",
+    "engineering"
   ],
   "tools": [
     "claude-code"

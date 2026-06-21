@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T12:59:37.493Z",
+  "generatedAt": "2026-06-21T02:01:15.187749Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -66,7 +66,7 @@
         "observability"
       ],
       "categories": [
-        "ai",
+        "ml",
         "engineering"
       ],
       "tools": [
@@ -204,12 +204,11 @@
       ],
       "categories": [
         "infrastructure",
-        "cloud",
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -247,8 +246,8 @@
         "artifacts"
       ],
       "categories": [
-        "design",
-        "content"
+        "frontend",
+        "documentation"
       ],
       "tools": [
         "codex",
@@ -293,8 +292,8 @@
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -335,13 +334,13 @@
         "replication"
       ],
       "categories": [
-        "database",
+        "data",
         "reliability",
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -384,12 +383,12 @@
       ],
       "categories": [
         "platform",
-        "developer-experience",
+        "devex",
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -429,8 +428,7 @@
         "content"
       ],
       "categories": [
-        "productivity",
-        "content"
+        "documentation"
       ],
       "tools": [
         "codex",
@@ -468,8 +466,7 @@
         "delivery"
       ],
       "categories": [
-        "engineering-leadership",
-        "planning"
+        "product"
       ],
       "tools": [
         "codex",
@@ -515,8 +512,7 @@
         "monorepo"
       ],
       "categories": [
-        "engineering",
-        "craft"
+        "engineering"
       ],
       "tools": [
         "codex",
@@ -560,7 +556,6 @@
       ],
       "categories": [
         "backend",
-        "architecture",
         "engineering"
       ],
       "tools": [
@@ -691,7 +686,7 @@
       ],
       "categories": [
         "engineering",
-        "workflow"
+        "devex"
       ],
       "tools": [
         "codex",
@@ -734,7 +729,6 @@
         "infrastructure"
       ],
       "categories": [
-        "cloud",
         "infrastructure"
       ],
       "tools": [
@@ -775,8 +769,7 @@
         "monorepo"
       ],
       "categories": [
-        "engineering",
-        "implementation"
+        "engineering"
       ],
       "tools": [
         "codex",
@@ -826,8 +819,8 @@
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -867,13 +860,12 @@
         "performance"
       ],
       "categories": [
-        "mobile",
         "frontend",
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -953,13 +945,12 @@
         "community"
       ],
       "categories": [
-        "open-source",
-        "community",
+        "product",
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -977,7 +968,10 @@
         "git-workflow-and-versioning",
         "dependency-management"
       ],
-      "capabilities": 7
+      "plugins": [
+        "claude-code-review"
+      ],
+      "capabilities": 8
     },
     {
       "id": "performance-engineer",
@@ -999,7 +993,7 @@
         "debugging"
       ],
       "categories": [
-        "performance",
+        "reliability",
         "engineering"
       ],
       "tools": [
@@ -1044,7 +1038,7 @@
       "categories": [
         "platform",
         "infrastructure",
-        "operations"
+        "reliability"
       ],
       "tools": [
         "codex",
@@ -1086,8 +1080,7 @@
         "plugins"
       ],
       "categories": [
-        "starter",
-        "popular"
+        "engineering"
       ],
       "tools": [
         "codex",
@@ -1117,8 +1110,8 @@
         "development"
       ],
       "categories": [
-        "plugins",
-        "development"
+        "platform",
+        "engineering"
       ],
       "tools": [
         "claude-code"
@@ -1159,8 +1152,7 @@
         "coding"
       ],
       "categories": [
-        "engineering",
-        "popular"
+        "engineering"
       ],
       "tools": [
         "codex",
@@ -1209,8 +1201,7 @@
         "plugins"
       ],
       "categories": [
-        "plugins",
-        "integrations"
+        "platform"
       ],
       "tools": [
         "claude-code"
@@ -1250,7 +1241,7 @@
         "code-review"
       ],
       "categories": [
-        "code-review",
+        "quality",
         "engineering"
       ],
       "tools": [
@@ -1266,9 +1257,10 @@
         "code-review-and-quality"
       ],
       "plugins": [
-        "github-pr-inspection"
+        "github-pr-inspection",
+        "claude-code-review"
       ],
-      "capabilities": 3
+      "capabilities": 4
     },
     {
       "id": "product-discovery",
@@ -1288,8 +1280,7 @@
         "planning"
       ],
       "categories": [
-        "product",
-        "planning"
+        "product"
       ],
       "tools": [
         "codex",
@@ -1336,8 +1327,8 @@
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -1418,13 +1409,12 @@
         "performance"
       ],
       "categories": [
-        "systems",
         "backend",
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -1469,8 +1459,8 @@
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -1507,8 +1497,7 @@
         "documentation"
       ],
       "categories": [
-        "release",
-        "operations"
+        "reliability"
       ],
       "tools": [
         "codex",
@@ -1598,8 +1587,8 @@
         "engineering"
       ],
       "tools": [
-        "claude-code",
         "codex",
+        "claude-code",
         "cursor",
         "gemini",
         "opencode"
@@ -1642,7 +1631,7 @@
       ],
       "categories": [
         "engineering",
-        "workflow"
+        "devex"
       ],
       "tools": [
         "codex",
@@ -1676,8 +1665,8 @@
         "collaboration"
       ],
       "categories": [
-        "collaboration",
-        "workflow"
+        "product",
+        "devex"
       ],
       "tools": [
         "codex",
@@ -1719,7 +1708,7 @@
       ],
       "categories": [
         "engineering",
-        "workflow"
+        "devex"
       ],
       "tools": [
         "codex",
@@ -1764,8 +1753,7 @@
         "opencode"
       ],
       "categories": [
-        "plugins",
-        "distribution"
+        "platform"
       ],
       "tools": [
         "codex",
@@ -1805,8 +1793,7 @@
         "meta"
       ],
       "categories": [
-        "skills",
-        "authoring"
+        "documentation"
       ],
       "tools": [
         "codex",

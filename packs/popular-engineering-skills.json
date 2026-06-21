@@ -35,8 +35,7 @@
   ],
   "upstreamSource": "https://github.com/addyosmani/agent-skills",
   "categories": [
-    "engineering",
-    "popular"
+    "engineering"
   ],
   "tools": [
     "codex",

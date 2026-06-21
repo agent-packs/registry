@@ -24,56 +24,72 @@
       "name": "Engineering leader strategy",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/spec-driven-development",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community",
+      "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-planning",
       "name": "Engineering leader planning",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/planning-and-task-breakdown",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community",
+      "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-quality-review",
       "name": "Engineering leader quality review",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/code-review-and-quality",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community",
+      "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-architecture-adrs",
       "name": "Engineering leader architecture ADRs",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/documentation-and-adrs",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community",
+      "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-delivery-ops",
       "name": "Engineering leader delivery ops",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/ci-cd-and-automation",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community",
+      "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-launch-readiness",
       "name": "Engineering leader launch readiness",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/shipping-and-launch",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community",
+      "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-security-risk",
       "name": "Engineering leader security risk",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/security-and-hardening",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community",
+      "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-performance-health",
       "name": "Engineering leader performance health",
       "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/performance-optimization",
       "format": "agent-skill",
-      "entry": "SKILL.md"
+      "entry": "SKILL.md",
+      "trust": "community",
+      "repository": "https://github.com/addyosmani/agent-skills"
     }
   ],
   "plugins": [
@@ -93,8 +109,7 @@
     }
   ],
   "categories": [
-    "engineering-leadership",
-    "planning"
+    "product"
   ],
   "tools": [
     "codex",

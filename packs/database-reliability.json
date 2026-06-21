@@ -30,13 +30,13 @@
     "deprecation-and-migration"
   ],
   "categories": [
-    "database",
+    "data",
     "reliability",
     "engineering"
   ],
   "tools": [
-    "claude-code",
     "codex",
+    "claude-code",
     "cursor",
     "gemini",
     "opencode"
