@@ -31,6 +31,7 @@ You can also validate with the CLI:
 agent-packs validate packs
 agent-packs validate skills
 agent-packs validate plugins
+agent-packs publish --check --json
 ```
 
 ## Regenerate the index
