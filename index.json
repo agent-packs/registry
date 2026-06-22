@@ -1520,6 +1520,43 @@
       "capabilities": 5
     },
     {
+      "id": "social-media-agent",
+      "name": "Social Media Agent Pack",
+      "version": "0.1.0",
+      "description": "Workflows for agents that need X/Twitter search, social listening, trend checks, and approval-gated account actions through Hermes Agent.",
+      "maintainers": [
+        "Xquik-dev"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-06-22",
+      "reviewStatus": "draft",
+      "tags": [
+        "social-media",
+        "twitter",
+        "x",
+        "hermes-agent",
+        "xquik",
+        "approval-gated"
+      ],
+      "categories": [
+        "platform",
+        "product"
+      ],
+      "tools": [
+        "hermes-agent",
+        "codex",
+        "claude-code"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "hermes-tweet"
+      ],
+      "capabilities": 1
+    },
+    {
       "id": "sre-engineer",
       "name": "SRE Engineer Pack",
       "version": "0.1.0",
