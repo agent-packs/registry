@@ -41,6 +41,12 @@ agent-packs validate plugins
 AGENT_PACKS_REGISTRY=./packs agent-packs index --output index.json
 ```
 
+## Roadmap
+
+See [Registry Enhancement Plan](docs/registry-enhancement-plan.md) for the
+current product, engineering, and quality roadmap for improving catalog trust,
+discovery, contributor workflow, compatibility, and CI gates.
+
 ## Categories
 
 Each pack's `categories` array must use values from this canonical allowlist.
