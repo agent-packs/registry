@@ -136,7 +136,7 @@ def validate_pack(pack, schema):
                 if field not in capability:
                     errors.append(f"capabilities[{index}] missing required field: {field}")
 
-            string_fields = ("type", "name", "source", "upstreamSource", "format", "version", "entry", "homepage", "repository", "license")
+            string_fields = ("type", "name", "source", "upstreamSource", "format", "version", "entry", "homepage", "repository", "license", "content", "mergeKey", "applyTo")
             for field in string_fields:
                 if field in capability and not isinstance(capability[field], str):
                     errors.append(f"capabilities[{index}].{field} must be a string")
@@ -148,6 +148,12 @@ def validate_pack(pack, schema):
             capability_format = capability.get("format")
             if isinstance(capability_format, str) and capability_format not in valid_formats:
                 errors.append(f"capabilities[{index}].format is not allowed")
+
+            if capability_type in {"memory", "settings"}:
+                if "source" not in capability and "content" not in capability:
+                    errors.append(f"capabilities[{index}].source or .content is required")
+            elif "source" not in capability:
+                errors.append(f"capabilities[{index}] missing required field: source")
 
             if capability_type == "plugin":
                 for field in ("format", "install"):
@@ -185,6 +191,19 @@ def validate_pack(pack, schema):
                     for target_index, target in enumerate(targets):
                         if not isinstance(target, str):
                             errors.append(f"capabilities[{index}].targets[{target_index}] must be a string")
+
+            agent_targets = capability.get("agentTargets")
+            if agent_targets is not None:
+                if not isinstance(agent_targets, dict):
+                    errors.append(f"capabilities[{index}].agentTargets must be an object")
+                else:
+                    for agent_id, target in agent_targets.items():
+                        if not isinstance(target, dict):
+                            errors.append(f"capabilities[{index}].agentTargets.{agent_id} must be an object")
+                            continue
+                        for field in ("destination", "scope", "format"):
+                            if field in target and not isinstance(target[field], str):
+                                errors.append(f"capabilities[{index}].agentTargets.{agent_id}.{field} must be a string")
 
     return errors
 
@@ -317,6 +336,36 @@ class AgentPackSchemaTest(unittest.TestCase):
         pack = valid_pack()
         pack["capabilities"][0]["type"] = "unknown"
         self.assert_invalid(pack, "capabilities[0].type is not allowed")
+
+    def test_allows_memory_and_settings_capabilities(self):
+        pack = valid_pack()
+        pack["capabilities"] = [
+            {
+                "type": "memory",
+                "name": "Team rules",
+                "content": "Always run focused tests.",
+                "applyTo": "src/**/*.ts",
+                "agentTargets": {
+                    "copilot": {
+                        "destination": ".github/instructions/team-rules.instructions.md",
+                        "scope": "project",
+                        "format": "markdown",
+                    }
+                },
+            },
+            {
+                "type": "settings",
+                "name": "Codex memories",
+                "content": "{\"features\":{\"memories\":true}}",
+                "mergeKey": "profiles.default",
+            },
+        ]
+        self.assert_valid(pack)
+
+    def test_memory_and_settings_require_source_or_content(self):
+        pack = valid_pack()
+        pack["capabilities"] = [{"type": "memory", "name": "Empty fragment"}]
+        self.assert_invalid(pack, "capabilities[0].source or .content is required")
 
     def test_requires_plugin_metadata(self):
         pack = valid_pack()
