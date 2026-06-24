@@ -148,7 +148,8 @@
             "template",
             "tool",
             "memory",
-            "settings"
+            "settings",
+            "mcp"
           ]
         },
         "name": {
@@ -229,6 +230,24 @@
           "additionalProperties": {
             "$ref": "#/$defs/agentTarget"
           }
+        },
+        "serverName": {
+          "type": "string"
+        },
+        "command": {
+          "type": "string"
+        },
+        "args": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
         }
       },
       "allOf": [
@@ -239,7 +258,10 @@
                 "type": {
                   "enum": [
                     "memory",
-                    "settings"
+                    "settings",
+                    "mcp",
+                    "command",
+                    "hook"
                   ]
                 }
               },
@@ -259,8 +281,10 @@
             "properties": {
               "type": {
                 "enum": [
-                  "memory",
-                  "settings"
+                    "memory",
+                    "settings",
+                    "command",
+                    "hook"
                 ]
               }
             },
@@ -331,6 +355,25 @@
                 "const": "agent-skill"
               }
             }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "mcp"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "serverName",
+              "command",
+              "args"
+            ]
           }
         }
       ]

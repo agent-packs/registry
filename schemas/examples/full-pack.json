@@ -53,14 +53,22 @@
     {
       "type": "command",
       "name": "Run repository tests",
-      "source": "npm test",
-      "format": "shell-command"
+      "content": "Run the repository's focused test command, then summarize failures and likely fixes.",
+      "format": "markdown",
+      "targets": [
+        "claude",
+        "codex",
+        "generic"
+      ]
     },
     {
       "type": "hook",
       "name": "Pre-review setup hook",
-      "source": "https://example.com/hooks/pre-review.sh",
-      "format": "shell-command"
+      "content": "{\"event\":\"preReview\",\"steps\":[\"git status --short\",\"detect test command\"]}",
+      "format": "json",
+      "targets": [
+        "generic"
+      ]
     },
     {
       "type": "prompt",
@@ -116,15 +124,14 @@
       ]
     },
     {
-      "type": "settings",
+      "type": "mcp",
       "name": "Filesystem MCP server",
-      "mergeKey": "mcpServers",
-      "content": "{\"filesystem\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-filesystem\"]}}",
-      "format": "json",
-      "targets": [
-        "claude",
-        "gemini",
-        "opencode"
+      "serverName": "filesystem",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${PROJECT_DIR}"
       ]
     }
   ]

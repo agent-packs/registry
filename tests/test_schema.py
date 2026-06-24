@@ -149,9 +149,13 @@ def validate_pack(pack, schema):
             if isinstance(capability_format, str) and capability_format not in valid_formats:
                 errors.append(f"capabilities[{index}].format is not allowed")
 
-            if capability_type in {"memory", "settings"}:
+            if capability_type in {"memory", "settings", "command", "hook"}:
                 if "source" not in capability and "content" not in capability:
                     errors.append(f"capabilities[{index}].source or .content is required")
+            elif capability_type == "mcp":
+                for field in ("serverName", "command", "args"):
+                    if field not in capability:
+                        errors.append(f"capabilities[{index}] missing required mcp field: {field}")
             elif "source" not in capability:
                 errors.append(f"capabilities[{index}] missing required field: source")
 
@@ -365,6 +369,29 @@ class AgentPackSchemaTest(unittest.TestCase):
     def test_memory_and_settings_require_source_or_content(self):
         pack = valid_pack()
         pack["capabilities"] = [{"type": "memory", "name": "Empty fragment"}]
+        self.assert_invalid(pack, "capabilities[0].source or .content is required")
+
+    def test_allows_command_and_hook_inline_content(self):
+        pack = valid_pack()
+        pack["capabilities"] = [
+            {
+                "type": "command",
+                "name": "Review PR",
+                "content": "Review this pull request.",
+                "format": "markdown",
+            },
+            {
+                "type": "hook",
+                "name": "Before Commit",
+                "content": "{\"event\":\"beforeCommit\"}",
+                "format": "json",
+            },
+        ]
+        self.assert_valid(pack)
+
+    def test_command_and_hook_require_source_or_content(self):
+        pack = valid_pack()
+        pack["capabilities"] = [{"type": "command", "name": "Empty command"}]
         self.assert_invalid(pack, "capabilities[0].source or .content is required")
 
     def test_requires_plugin_metadata(self):
