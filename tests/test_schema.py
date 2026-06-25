@@ -278,7 +278,7 @@ class AgentPackSchemaTest(unittest.TestCase):
         # Scan all packs, skills, and plugins.
         # Strong secret regex (matches actual secret tokens, not env var names)
         secret_pattern = re.compile(
-            r"\b(?:sk-[a-zA-Z0-9_-]{20,}|ghp_[a-zA-Z0-9]{36,})\b",
+            r"\b(?:sk-[a-zA-Z0-9_-]{20,}|ghp_[a-zA-Z0-9]{36,}|github_pat_[a-zA-Z0-9_]{82,})\b",
             re.IGNORECASE
         )
         # We explicitly block xquik in the public registry (since Xquik requires XQUIK_API_KEY)
@@ -335,6 +335,7 @@ class AgentPackSchemaTest(unittest.TestCase):
                 fallback_patterns = [
                     re.compile(r"\bsk-[a-zA-Z0-9_-]{20,}\b", re.IGNORECASE),
                     re.compile(r"\bghp_[a-zA-Z0-9]{36,}\b", re.IGNORECASE),
+                    re.compile(r"\bgithub_pat_[a-zA-Z0-9_]{82,}\b", re.IGNORECASE),
                     re.compile(r"\b[a-f0-9]{32,}\b", re.IGNORECASE),
                     re.compile(r"\b[a-zA-Z0-9_-]{32,}\b", re.IGNORECASE),
                 ]
