@@ -278,14 +278,26 @@ class AgentPackSchemaTest(unittest.TestCase):
         # Scan all packs, skills, and plugins.
         # Strong secret regex (matches actual secret tokens, not env var names)
         secret_pattern = re.compile(
-            r"\b(?:sk-[a-zA-Z0-9_]{20,}|ghp_[a-zA-Z0-9]{36,})\b",
+            r"\b(?:sk-[a-zA-Z0-9_-]{20,}|ghp_[a-zA-Z0-9]{36,})\b",
             re.IGNORECASE
         )
         # We explicitly block xquik in the public registry (since Xquik requires XQUIK_API_KEY)
         xquik_pattern = re.compile(r"xquik", re.IGNORECASE)
 
+        def is_env_var_ref(val):
+            if not isinstance(val, str):
+                return False
+            val = val.strip()
+            return (
+                val.startswith("$") or
+                (val.startswith("%") and val.endswith("%") and len(val) > 2) or
+                (val.startswith("{{") and val.endswith("}}") and len(val) > 4)
+            )
+
         def is_placeholder(val):
             if not isinstance(val, str):
+                return True
+            if is_env_var_ref(val):
                 return True
             val_lower = val.lower()
             return (
