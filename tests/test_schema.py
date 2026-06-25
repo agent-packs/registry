@@ -288,11 +288,55 @@ class AgentPackSchemaTest(unittest.TestCase):
             if not isinstance(val, str):
                 return False
             val = val.strip()
-            return (
+            is_ref = (
                 val.startswith("$") or
                 (val.startswith("%") and val.endswith("%") and len(val) > 2) or
                 (val.startswith("{{") and val.endswith("}}") and len(val) > 4)
             )
+            if not is_ref:
+                return False
+
+            if secret_pattern.search(val):
+                return False
+
+            fallback = ""
+            if val.startswith("${") and val.endswith("}"):
+                inner = val[2:-1]
+                if ":-" in inner:
+                    fallback = inner.split(":-", 1)[1]
+                elif "-" in inner:
+                    fallback = inner.split("-", 1)[1]
+                elif ":" in inner:
+                    fallback = inner.split(":", 1)[1]
+            elif val.startswith("{{") and val.endswith("}}"):
+                inner = val[2:-2]
+                if ":-" in inner:
+                    fallback = inner.split(":-", 1)[1]
+                elif "-" in inner:
+                    fallback = inner.split("-", 1)[1]
+                elif ":" in inner:
+                    fallback = inner.split(":", 1)[1]
+            elif val.startswith("$"):
+                name = val[1:]
+                if name.startswith("(") and name.endswith(")"):
+                    name = name[1:-1]
+                is_standard_name = bool(re.match(r"^[a-zA-Z_][a-zA-Z0-9_]*$", name)) or \
+                                   bool(re.match(r"^(?i)env:[a-zA-Z_][a-zA-Z0-9_]*$", name))
+                if not is_standard_name:
+                    fallback = val
+
+            if fallback:
+                fallback_patterns = [
+                    re.compile(r"\bsk-[a-zA-Z0-9_-]{20,}\b", re.IGNORECASE),
+                    re.compile(r"\bghp_[a-zA-Z0-9]{36,}\b", re.IGNORECASE),
+                    re.compile(r"\b[a-f0-9]{32,}\b", re.IGNORECASE),
+                    re.compile(r"\b[a-zA-Z0-9_-]{32,}\b", re.IGNORECASE),
+                ]
+                for pat in fallback_patterns:
+                    if pat.search(fallback):
+                        return False
+
+            return True
 
         def is_placeholder(val):
             if not isinstance(val, str):
@@ -313,7 +357,7 @@ class AgentPackSchemaTest(unittest.TestCase):
             if isinstance(obj, dict):
                 for k, v in obj.items():
                     k_lower = k.lower()
-                    is_secret_key = any(x in k_lower for x in ("key", "token", "secret", "password"))
+                    is_secret_key = any(k_lower.endswith(x) for x in ("key", "token", "secret", "password", "pwd"))
                     if is_secret_key and isinstance(v, str) and v and not is_placeholder(v):
                         self.fail(f"{path_name} contains a literal credentials value for env var '{k}': {v} (use a placeholder)")
                     scan_env_for_credentials(v, path_name)
