@@ -275,38 +275,92 @@ class AgentPackSchemaTest(unittest.TestCase):
         self.assert_valid(valid_pack())
 
     def test_block_api_keys_and_secrets(self):
-        # Match blocked API key patterns or Xquik references (which require XQUIK_API_KEY)
-        key_pattern = re.compile(
-            r"\b[A-Za-z0-9_]*(?:API_KEY|API_TOKEN|SECRET_KEY|AUTH_TOKEN|ACCESS_TOKEN)\b|xquik",
+        # Scan all packs, skills, and plugins.
+        # Strong secret regex (matches actual secret tokens, not env var names)
+        secret_pattern = re.compile(
+            r"\b(?:sk-[a-zA-Z0-9_]{20,}|ghp_[a-zA-Z0-9]{36,})\b",
             re.IGNORECASE
         )
+        # We explicitly block xquik in the public registry (since Xquik requires XQUIK_API_KEY)
+        xquik_pattern = re.compile(r"xquik", re.IGNORECASE)
+
+        def is_placeholder(val):
+            if not isinstance(val, str):
+                return True
+            val_lower = val.lower()
+            return (
+                not val or
+                "your" in val_lower or
+                "todo" in val_lower or
+                "placeholder" in val_lower or
+                "<" in val_lower or
+                ">" in val_lower
+            )
+
+        def scan_env_for_credentials(obj, path_name):
+            if isinstance(obj, dict):
+                for k, v in obj.items():
+                    k_lower = k.lower()
+                    is_secret_key = any(x in k_lower for x in ("key", "token", "secret", "password"))
+                    if is_secret_key and isinstance(v, str) and v and not is_placeholder(v):
+                        self.fail(f"{path_name} contains a literal credentials value for env var '{k}': {v} (use a placeholder)")
+                    scan_env_for_credentials(v, path_name)
+            elif isinstance(obj, list):
+                for item in obj:
+                    scan_env_for_credentials(item, path_name)
 
         # Scan all registry packs
         for path in sorted(REGISTRY_PATH.glob("*.json")):
             content = path.read_text(encoding="utf-8")
-            matches = key_pattern.findall(content)
+            
+            # Block Xquik (registry policy)
             self.assertEqual(
-                matches, [],
-                f"Pack {path.name} contains references to blocked API keys/tokens/Xquik: {matches}"
+                xquik_pattern.findall(content), [],
+                f"Pack {path.name} contains references to blocked Xquik: {xquik_pattern.findall(content)}"
             )
+            
+            # Block actual secrets
+            self.assertEqual(
+                secret_pattern.findall(content), [],
+                f"Pack {path.name} contains actual secrets: {secret_pattern.findall(content)}"
+            )
+            
+            # Validate env variables do not have literal secrets
+            pack_obj = json.loads(content)
+            scan_env_for_credentials(pack_obj, path.name)
 
         # Scan all registry skills
         for path in sorted(SKILLS_PATH.glob("*/SKILL.md")):
             content = path.read_text(encoding="utf-8")
-            matches = key_pattern.findall(content)
+            
+            # Block Xquik (registry policy)
             self.assertEqual(
-                matches, [],
-                f"Skill {path.parent.name}/SKILL.md contains references to blocked API keys/tokens/Xquik: {matches}"
+                xquik_pattern.findall(content), [],
+                f"Skill {path.parent.name}/SKILL.md contains references to blocked Xquik: {xquik_pattern.findall(content)}"
+            )
+            
+            # Block actual secrets
+            self.assertEqual(
+                secret_pattern.findall(content), [],
+                f"Skill {path.parent.name}/SKILL.md contains actual secrets: {secret_pattern.findall(content)}"
             )
 
         # Scan all registry plugins
         for path in sorted(PLUGINS_PATH.glob("*/.claude-plugin/plugin.json")):
             content = path.read_text(encoding="utf-8")
-            matches = key_pattern.findall(content)
+            
+            # Block Xquik (registry policy)
             self.assertEqual(
-                matches, [],
-                f"Plugin {path.parent.parent.name} contains references to blocked API keys/tokens/Xquik: {matches}"
+                xquik_pattern.findall(content), [],
+                f"Plugin {path.parent.parent.name} contains references to blocked Xquik: {xquik_pattern.findall(content)}"
             )
+            
+            # Block actual secrets
+            self.assertEqual(
+                secret_pattern.findall(content), [],
+                f"Plugin {path.parent.parent.name} contains actual secrets: {secret_pattern.findall(content)}"
+            )
+
 
 
     def test_allows_optional_upstream_source(self):
