@@ -274,6 +274,40 @@ class AgentPackSchemaTest(unittest.TestCase):
     def test_valid_pack_matches_schema(self):
         self.assert_valid(valid_pack())
 
+    def test_block_api_keys_and_secrets(self):
+        # Match blocked API key patterns or Xquik references (which require XQUIK_API_KEY)
+        key_pattern = re.compile(
+            r"\b[A-Za-z0-9_]*(?:API_KEY|API_TOKEN|SECRET_KEY|AUTH_TOKEN|ACCESS_TOKEN)\b|xquik",
+            re.IGNORECASE
+        )
+
+        # Scan all registry packs
+        for path in sorted(REGISTRY_PATH.glob("*.json")):
+            content = path.read_text(encoding="utf-8")
+            matches = key_pattern.findall(content)
+            self.assertEqual(
+                matches, [],
+                f"Pack {path.name} contains references to blocked API keys/tokens/Xquik: {matches}"
+            )
+
+        # Scan all registry skills
+        for path in sorted(SKILLS_PATH.glob("*/SKILL.md")):
+            content = path.read_text(encoding="utf-8")
+            matches = key_pattern.findall(content)
+            self.assertEqual(
+                matches, [],
+                f"Skill {path.parent.name}/SKILL.md contains references to blocked API keys/tokens/Xquik: {matches}"
+            )
+
+        # Scan all registry plugins
+        for path in sorted(PLUGINS_PATH.glob("*/.claude-plugin/plugin.json")):
+            content = path.read_text(encoding="utf-8")
+            matches = key_pattern.findall(content)
+            self.assertEqual(
+                matches, [],
+                f"Plugin {path.parent.parent.name} contains references to blocked API keys/tokens/Xquik: {matches}"
+            )
+
 
     def test_allows_optional_upstream_source(self):
         pack = valid_pack()
