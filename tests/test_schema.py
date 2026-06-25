@@ -326,6 +326,12 @@ class AgentPackSchemaTest(unittest.TestCase):
                     fallback = val
 
             if fallback:
+                is_uuid = len(fallback) == 36 and bool(re.match(r"^(?i)[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$", fallback))
+                is_sha = (len(fallback) == 40 and bool(re.match(r"^[a-f0-9]{40}$", fallback))) or \
+                         (len(fallback) == 64 and bool(re.match(r"^[a-f0-9]{64}$", fallback)))
+                if is_uuid or is_sha:
+                    return True
+
                 fallback_patterns = [
                     re.compile(r"\bsk-[a-zA-Z0-9_-]{20,}\b", re.IGNORECASE),
                     re.compile(r"\bghp_[a-zA-Z0-9]{36,}\b", re.IGNORECASE),
