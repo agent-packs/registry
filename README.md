@@ -1,7 +1,9 @@
 # Agent Packs Registry
 
-The curated registry of **Agent Packs** — packs, skills, and plugins for AI coding
-agents (Claude Code, Codex, Cursor, Gemini CLI, Copilot, Goose, OpenCode).
+The curated registry of **Agent Packs** — packs, skills, plugins, managed tool
+descriptors, MCP servers, commands, prompts, templates, memory, and settings for
+AI coding agents (Claude Code, Codex, Cursor, Gemini CLI, Copilot, Goose,
+OpenCode).
 
 This repository holds the registry **data**. The CLI that installs from it lives at
 [agent-packs/cli](https://github.com/agent-packs/cli) and fetches this registry at
@@ -13,6 +15,7 @@ runtime (override with `AGENT_PACKS_REGISTRY`, `AGENT_PACKS_REGISTRY_REPO`, or
 - `packs/` — one JSON manifest per pack (e.g. `backend-engineer.json`).
 - `skills/<id>/SKILL.md` — reusable Agent Skills with required frontmatter.
 - `plugins/<id>/.claude-plugin/plugin.json` — reusable Claude Code plugins.
+- `commands/<id>.json`, `hooks/<id>.json`, `subagents/<id>.json`, `prompts/<id>.json`, `templates/<id>.json`, `tools/<id>.json`, `memory/<id>.json`, `settings/<id>.json`, `mcp/<id>.json` — optional reusable JSON capability manifests for non-skill/plugin capability kinds.
 - `schemas/agent-pack.schema.json` — authoritative JSON Schema for pack validation.
 - `schemas/examples/` — canonical example manifests.
 - `policy/` — built-in policy presets (`default`, `ci`, `strict`).
@@ -80,6 +83,26 @@ reason about how much vetting a capability has received.
 `trust` is **required** on object refs and validated against this enum by the
 JSON schema and by `agent-packs validate` / `lint` / `publish --check`. Bare
 string skill refs (which carry no provenance metadata) are unaffected.
+
+## Capability type support
+
+| Type | Reference | Copy | Native | Standalone lifecycle | Reusable refs | Drift/status | Uninstall | Native destinations |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `skill` | yes | yes | reference-only | yes | `skills` | yes | yes | tool skill roots |
+| `plugin` | yes | no | gated by `--execute-plugins` | yes | `plugins` | receipt only | gated cleanup | plugin installer |
+| `command` | yes | yes | no | yes | `commands` | yes | yes | Claude commands; portable fallback |
+| `hook` | yes | gated by `--allow-hooks` | no | yes | `hooks` | yes | yes | portable fallback |
+| `subagent` | yes | yes | no | yes | `subagents` | yes | yes | Claude agents; portable fallback |
+| `prompt` | yes | yes | no | yes | `prompts` | yes | yes | portable fallback |
+| `template` | yes | yes | no | yes | `templates` | yes | yes | portable fallback |
+| `tool` | yes | yes | no execution in v1 | yes | `toolRefs` | yes | yes | portable `.agent-packs/tools/*.json` |
+| `memory` | yes | merge with `--mode copy` | no | yes | `memory` | yes | yes | verified agent instruction files |
+| `settings` | yes | merge with `--mode copy` | no | yes | `settings` | yes | yes | verified agent settings files |
+| `mcp` | yes | settings merge with `--mode copy` | gated by `--execute-mcps` | yes | `mcp` | yes | yes | settings-backed MCP config |
+
+Pack-level `tools` means advertised target agents. Reusable tool descriptors use
+`toolRefs` to avoid overloading that public field. `targets` is metadata only;
+use `agentTargets` for explicit per-agent destination overrides.
 
 ## Contributing a pack
 

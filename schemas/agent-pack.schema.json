@@ -57,6 +57,18 @@
         "verified"
       ]
     },
+    "trust": {
+      "type": "string",
+      "enum": [
+        "official",
+        "verified",
+        "community",
+        "unknown"
+      ]
+    },
+    "compatibility": {
+      "$ref": "#/$defs/compatibility"
+    },
     "requirements": {
       "$ref": "#/$defs/requirements"
     },
@@ -78,6 +90,18 @@
         "type": "string"
       }
     },
+    "requires": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conflictsWith": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "skills": {
       "type": "array",
       "items": {
@@ -88,6 +112,60 @@
       "type": "array",
       "items": {
         "$ref": "#/$defs/pluginRef"
+      }
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
+      }
+    },
+    "hooks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
+      }
+    },
+    "subagents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
+      }
+    },
+    "prompts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
+      }
+    },
+    "templates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
+      }
+    },
+    "toolRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
+      }
+    },
+    "memory": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
+      }
+    },
+    "settings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
+      }
+    },
+    "mcp": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capabilityRef"
       }
     },
     "upstreamSource": {
@@ -133,8 +211,7 @@
       "type": "object",
       "required": [
         "type",
-        "name",
-        "source"
+        "name"
       ],
       "properties": {
         "type": {
@@ -144,9 +221,13 @@
             "plugin",
             "command",
             "hook",
+            "subagent",
             "prompt",
             "template",
-            "tool"
+            "tool",
+            "memory",
+            "settings",
+            "mcp"
           ]
         },
         "name": {
@@ -164,6 +245,10 @@
             "shell-command",
             "markdown-prompt",
             "template",
+            "markdown",
+            "json",
+            "toml",
+            "yaml",
             "other"
           ]
         },
@@ -208,9 +293,97 @@
         },
         "upstreamSource": {
           "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "mergeKey": {
+          "type": "string"
+        },
+        "applyTo": {
+          "type": "string"
+        },
+        "agentTargets": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/agentTarget"
+          }
+        },
+        "serverName": {
+          "type": "string"
+        },
+        "command": {
+          "type": "string"
+        },
+        "args": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
         }
       },
       "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "skill",
+                  "plugin"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "source"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "memory",
+                  "settings",
+                  "command",
+                  "hook",
+                  "subagent",
+                  "prompt",
+                  "template",
+                  "tool"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "anyOf": [
+              {
+                "required": [
+                  "source"
+                ]
+              },
+              {
+                "required": [
+                  "content"
+                ]
+              }
+            ]
+          }
+        },
         {
           "if": {
             "properties": {
@@ -260,8 +433,52 @@
               }
             }
           }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "mcp"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "serverName",
+              "command",
+              "args"
+            ]
+          }
         }
       ]
+    },
+    "agentTarget": {
+      "type": "object",
+      "properties": {
+        "destination": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "global",
+            "project",
+            "target"
+          ]
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "markdown",
+            "json",
+            "toml",
+            "yaml"
+          ]
+        }
+      }
     },
     "install": {
       "type": "object",
@@ -320,6 +537,90 @@
           }
         }
       }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "compatible",
+              "partial",
+              "unsupported",
+              "unknown"
+            ]
+          },
+          "lastVerified": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "capabilityRef": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "trust"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "upstreamSource": {
+              "type": "string"
+            },
+            "format": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "entry": {
+              "type": "string"
+            },
+            "homepage": {
+              "type": "string"
+            },
+            "repository": {
+              "type": "string"
+            },
+            "license": {
+              "type": "string"
+            },
+            "install": {
+              "$ref": "#/$defs/install"
+            },
+            "trust": {
+              "type": "string",
+              "enum": [
+                "official",
+                "community",
+                "verified"
+              ]
+            }
+          }
+        }
+      ]
     },
     "skillRef": {
       "oneOf": [
@@ -461,6 +762,51 @@
     {
       "required": [
         "plugins"
+      ]
+    },
+    {
+      "required": [
+        "commands"
+      ]
+    },
+    {
+      "required": [
+        "hooks"
+      ]
+    },
+    {
+      "required": [
+        "subagents"
+      ]
+    },
+    {
+      "required": [
+        "prompts"
+      ]
+    },
+    {
+      "required": [
+        "templates"
+      ]
+    },
+    {
+      "required": [
+        "toolRefs"
+      ]
+    },
+    {
+      "required": [
+        "memory"
+      ]
+    },
+    {
+      "required": [
+        "settings"
+      ]
+    },
+    {
+      "required": [
+        "mcp"
       ]
     }
   ]

@@ -30,6 +30,16 @@ def load_manifests():
     return manifests
 
 
+def agent_packs_binary():
+    configured = os.environ.get("AGENT_PACKS_BIN")
+    if configured:
+        return configured
+    sibling = ROOT.parent / "agent-packs" / "bin" / "agent-packs"
+    if sibling.exists() and os.access(sibling, os.X_OK):
+        return str(sibling)
+    return shutil.which("agent-packs")
+
+
 def manifest_skill_ids(manifest):
     ids = []
     for ref in manifest.get("skills", []) or []:
@@ -105,7 +115,7 @@ class IndexDriftTest(unittest.TestCase):
                 )
 
     def test_committed_index_matches_freshly_generated(self):
-        binary = shutil.which("agent-packs")
+        binary = agent_packs_binary()
         if binary is None:
             self.skipTest("agent-packs binary not on PATH")
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T03:17:49.127756Z",
+  "generatedAt": "2026-06-27T19:35:23.383762Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -44,7 +44,11 @@
         "code-review-and-quality",
         "technical-writing"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "ai-engineer",
@@ -89,7 +93,11 @@
         "security-and-hardening",
         "source-driven-development"
       ],
-      "capabilities": 7
+      "capabilities": 7,
+      "capabilityTypes": {
+        "skill": 7
+      },
+      "freshness": "fresh"
     },
     {
       "id": "api-platform-engineer",
@@ -134,7 +142,11 @@
         "test-driven-development",
         "observability-and-monitoring"
       ],
-      "capabilities": 7
+      "capabilities": 7,
+      "capabilityTypes": {
+        "skill": 7
+      },
+      "freshness": "fresh"
     },
     {
       "id": "backend-engineer",
@@ -179,7 +191,11 @@
         "test-driven-development",
         "debugging-and-error-recovery"
       ],
-      "capabilities": 7
+      "capabilities": 7,
+      "capabilityTypes": {
+        "skill": 7
+      },
+      "freshness": "fresh"
     },
     {
       "id": "cloud-infrastructure",
@@ -225,7 +241,11 @@
         "ci-cd-and-automation",
         "documentation-and-adrs"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "content-design",
@@ -264,7 +284,11 @@
         "theme-factory",
         "web-artifacts-builder"
       ],
-      "capabilities": 5
+      "capabilities": 5,
+      "capabilityTypes": {
+        "skill": 5
+      },
+      "freshness": "fresh"
     },
     {
       "id": "data-engineer",
@@ -310,7 +334,11 @@
         "api-and-interface-design",
         "test-driven-development"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "database-reliability",
@@ -358,7 +386,11 @@
         "documentation-and-adrs",
         "deprecation-and-migration"
       ],
-      "capabilities": 7
+      "capabilities": 7,
+      "capabilityTypes": {
+        "skill": 7
+      },
+      "freshness": "fresh"
     },
     {
       "id": "devex-engineer",
@@ -405,7 +437,11 @@
         "dependency-management",
         "code-review-and-quality"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "document-processing",
@@ -444,7 +480,11 @@
         "pptx",
         "xlsx"
       ],
-      "capabilities": 4
+      "capabilities": 4,
+      "capabilityTypes": {
+        "skill": 4
+      },
+      "freshness": "fresh"
     },
     {
       "id": "eng-leader",
@@ -490,7 +530,12 @@
         "eng-leader-workflows",
         "github-pr-inspection"
       ],
-      "capabilities": 10
+      "capabilities": 10,
+      "capabilityTypes": {
+        "plugin": 2,
+        "skill": 8
+      },
+      "freshness": "fresh"
     },
     {
       "id": "engineering-craft",
@@ -533,7 +578,11 @@
         "ai-feature-development",
         "monorepo-workflows"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "event-driven-architect",
@@ -577,7 +626,11 @@
         "debugging-and-error-recovery",
         "infrastructure-as-code"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "frontend-engineer",
@@ -621,7 +674,12 @@
       "plugins": [
         "browser-verification-workflow"
       ],
-      "capabilities": 7
+      "capabilities": 7,
+      "capabilityTypes": {
+        "plugin": 1,
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "frontend-quality",
@@ -665,7 +723,12 @@
       "plugins": [
         "browser-verification-workflow"
       ],
-      "capabilities": 5
+      "capabilities": 5,
+      "capabilityTypes": {
+        "plugin": 1,
+        "skill": 4
+      },
+      "freshness": "fresh"
     },
     {
       "id": "full-lifecycle-engineer",
@@ -707,7 +770,12 @@
       "plugins": [
         "github-pr-inspection"
       ],
-      "capabilities": 28
+      "capabilities": 28,
+      "capabilityTypes": {
+        "plugin": 2,
+        "skill": 26
+      },
+      "freshness": "fresh"
     },
     {
       "id": "google-cloud",
@@ -748,7 +816,11 @@
         "firebase-basics",
         "google-cloud-waf-security"
       ],
-      "capabilities": 7
+      "capabilities": 7,
+      "capabilityTypes": {
+        "skill": 7
+      },
+      "freshness": "fresh"
     },
     {
       "id": "implementation-core",
@@ -790,7 +862,11 @@
         "test-driven-development",
         "monorepo-workflows"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "ml-engineer",
@@ -837,7 +913,11 @@
         "test-driven-development",
         "security-and-hardening"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "mobile-engineer",
@@ -882,7 +962,11 @@
         "test-driven-development",
         "debugging-and-error-recovery"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "nextjs-vercel",
@@ -922,7 +1006,11 @@
         "deploy-to-vercel",
         "vercel-optimize"
       ],
-      "capabilities": 5
+      "capabilities": 5,
+      "capabilityTypes": {
+        "skill": 5
+      },
+      "freshness": "fresh"
     },
     {
       "id": "open-source-maintainer",
@@ -971,7 +1059,12 @@
       "plugins": [
         "claude-code-review"
       ],
-      "capabilities": 8
+      "capabilities": 8,
+      "capabilityTypes": {
+        "plugin": 1,
+        "skill": 7
+      },
+      "freshness": "fresh"
     },
     {
       "id": "performance-engineer",
@@ -1014,7 +1107,11 @@
         "observability-and-monitoring",
         "debugging-and-error-recovery"
       ],
-      "capabilities": 5
+      "capabilities": 5,
+      "capabilityTypes": {
+        "skill": 5
+      },
+      "freshness": "fresh"
     },
     {
       "id": "platform-engineer",
@@ -1060,7 +1157,11 @@
         "documentation-and-adrs",
         "infrastructure-as-code"
       ],
-      "capabilities": 7
+      "capabilities": 7,
+      "capabilityTypes": {
+        "skill": 7
+      },
+      "freshness": "fresh"
     },
     {
       "id": "popular-agent-starter",
@@ -1090,7 +1191,12 @@
         "global",
         "project"
       ],
-      "capabilities": 25
+      "capabilities": 25,
+      "capabilityTypes": {
+        "plugin": 10,
+        "skill": 15
+      },
+      "freshness": "fresh"
     },
     {
       "id": "popular-claude-dev-plugins",
@@ -1132,7 +1238,11 @@
         "session-report",
         "skill-creator"
       ],
-      "capabilities": 10
+      "capabilities": 10,
+      "capabilityTypes": {
+        "plugin": 10
+      },
+      "freshness": "fresh"
     },
     {
       "id": "popular-engineering-skills",
@@ -1182,7 +1292,11 @@
         "git-workflow-and-versioning",
         "ci-cd-and-automation"
       ],
-      "capabilities": 15
+      "capabilities": 15,
+      "capabilityTypes": {
+        "skill": 15
+      },
+      "freshness": "fresh"
     },
     {
       "id": "popular-integration-plugins",
@@ -1220,7 +1334,11 @@
         "terraform",
         "serena"
       ],
-      "capabilities": 8
+      "capabilities": 8,
+      "capabilityTypes": {
+        "plugin": 8
+      },
+      "freshness": "fresh"
     },
     {
       "id": "pr-review",
@@ -1260,7 +1378,12 @@
         "github-pr-inspection",
         "claude-code-review"
       ],
-      "capabilities": 4
+      "capabilities": 4,
+      "capabilityTypes": {
+        "plugin": 2,
+        "skill": 2
+      },
+      "freshness": "fresh"
     },
     {
       "id": "product-discovery",
@@ -1299,7 +1422,11 @@
         "spec-driven-development",
         "planning-and-task-breakdown"
       ],
-      "capabilities": 4
+      "capabilities": 4,
+      "capabilityTypes": {
+        "skill": 4
+      },
+      "freshness": "fresh"
     },
     {
       "id": "qa-engineer",
@@ -1345,7 +1472,11 @@
         "security-and-hardening",
         "debugging-and-error-recovery"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "reliability-debugging",
@@ -1386,7 +1517,11 @@
         "security-and-hardening",
         "observability-and-monitoring"
       ],
-      "capabilities": 4
+      "capabilities": 4,
+      "capabilityTypes": {
+        "skill": 4
+      },
+      "freshness": "fresh"
     },
     {
       "id": "rust-engineer",
@@ -1431,7 +1566,11 @@
         "observability-and-monitoring",
         "security-and-hardening"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "security-engineer",
@@ -1477,7 +1616,11 @@
         "code-review-and-quality",
         "documentation-and-adrs"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     },
     {
       "id": "shipping-ops",
@@ -1517,7 +1660,11 @@
         "deprecation-and-migration",
         "documentation-and-adrs"
       ],
-      "capabilities": 5
+      "capabilities": 5,
+      "capabilityTypes": {
+        "skill": 5
+      },
+      "freshness": "fresh"
     },
     {
       "id": "sre-engineer",
@@ -1565,7 +1712,11 @@
         "debugging-and-error-recovery",
         "load-testing"
       ],
-      "capabilities": 8
+      "capabilities": 8,
+      "capabilityTypes": {
+        "skill": 8
+      },
+      "freshness": "fresh"
     },
     {
       "id": "superpowers",
@@ -1602,7 +1753,12 @@
         "global",
         "project"
       ],
-      "capabilities": 19
+      "capabilities": 19,
+      "capabilityTypes": {
+        "plugin": 5,
+        "skill": 14
+      },
+      "freshness": "fresh"
     },
     {
       "id": "superpowers-collaboration-subagents",
@@ -1644,7 +1800,11 @@
         "superpowers-requesting-code-review",
         "superpowers-receiving-code-review"
       ],
-      "capabilities": 5
+      "capabilities": 5,
+      "capabilityTypes": {
+        "skill": 5
+      },
+      "freshness": "fresh"
     },
     {
       "id": "superpowers-core-workflow",
@@ -1688,7 +1848,11 @@
         "superpowers-verification-before-completion",
         "superpowers-finishing-a-development-branch"
       ],
-      "capabilities": 7
+      "capabilities": 7,
+      "capabilityTypes": {
+        "skill": 7
+      },
+      "freshness": "fresh"
     },
     {
       "id": "superpowers-distribution-plugins",
@@ -1731,7 +1895,11 @@
         "superpowers-gemini-extension",
         "superpowers-opencode-plugin"
       ],
-      "capabilities": 5
+      "capabilities": 5,
+      "capabilityTypes": {
+        "plugin": 5
+      },
+      "freshness": "fresh"
     },
     {
       "id": "superpowers-meta-authoring",
@@ -1767,7 +1935,11 @@
       "skills": [
         "superpowers-writing-skills"
       ],
-      "capabilities": 1
+      "capabilities": 1,
+      "capabilityTypes": {
+        "skill": 1
+      },
+      "freshness": "fresh"
     },
     {
       "id": "superpowers-quality-debugging",
@@ -1804,7 +1976,11 @@
       "skills": [
         "superpowers-systematic-debugging"
       ],
-      "capabilities": 1
+      "capabilities": 1,
+      "capabilityTypes": {
+        "skill": 1
+      },
+      "freshness": "fresh"
     },
     {
       "id": "technical-writer",
@@ -1846,7 +2022,11 @@
         "source-driven-development",
         "spec-driven-development"
       ],
-      "capabilities": 5
+      "capabilities": 5,
+      "capabilityTypes": {
+        "skill": 5
+      },
+      "freshness": "fresh"
     },
     {
       "id": "typescript-engineer",
@@ -1891,7 +2071,11 @@
         "dependency-management",
         "monorepo-workflows"
       ],
-      "capabilities": 6
+      "capabilities": 6,
+      "capabilityTypes": {
+        "skill": 6
+      },
+      "freshness": "fresh"
     }
   ]
 }
