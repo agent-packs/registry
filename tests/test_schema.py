@@ -149,17 +149,9 @@ def validate_pack(pack, schema):
             if isinstance(capability_format, str) and capability_format not in valid_formats:
                 errors.append(f"capabilities[{index}].format is not allowed")
 
-            if capability_type in {"memory", "settings", "command", "hook"}:
-                if "source" not in capability and "content" not in capability:
-                    errors.append(f"capabilities[{index}].source or .content is required")
-            elif capability_type == "mcp":
-                for field in ("serverName", "command", "args"):
-                    if field not in capability:
-                        errors.append(f"capabilities[{index}] missing required mcp field: {field}")
-            elif "source" not in capability:
-                errors.append(f"capabilities[{index}] missing required field: source")
-
             if capability_type == "plugin":
+                if "source" not in capability:
+                    errors.append(f"capabilities[{index}] missing required field: source")
                 for field in ("format", "install"):
                     if field not in capability:
                         errors.append(f"capabilities[{index}] missing required plugin field: {field}")
@@ -167,11 +159,22 @@ def validate_pack(pack, schema):
                     errors.append(f"capabilities[{index}].format is not allowed for plugin")
 
             if capability_type == "skill":
+                if "source" not in capability:
+                    errors.append(f"capabilities[{index}] missing required field: source")
                 for field in ("format", "entry"):
                     if field not in capability:
                         errors.append(f"capabilities[{index}] missing required skill field: {field}")
                 if capability.get("format") != "agent-skill":
                     errors.append(f"capabilities[{index}].format must be agent-skill for skill")
+
+            if capability_type in {"memory", "settings", "command", "hook", "subagent", "prompt", "template", "tool"}:
+                if "source" not in capability and "content" not in capability:
+                    errors.append(f"capabilities[{index}] missing required field: source or content")
+
+            if capability_type == "mcp":
+                for field in ("serverName", "command", "args"):
+                    if field not in capability:
+                        errors.append(f"capabilities[{index}] missing required mcp field: {field}")
 
             install = capability.get("install")
             if install is not None:
@@ -369,7 +372,7 @@ class AgentPackSchemaTest(unittest.TestCase):
     def test_memory_and_settings_require_source_or_content(self):
         pack = valid_pack()
         pack["capabilities"] = [{"type": "memory", "name": "Empty fragment"}]
-        self.assert_invalid(pack, "capabilities[0].source or .content is required")
+        self.assert_invalid(pack, "capabilities[0] missing required field: source or content")
 
     def test_allows_command_and_hook_inline_content(self):
         pack = valid_pack()
@@ -392,7 +395,7 @@ class AgentPackSchemaTest(unittest.TestCase):
     def test_command_and_hook_require_source_or_content(self):
         pack = valid_pack()
         pack["capabilities"] = [{"type": "command", "name": "Empty command"}]
-        self.assert_invalid(pack, "capabilities[0].source or .content is required")
+        self.assert_invalid(pack, "capabilities[0] missing required field: source or content")
 
     def test_requires_plugin_metadata(self):
         pack = valid_pack()

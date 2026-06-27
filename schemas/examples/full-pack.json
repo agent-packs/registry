@@ -10,6 +10,18 @@
   "stability": "stable",
   "lastVerified": "2026-06-05",
   "reviewStatus": "verified",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "verified",
+      "lastVerified": "2026-06-27",
+      "notes": "Reference and copy-mode dry runs verified."
+    },
+    "claude-code": {
+      "status": "verified",
+      "lastVerified": "2026-06-27"
+    }
+  },
   "requirements": {
     "agentPacks": ">=0.1.0",
     "tools": {
@@ -54,74 +66,49 @@
       "type": "command",
       "name": "Run repository tests",
       "content": "Run the repository's focused test command, then summarize failures and likely fixes.",
-      "format": "markdown",
-      "targets": [
-        "claude",
-        "codex",
-        "generic"
-      ]
+      "format": "markdown"
     },
     {
       "type": "hook",
       "name": "Pre-review setup hook",
       "content": "{\"event\":\"preReview\",\"steps\":[\"git status --short\",\"detect test command\"]}",
-      "format": "json",
-      "targets": [
-        "generic"
-      ]
+      "format": "json"
+    },
+    {
+      "type": "subagent",
+      "name": "Code reviewer subagent",
+      "content": "---\nname: code-reviewer\ndescription: Review code changes.\ntools: Read, Grep, Glob\n---\n\nReview code for correctness, maintainability, and test coverage.",
+      "format": "markdown"
     },
     {
       "type": "prompt",
       "name": "Review summary prompt",
-      "source": "https://example.com/prompts/review-summary.md",
-      "format": "markdown-prompt"
+      "content": "Summarize the review findings by severity.",
+      "format": "markdown"
     },
     {
       "type": "template",
       "name": "Pull request report template",
-      "source": "https://example.com/templates/pr-report.md",
-      "format": "template"
+      "content": "# Pull Request Report\n\n## Summary\n\n## Risks\n",
+      "format": "markdown"
     },
     {
       "type": "tool",
       "name": "Browser verification tool",
-      "source": "https://example.com/tools/browser-verify",
-      "format": "other"
+      "content": "{\"name\":\"browser-verify\",\"description\":\"Portable descriptor only; Agent Packs does not execute this.\"}",
+      "format": "json"
     },
     {
       "type": "memory",
       "name": "Team engineering rules",
       "content": "Run focused tests before committing.\nKeep agent-authored changes small and reviewable.",
-      "format": "markdown",
-      "targets": [
-        "claude",
-        "codex",
-        "gemini",
-        "opencode"
-      ]
-    },
-    {
-      "type": "memory",
-      "name": "Copilot TypeScript review rules",
-      "content": "Prefer explicit return types on exported TypeScript functions.",
-      "format": "markdown",
-      "applyTo": "src/**/*.{ts,tsx}",
-      "agentTargets": {
-        "copilot": {
-          "destination": ".github/instructions/copilot-typescript-review-rules.instructions.md",
-          "scope": "project",
-          "format": "markdown"
-        }
-      }
+      "format": "markdown"
     },
     {
       "type": "settings",
       "name": "Codex memories",
-      "content": "{\"features\":{\"memories\":true},\"memories\":{\"use_memories\":true}}",
-      "format": "toml",
-      "targets": [
-        "codex"
-      ]
+      "content": "{\"features\":{\"memories\":true}}",
+      "format": "toml"
     },
     {
       "type": "mcp",
