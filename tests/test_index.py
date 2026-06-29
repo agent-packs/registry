@@ -47,6 +47,24 @@ def manifest_skill_ids(manifest):
     return ids
 
 
+def manifest_direct_capability_count(manifest):
+    count = len(manifest.get("capabilities", []) or [])
+    for field in (
+        "skills",
+        "plugins",
+        "commands",
+        "hooks",
+        "subagents",
+        "prompts",
+        "templates",
+        "memory",
+        "settings",
+        "mcp",
+    ):
+        count += len(manifest.get(field, []) or [])
+    return count
+
+
 class IndexDriftTest(unittest.TestCase):
     """Guards that index.json stays in sync with packs/*.json."""
 
@@ -91,22 +109,15 @@ class IndexDriftTest(unittest.TestCase):
                     self.assertIn(entry.get("skills"), (None, []))
 
     def test_index_capability_count_matches_manifests(self):
-        # The index stores a capability COUNT, not the array. For packs with
-        # inline capabilities or direct skill/plugin refs, that count is the
-        # number of entries in the manifest. Composed packs (which use the
-        # `packs` field) derive their count from recursive expansion that the
-        # CLI performs, so they are covered by the full-regeneration guard
-        # below rather than a direct count comparison here.
+        # The index stores a capability COUNT, not the array. Direct refs and
+        # inline capabilities are both expanded by the CLI, while composed
+        # packs derive their count from recursive expansion and are covered by
+        # the full-regeneration guard below.
         for pack_id, manifest in self.manifests.items():
             if "packs" in manifest:
                 continue
             entry = self.index[pack_id]
-            if "capabilities" in manifest:
-                expected = len(manifest["capabilities"])
-            else:
-                expected = len(manifest.get("skills", []) or []) + len(
-                    manifest.get("plugins", []) or []
-                )
+            expected = manifest_direct_capability_count(manifest)
             with self.subTest(pack=pack_id):
                 self.assertEqual(
                     entry.get("capabilities"),

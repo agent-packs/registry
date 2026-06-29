@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T19:35:23.383762Z",
+  "generatedAt": "2026-06-29T00:38:27.468068Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -495,18 +495,27 @@
         "sandeshh"
       ],
       "stability": "experimental",
-      "lastVerified": "2026-06-05",
-      "reviewStatus": "reviewed",
+      "lastVerified": "2026-06-28",
+      "reviewStatus": "verified",
       "tags": [
         "engineering-leadership",
         "strategy",
         "planning",
         "quality",
         "architecture",
-        "delivery"
+        "delivery",
+        "launch-readiness",
+        "security",
+        "performance",
+        "operating-rhythm"
       ],
       "categories": [
-        "product"
+        "engineering",
+        "product",
+        "quality",
+        "reliability",
+        "security",
+        "documentation"
       ],
       "tools": [
         "codex",
@@ -530,10 +539,29 @@
         "eng-leader-workflows",
         "github-pr-inspection"
       ],
-      "capabilities": 10,
+      "capabilities": 20,
       "capabilityTypes": {
+        "mcp": 1,
+        "memory": 1,
         "plugin": 2,
-        "skill": 8
+        "prompt": 3,
+        "skill": 8,
+        "subagent": 1,
+        "template": 3,
+        "tool": 1
+      },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-06-28",
+          "notes": "Skills, Claude plugin wrappers, and portable managed capabilities validate and install through the supported target matrix."
+        },
+        "codex": {
+          "status": "partial",
+          "lastVerified": "2026-06-28",
+          "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable; Claude plugin wrappers are recorded but not natively installed for Codex."
+        }
       },
       "freshness": "fresh"
     },
