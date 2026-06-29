@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T05:24:35.985795Z",
+  "generatedAt": "2026-06-29T18:41:37.544054Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -59,8 +59,8 @@
         "sandeshh"
       ],
       "stability": "experimental",
-      "lastVerified": "2026-06-12",
-      "reviewStatus": "reviewed",
+      "lastVerified": "2026-06-29",
+      "reviewStatus": "verified",
       "tags": [
         "ai",
         "llm",
@@ -93,9 +93,26 @@
         "security-and-hardening",
         "source-driven-development"
       ],
-      "capabilities": 7,
+      "capabilities": 16,
       "capabilityTypes": {
-        "skill": 7
+        "memory": 1,
+        "prompt": 3,
+        "skill": 7,
+        "template": 4,
+        "tool": 1
+      },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "compatible",
+          "lastVerified": "2026-06-29",
+          "notes": "Agent Skills and portable managed capabilities are compatible; no Claude-specific plugin wrapper is required."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-06-29",
+          "notes": "Skills and portable managed AI prompts, templates, tools, and memory validate and install through dry-run planning."
+        }
       },
       "freshness": "fresh"
     },
@@ -540,16 +557,16 @@
         "eng-leader-workflows",
         "github-pr-inspection"
       ],
-      "capabilities": 22,
+      "capabilities": 30,
       "capabilityTypes": {
         "mcp": 1,
         "memory": 2,
         "plugin": 2,
-        "prompt": 3,
+        "prompt": 7,
         "skill": 9,
         "subagent": 1,
-        "template": 3,
-        "tool": 1
+        "template": 6,
+        "tool": 2
       },
       "trust": "community",
       "compatibility": {
@@ -670,8 +687,8 @@
         "sandeshh"
       ],
       "stability": "experimental",
-      "lastVerified": "2026-06-12",
-      "reviewStatus": "reviewed",
+      "lastVerified": "2026-06-29",
+      "reviewStatus": "verified",
       "tags": [
         "frontend",
         "ui",
@@ -703,10 +720,27 @@
       "plugins": [
         "browser-verification-workflow"
       ],
-      "capabilities": 7,
+      "capabilities": 15,
       "capabilityTypes": {
+        "memory": 1,
         "plugin": 1,
-        "skill": 6
+        "prompt": 4,
+        "skill": 6,
+        "template": 2,
+        "tool": 1
+      },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-06-29",
+          "notes": "Agent Skills, Claude plugin wrapper, and portable managed capabilities are supported."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-06-29",
+          "notes": "Skills, browser-verification plugin metadata, and portable managed frontend prompts/templates/tools validate and install through dry-run planning."
+        }
       },
       "freshness": "fresh"
     },

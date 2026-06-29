@@ -188,6 +188,40 @@
       "license": "Apache-2.0"
     },
     {
+      "type": "prompt",
+      "name": "Engineering operating cadence review",
+      "content": "Design or review the engineering operating cadence for this team or organization. Cover weekly delivery review, monthly engineering health review, quarterly planning, incident/postmortem loop, architecture review, escalation path, decision forums, metrics, and follow-up ownership. Identify missing rituals, redundant meetings, unclear decision rights, and the smallest cadence changes to try next.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Engineering org health review",
+      "content": "Review engineering org health. Assess ownership clarity, team topology, manager span, cognitive load, dependency drag, operational load, attrition risk, hiring gaps, succession risk, decision latency, and cross-functional trust. Separate observed signals from assumptions and end with leadership actions by owner/date.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "DORA metrics leadership review",
+      "content": "Interpret DORA delivery metrics as leadership signals, not scorekeeping. Review deployment frequency, lead time, change failure rate, and recovery time alongside team context, product risk, incident load, quality escapes, and psychological safety. Identify what the system is making hard and propose leadership-level interventions.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "upstreamSource": "https://dora.dev/research/"
+    },
+    {
+      "type": "prompt",
+      "name": "SPACE developer productivity review",
+      "content": "Run a SPACE developer productivity review. Assess satisfaction and well-being, performance, activity, communication and collaboration, and efficiency and flow. Avoid using any single metric as a productivity proxy. Identify missing evidence, top productivity risks, system improvements, and leadership decisions needed.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "upstreamSource": "https://queue.acm.org/detail.cfm?id=3454124"
+    },
+    {
       "type": "template",
       "name": "Architecture decision review brief",
       "content": "# Architecture Decision Review\n\n## Context\n\n## Decision Needed\n\n## Options Considered\n\n## Recommendation\n\n## Tradeoffs\n\n## Risks And Mitigations\n\n## Rollout / Reversibility\n\n## Owners And Dates\n",
@@ -212,9 +246,41 @@
       "license": "Apache-2.0"
     },
     {
+      "type": "template",
+      "name": "Executive engineering update",
+      "content": "# Executive Engineering Update\n\n## Business Outcome\n\n## Current Status\n\n## Customer Impact\n\n## Delivery Confidence\n\n## Top Risks\n\n## Decisions Needed\n\n## Leadership Asks\n\n## Next Milestones\n\n## Owner / Date Actions\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Quarterly engineering strategy memo",
+      "content": "# Quarterly Engineering Strategy\n\n## Mandate\n\n## Diagnosis\n\n## Strategic Options\n\n## Recommended Direction\n\n## Non-Goals\n\n## Investment Plan\n\n## Risks And Tradeoffs\n\n## Operating Cadence\n\n## Metrics And Review Triggers\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Org health review",
+      "content": "# Engineering Org Health Review\n\n## Ownership Map\n\n## Team Topology\n\n## Manager Span And Load\n\n## Dependency Hotspots\n\n## Operational Load\n\n## Hiring / Succession Risks\n\n## Team Health Signals\n\n## Leadership Actions\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
       "type": "tool",
       "name": "Engineering leadership review checklist",
       "content": "{\"name\":\"eng-leader-review-checklist\",\"description\":\"Portable checklist descriptor for engineering leadership reviews. Agent Packs records and copies this descriptor but does not execute it.\",\"inputs\":[\"initiative\",\"status\",\"risks\",\"decisions\"],\"outputs\":[\"summary\",\"risk_register\",\"decision_log\",\"action_items\"],\"nonExecuting\":true}",
+      "format": "json",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "tool",
+      "name": "Engineering leadership scorecard",
+      "content": "{\"name\":\"engineering-leadership-scorecard\",\"description\":\"Portable non-executing descriptor for reviewing engineering leadership health across delivery, quality, reliability, productivity, org health, and decision quality.\",\"dimensions\":[\"strategy\",\"delivery\",\"quality\",\"reliability\",\"security\",\"productivity\",\"org_health\",\"decision_rights\",\"operating_cadence\"],\"nonExecuting\":true}",
       "format": "json",
       "trust": "official",
       "license": "Apache-2.0"

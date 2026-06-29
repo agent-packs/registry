@@ -8,8 +8,21 @@
     "sandeshh"
   ],
   "stability": "experimental",
-  "lastVerified": "2026-06-12",
-  "reviewStatus": "reviewed",
+  "lastVerified": "2026-06-29",
+  "reviewStatus": "verified",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "verified",
+      "lastVerified": "2026-06-29",
+      "notes": "Skills, browser-verification plugin metadata, and portable managed frontend prompts/templates/tools validate and install through dry-run planning."
+    },
+    "claude-code": {
+      "status": "verified",
+      "lastVerified": "2026-06-29",
+      "notes": "Agent Skills, Claude plugin wrapper, and portable managed capabilities are supported."
+    }
+  },
   "tags": [
     "frontend",
     "ui",
@@ -28,6 +41,72 @@
   ],
   "plugins": [
     "browser-verification-workflow"
+  ],
+  "capabilities": [
+    {
+      "type": "memory",
+      "name": "Frontend engineer pack guidance",
+      "content": "Use the Frontend Engineer Pack to ship polished, accessible, responsive, and tested UI changes. Ask for the target user flow, design constraints, data states, interaction states, accessibility requirements, browser/device matrix, performance budget, and verification evidence. Always account for loading, empty, error, success, disabled, permission, mobile, keyboard, and reduced-motion states.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Frontend quality gate",
+      "content": "Review this frontend change before merge. Check loading, error, empty, success, permission, disabled, optimistic, offline, mobile, keyboard, screen reader, reduced-motion, and high-contrast states. Identify missing tests, visual regressions, performance risk, and design-system drift. End with merge readiness and owner/date follow-ups.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Design system fit review",
+      "content": "Review this UI against the product design system. Check component reuse, spacing, typography, tokens, color semantics, interaction patterns, density, responsive behavior, and whether custom styling is justified. Recommend simpler system-aligned alternatives where appropriate.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Accessibility before merge",
+      "content": "Run an accessibility before-merge review. Check semantic structure, labels, focus order, keyboard operation, visible focus, contrast, error messaging, dynamic announcements, target sizes, reduced motion, and screen reader naming. Prioritize blockers, then fixes that can follow shortly after launch.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Frontend performance budget review",
+      "content": "Review this frontend change against a performance budget. Check LCP, INP, CLS, bundle size, hydration cost, image strategy, network waterfalls, client/server boundaries, caching, and third-party scripts. Identify the highest-leverage fixes and what must be measured before release.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "UI implementation plan",
+      "content": "# UI Implementation Plan\n\n## User Flow\n\n## Component Boundaries\n\n## Data And State Model\n\n## Interaction States\n- Loading\n- Empty\n- Error\n- Success\n- Disabled\n- Permission\n\n## Responsive Behavior\n\n## Accessibility Requirements\n\n## Test Plan\n\n## Visual Verification\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Visual regression plan",
+      "content": "# Visual Regression Plan\n\n## Screens / Components\n\n## Viewports\n\n## Themes / Color Modes\n\n## Interaction States\n\n## Data Fixtures\n\n## Screenshot Matrix\n\n## Known Acceptable Diffs\n\n## Release Blockers\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "tool",
+      "name": "Frontend readiness checklist",
+      "content": "{\"name\":\"frontend-readiness-checklist\",\"description\":\"Portable non-executing descriptor for reviewing production frontend readiness.\",\"dimensions\":[\"states\",\"accessibility\",\"responsive\",\"design_system\",\"tests\",\"visual_regression\",\"performance\",\"browser_matrix\"],\"nonExecuting\":true}",
+      "format": "json",
+      "trust": "official",
+      "license": "Apache-2.0"
+    }
   ],
   "categories": [
     "frontend",

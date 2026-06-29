@@ -8,8 +8,21 @@
     "sandeshh"
   ],
   "stability": "experimental",
-  "lastVerified": "2026-06-12",
-  "reviewStatus": "reviewed",
+  "lastVerified": "2026-06-29",
+  "reviewStatus": "verified",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "verified",
+      "lastVerified": "2026-06-29",
+      "notes": "Skills and portable managed AI prompts, templates, tools, and memory validate and install through dry-run planning."
+    },
+    "claude-code": {
+      "status": "compatible",
+      "lastVerified": "2026-06-29",
+      "notes": "Agent Skills and portable managed capabilities are compatible; no Claude-specific plugin wrapper is required."
+    }
+  },
   "tags": [
     "ai",
     "llm",
@@ -26,6 +39,80 @@
     "observability-and-monitoring",
     "security-and-hardening",
     "source-driven-development"
+  ],
+  "capabilities": [
+    {
+      "type": "memory",
+      "name": "AI engineer pack guidance",
+      "content": "Use the AI Engineer Pack to move from AI feature idea to production-ready implementation. First clarify the user outcome, model behavior, safety boundary, data access, latency/cost target, evaluation plan, observability needs, and rollback path. Prefer evidence-backed plans with explicit failure modes, test data, acceptance criteria, and owner/date follow-ups.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "AI product requirements review",
+      "content": "Review this AI feature proposal. Identify the user job, model task, input/output contract, safety and privacy boundaries, tool/data access, expected failure modes, fallback behavior, latency/cost constraints, evaluation strategy, observability signals, and launch gates. End with decisions needed and owner/date actions.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Prompt change regression review",
+      "content": "Review this prompt or system-instruction change for behavior drift. Compare intended behavior, likely regressions, jailbreak or prompt-injection exposure, output-format stability, tool-use side effects, privacy risk, and missing eval cases. Recommend whether to merge, test more, or redesign.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Model selection review",
+      "content": "Evaluate model choices for this AI feature. Compare capability fit, latency, cost, reliability, privacy/data-retention constraints, tool support, streaming requirements, fallback strategy, and eval evidence. Recommend a primary model, fallback model, and launch monitoring plan.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "AI feature PRD",
+      "content": "# AI Feature PRD\n\n## User Outcome\n\n## Model Task\n\n## Inputs And Outputs\n\n## Data / Tool Access\n\n## Safety And Privacy Boundaries\n\n## Failure Modes\n\n## Evaluation Plan\n\n## Observability And Cost\n\n## Rollout / Fallback\n\n## Open Decisions\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "AI evaluation plan",
+      "content": "# AI Evaluation Plan\n\n## Target Behavior\n\n## Golden Dataset\n\n## Regression Cases\n\n## Safety / Abuse Cases\n\n## Human Review Rubric\n\n## Automated Metrics\n\n## Release Gates\n\n## Monitoring After Launch\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "AI observability checklist",
+      "content": "# AI Observability Checklist\n\n## Request Metadata\n\n## Prompt / Context Capture\n\n## Model And Tool Calls\n\n## Output Quality Signals\n\n## Safety Signals\n\n## Latency And Cost\n\n## User Feedback\n\n## Alerting And Dashboards\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "AI red-team test plan",
+      "content": "# AI Red-Team Test Plan\n\n## Prompt Injection\n\n## Jailbreak Attempts\n\n## Sensitive Data Exposure\n\n## Tool Misuse\n\n## Hallucination / Unsupported Claims\n\n## Harmful Or Policy-Violating Output\n\n## Mitigations\n\n## Launch Blockers\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "tool",
+      "name": "AI feature readiness scorecard",
+      "content": "{\"name\":\"ai-feature-readiness-scorecard\",\"description\":\"Portable non-executing descriptor for reviewing production AI feature readiness.\",\"dimensions\":[\"user_outcome\",\"model_behavior\",\"evals\",\"safety_privacy\",\"observability\",\"cost_latency\",\"fallback\",\"launch_gates\"],\"nonExecuting\":true}",
+      "format": "json",
+      "trust": "official",
+      "license": "Apache-2.0"
+    }
   ],
   "categories": [
     "ml",
