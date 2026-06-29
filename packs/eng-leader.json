@@ -23,6 +23,18 @@
       "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable; Claude plugin wrappers are recorded but not natively installed for Codex."
     }
   },
+  "useCases": [
+    "Create and review engineering strategy for a team, platform, migration, or multi-quarter investment.",
+    "Run weekly, monthly, and quarterly engineering operating reviews with clear owners and decisions.",
+    "Assess launch readiness, architecture tradeoffs, incident updates, and executive engineering communication.",
+    "Review engineering org health, productivity signals, ownership clarity, and leadership operating cadence."
+  ],
+  "examplePrompts": [
+    "Review this quarterly engineering strategy and tell me where the diagnosis, tradeoffs, or operating cadence are weak.",
+    "Run a weekly engineering leadership review for this initiative using delivery status, risks, decisions, and owner/date actions.",
+    "Create an executive engineering update for this launch, including customer impact, delivery confidence, top risks, and leadership asks.",
+    "Use DORA and SPACE as leadership signals to identify the highest-leverage system improvements for this team."
+  ],
   "tags": [
     "engineering-leadership",
     "strategy",

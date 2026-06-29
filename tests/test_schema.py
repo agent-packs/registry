@@ -75,7 +75,7 @@ def validate_pack(pack, schema):
     if isinstance(pack.get("id"), str) and not re.fullmatch(id_pattern, pack["id"]):
         errors.append("id does not match schema pattern")
 
-    for array_field in ("tags", "categories", "tools", "scope", "maintainers"):
+    for array_field in ("tags", "categories", "tools", "scope", "maintainers", "useCases", "examplePrompts"):
         if array_field in pack and isinstance(pack[array_field], list):
             for index, value in enumerate(pack[array_field]):
                 if not isinstance(value, str):

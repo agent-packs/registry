@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T18:41:37.544054Z",
+  "generatedAt": "2026-06-29T21:34:15.180072Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -61,6 +61,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-29",
       "reviewStatus": "verified",
+      "useCases": [
+        "Turn an AI feature idea into a production-ready requirements, evaluation, and rollout plan.",
+        "Review prompt and system-instruction changes for behavior drift, safety risk, and missing regression cases.",
+        "Compare model choices across capability, latency, cost, privacy, tool support, and fallback strategy.",
+        "Design observability, red-team testing, and release gates for AI-powered product features."
+      ],
+      "examplePrompts": [
+        "Review this AI feature proposal and produce a PRD, evaluation plan, failure modes, and launch gates.",
+        "Compare these model options for latency, cost, privacy, quality, fallback behavior, and eval evidence.",
+        "Review this prompt change for regressions, jailbreak exposure, output-format drift, and missing test cases.",
+        "Create an AI observability checklist for this feature, including traces, safety signals, user feedback, cost, and alerts."
+      ],
       "tags": [
         "ai",
         "llm",
@@ -514,6 +526,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-28",
       "reviewStatus": "verified",
+      "useCases": [
+        "Create and review engineering strategy for a team, platform, migration, or multi-quarter investment.",
+        "Run weekly, monthly, and quarterly engineering operating reviews with clear owners and decisions.",
+        "Assess launch readiness, architecture tradeoffs, incident updates, and executive engineering communication.",
+        "Review engineering org health, productivity signals, ownership clarity, and leadership operating cadence."
+      ],
+      "examplePrompts": [
+        "Review this quarterly engineering strategy and tell me where the diagnosis, tradeoffs, or operating cadence are weak.",
+        "Run a weekly engineering leadership review for this initiative using delivery status, risks, decisions, and owner/date actions.",
+        "Create an executive engineering update for this launch, including customer impact, delivery confidence, top risks, and leadership asks.",
+        "Use DORA and SPACE as leadership signals to identify the highest-leverage system improvements for this team."
+      ],
       "tags": [
         "engineering-leadership",
         "strategy",
@@ -689,6 +713,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-29",
       "reviewStatus": "verified",
+      "useCases": [
+        "Plan and implement polished frontend user flows with clear components, state models, and responsive behavior.",
+        "Run pre-merge quality gates across loading, empty, error, success, permission, mobile, and keyboard states.",
+        "Review UI changes for accessibility, design-system fit, visual regression risk, and performance budget impact.",
+        "Create browser verification and screenshot plans for production frontend releases."
+      ],
+      "examplePrompts": [
+        "Create a UI implementation plan for this feature, including component boundaries, state handling, responsive behavior, accessibility, and tests.",
+        "Run a frontend quality gate on this PR and call out missing states, accessibility blockers, visual regressions, and performance risks.",
+        "Review this UI against our design system and recommend where to reuse components, tokens, spacing, and interaction patterns.",
+        "Build a visual regression plan with viewport matrix, fixtures, interaction states, and release-blocking screenshot diffs."
+      ],
       "tags": [
         "frontend",
         "ui",

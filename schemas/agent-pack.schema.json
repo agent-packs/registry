@@ -72,6 +72,18 @@
     "requirements": {
       "$ref": "#/$defs/requirements"
     },
+    "useCases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "examplePrompts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "tags": {
       "type": "array",
       "items": {

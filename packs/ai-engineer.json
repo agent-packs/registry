@@ -23,6 +23,18 @@
       "notes": "Agent Skills and portable managed capabilities are compatible; no Claude-specific plugin wrapper is required."
     }
   },
+  "useCases": [
+    "Turn an AI feature idea into a production-ready requirements, evaluation, and rollout plan.",
+    "Review prompt and system-instruction changes for behavior drift, safety risk, and missing regression cases.",
+    "Compare model choices across capability, latency, cost, privacy, tool support, and fallback strategy.",
+    "Design observability, red-team testing, and release gates for AI-powered product features."
+  ],
+  "examplePrompts": [
+    "Review this AI feature proposal and produce a PRD, evaluation plan, failure modes, and launch gates.",
+    "Compare these model options for latency, cost, privacy, quality, fallback behavior, and eval evidence.",
+    "Review this prompt change for regressions, jailbreak exposure, output-format drift, and missing test cases.",
+    "Create an AI observability checklist for this feature, including traces, safety signals, user feedback, cost, and alerts."
+  ],
   "tags": [
     "ai",
     "llm",

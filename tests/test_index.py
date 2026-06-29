@@ -84,7 +84,7 @@ class IndexDriftTest(unittest.TestCase):
     def test_index_scalar_fields_match_manifests(self):
         for pack_id, manifest in self.manifests.items():
             entry = self.index[pack_id]
-            for field in ("version", "description", "reviewStatus", "lastVerified"):
+            for field in ("version", "description", "reviewStatus", "lastVerified", "useCases", "examplePrompts"):
                 with self.subTest(pack=pack_id, field=field):
                     self.assertEqual(
                         manifest.get(field),

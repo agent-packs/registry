@@ -23,6 +23,18 @@
       "notes": "Agent Skills, Claude plugin wrapper, and portable managed capabilities are supported."
     }
   },
+  "useCases": [
+    "Plan and implement polished frontend user flows with clear components, state models, and responsive behavior.",
+    "Run pre-merge quality gates across loading, empty, error, success, permission, mobile, and keyboard states.",
+    "Review UI changes for accessibility, design-system fit, visual regression risk, and performance budget impact.",
+    "Create browser verification and screenshot plans for production frontend releases."
+  ],
+  "examplePrompts": [
+    "Create a UI implementation plan for this feature, including component boundaries, state handling, responsive behavior, accessibility, and tests.",
+    "Run a frontend quality gate on this PR and call out missing states, accessibility blockers, visual regressions, and performance risks.",
+    "Review this UI against our design system and recommend where to reuse components, tokens, spacing, and interaction patterns.",
+    "Build a visual regression plan with viewport matrix, fixtures, interaction states, and release-blocking screenshot diffs."
+  ],
   "tags": [
     "frontend",
     "ui",
