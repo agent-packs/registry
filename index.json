@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T05:21:58.523993Z",
+  "generatedAt": "2026-06-29T05:22:37.609542Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -540,10 +540,10 @@
         "eng-leader-workflows",
         "github-pr-inspection"
       ],
-      "capabilities": 21,
+      "capabilities": 22,
       "capabilityTypes": {
         "mcp": 1,
-        "memory": 1,
+        "memory": 2,
         "plugin": 2,
         "prompt": 3,
         "skill": 9,
