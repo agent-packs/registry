@@ -29,6 +29,14 @@
       "claude-code": ">=0.0.0"
     }
   },
+  "useCases": [
+    "Review a full-stack pull request for quality, security, and release risk.",
+    "Generate a concise PR report with findings, risks, and follow-up owners."
+  ],
+  "examplePrompts": [
+    "Review this pull request and summarize merge blockers, quality risks, and required follow-ups.",
+    "Create a full-stack release readiness report for this branch."
+  ],
   "tags": [
     "review",
     "full-stack",
