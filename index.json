@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T00:38:27.468068Z",
+  "generatedAt": "2026-06-29T02:40:11.505378Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -526,6 +526,7 @@
         "project"
       ],
       "skills": [
+        "crafting-engineering-strategy",
         "eng-leader-strategy",
         "eng-leader-planning",
         "eng-leader-quality-review",
@@ -539,13 +540,13 @@
         "eng-leader-workflows",
         "github-pr-inspection"
       ],
-      "capabilities": 20,
+      "capabilities": 21,
       "capabilityTypes": {
         "mcp": 1,
         "memory": 1,
         "plugin": 2,
         "prompt": 3,
-        "skill": 8,
+        "skill": 9,
         "subagent": 1,
         "template": 3,
         "tool": 1
