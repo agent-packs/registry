@@ -8,87 +8,112 @@
     "sandeshh"
   ],
   "stability": "experimental",
-  "lastVerified": "2026-06-05",
-  "reviewStatus": "reviewed",
+  "lastVerified": "2026-06-28",
+  "reviewStatus": "verified",
+  "trust": "community",
+  "compatibility": {
+    "claude-code": {
+      "status": "verified",
+      "lastVerified": "2026-06-28",
+      "notes": "Skills, Claude plugin wrappers, and portable managed capabilities validate and install through the supported target matrix."
+    },
+    "codex": {
+      "status": "partial",
+      "lastVerified": "2026-06-28",
+      "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable; Claude plugin wrappers are recorded but not natively installed for Codex."
+    }
+  },
   "tags": [
     "engineering-leadership",
     "strategy",
     "planning",
     "quality",
     "architecture",
-    "delivery"
+    "delivery",
+    "launch-readiness",
+    "security",
+    "performance",
+    "operating-rhythm"
   ],
   "skills": [
     {
       "id": "eng-leader-strategy",
       "name": "Engineering leader strategy",
-      "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/spec-driven-development",
+      "source": "https://github.com/addyosmani/agent-skills/tree/aba7c4e9695c363e65cb59effe926c7f1d1abe3d/skills/spec-driven-development",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "community",
+      "license": "MIT",
       "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-planning",
       "name": "Engineering leader planning",
-      "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/planning-and-task-breakdown",
+      "source": "https://github.com/addyosmani/agent-skills/tree/aba7c4e9695c363e65cb59effe926c7f1d1abe3d/skills/planning-and-task-breakdown",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "community",
+      "license": "MIT",
       "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-quality-review",
       "name": "Engineering leader quality review",
-      "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/code-review-and-quality",
+      "source": "https://github.com/addyosmani/agent-skills/tree/aba7c4e9695c363e65cb59effe926c7f1d1abe3d/skills/code-review-and-quality",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "community",
+      "license": "MIT",
       "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-architecture-adrs",
       "name": "Engineering leader architecture ADRs",
-      "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/documentation-and-adrs",
+      "source": "https://github.com/addyosmani/agent-skills/tree/aba7c4e9695c363e65cb59effe926c7f1d1abe3d/skills/documentation-and-adrs",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "community",
+      "license": "MIT",
       "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-delivery-ops",
       "name": "Engineering leader delivery ops",
-      "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/ci-cd-and-automation",
+      "source": "https://github.com/addyosmani/agent-skills/tree/aba7c4e9695c363e65cb59effe926c7f1d1abe3d/skills/ci-cd-and-automation",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "community",
+      "license": "MIT",
       "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-launch-readiness",
       "name": "Engineering leader launch readiness",
-      "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/shipping-and-launch",
+      "source": "https://github.com/addyosmani/agent-skills/tree/aba7c4e9695c363e65cb59effe926c7f1d1abe3d/skills/shipping-and-launch",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "community",
+      "license": "MIT",
       "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-security-risk",
       "name": "Engineering leader security risk",
-      "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/security-and-hardening",
+      "source": "https://github.com/addyosmani/agent-skills/tree/aba7c4e9695c363e65cb59effe926c7f1d1abe3d/skills/security-and-hardening",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "community",
+      "license": "MIT",
       "repository": "https://github.com/addyosmani/agent-skills"
     },
     {
       "id": "eng-leader-performance-health",
       "name": "Engineering leader performance health",
-      "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/performance-optimization",
+      "source": "https://github.com/addyosmani/agent-skills/tree/aba7c4e9695c363e65cb59effe926c7f1d1abe3d/skills/performance-optimization",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "community",
+      "license": "MIT",
       "repository": "https://github.com/addyosmani/agent-skills"
     }
   ],
@@ -99,7 +124,8 @@
       "source": "https://github.com/agent-packs/registry/tree/main/plugins/eng-leader-workflows",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
-      "trust": "official"
+      "trust": "official",
+      "license": "Apache-2.0"
     },
     {
       "id": "github-pr-inspection",
@@ -107,11 +133,106 @@
       "source": "https://github.com/agent-packs/registry/tree/main/plugins/github-pr-inspection",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
-      "trust": "official"
+      "trust": "official",
+      "license": "Apache-2.0"
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "memory",
+      "name": "Engineering leadership operating principles",
+      "content": "Use this pack to help engineering leaders make high-leverage decisions. Optimize for clear strategy, explicit tradeoffs, measurable delivery health, pragmatic quality gates, launch readiness, security risk visibility, and sustainable team execution. When reviewing work, separate facts, risks, decisions, owners, and follow-up dates.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "subagent",
+      "name": "Engineering leadership reviewer",
+      "content": "You are an engineering leadership reviewer. Evaluate initiatives through strategy, customer impact, delivery confidence, architecture tradeoffs, quality gates, security/privacy exposure, performance health, operational readiness, staffing constraints, and stakeholder alignment. Prefer concise findings, explicit assumptions, clear owner/date actions, and practical next steps over generic advice.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Weekly engineering leadership review",
+      "content": "Run a weekly engineering leadership review. Summarize delivery status, top risks, blocked decisions, customer impact, operational health, security exposure, hiring or staffing constraints, and the next seven days of leadership actions. End with an owner/date action table.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Cross-functional escalation review",
+      "content": "Prepare a concise escalation review for a project at risk. Identify the decision needed, why it matters now, options considered, recommended path, blast radius, required stakeholders, and the smallest reversible next step.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Launch pre-mortem risk review",
+      "content": "Run a launch pre-mortem. Assume the launch failed 30 days after release. Identify the most plausible failure modes across customer value, reliability, security/privacy, performance, support burden, rollout controls, observability, and ownership. Rank risks by likelihood and impact, then propose mitigations and go/no-go gates.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Architecture decision review brief",
+      "content": "# Architecture Decision Review\n\n## Context\n\n## Decision Needed\n\n## Options Considered\n\n## Recommendation\n\n## Tradeoffs\n\n## Risks And Mitigations\n\n## Rollout / Reversibility\n\n## Owners And Dates\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Launch readiness checklist",
+      "content": "# Launch Readiness\n\n## Scope\n\n## Customer Impact\n\n## Quality Gates\n- Tests\n- Observability\n- Rollback\n- Documentation\n\n## Security And Privacy Review\n\n## Operational Readiness\n\n## Open Risks\n\n## Go / No-Go Decision\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Incident leadership update",
+      "content": "# Incident Leadership Update\n\n## Current Status\n\n## Customer Impact\n\n## Timeline\n\n## Root Cause / Leading Hypothesis\n\n## Mitigation Status\n\n## Operational Risk\n\n## Customer / Executive Comms\n\n## Follow-Up Owners And Dates\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "tool",
+      "name": "Engineering leadership review checklist",
+      "content": "{\"name\":\"eng-leader-review-checklist\",\"description\":\"Portable checklist descriptor for engineering leadership reviews. Agent Packs records and copies this descriptor but does not execute it.\",\"inputs\":[\"initiative\",\"status\",\"risks\",\"decisions\"],\"outputs\":[\"summary\",\"risk_register\",\"decision_log\",\"action_items\"],\"nonExecuting\":true}",
+      "format": "json",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "mcp",
+      "name": "GitHub context MCP metadata",
+      "serverName": "github",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "trust": "community",
+      "license": "Apache-2.0"
     }
   ],
   "categories": [
-    "product"
+    "engineering",
+    "product",
+    "quality",
+    "reliability",
+    "security",
+    "documentation"
   ],
   "tools": [
     "codex",
