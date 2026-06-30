@@ -10,6 +10,18 @@
   "stability": "experimental",
   "lastVerified": "2026-06-16",
   "reviewStatus": "reviewed",
+  "useCases": [
+    "Profile application hot paths and prioritize measurable performance fixes.",
+    "Design load, stress, and regression tests tied to service-level objectives.",
+    "Investigate web or backend latency regressions using traces, metrics, logs, and benchmarks.",
+    "Review performance-sensitive changes for resource use, caching, concurrency, and release risk."
+  ],
+  "examplePrompts": [
+    "Profile this performance issue and identify the highest-impact code, query, or caching fixes.",
+    "Design a load test plan with traffic model, metrics, thresholds, fixtures, and failure criteria.",
+    "Investigate this latency regression using available traces, metrics, logs, and recent changes.",
+    "Review this change for performance risk, including memory, CPU, I/O, caching, and concurrency."
+  ],
   "tags": [
     "performance",
     "profiling",

@@ -10,6 +10,18 @@
   "stability": "experimental",
   "lastVerified": "2026-06-12",
   "reviewStatus": "reviewed",
+  "useCases": [
+    "Implement backend service features with clear API contracts, data models, tests, and observability.",
+    "Review service changes for reliability, security, migration risk, and rollback readiness.",
+    "Debug production backend issues across logs, traces, metrics, queues, and database behavior.",
+    "Plan incremental refactors that improve service boundaries without broadening the change."
+  ],
+  "examplePrompts": [
+    "Implement this backend feature with API contract updates, persistence changes, tests, and observability.",
+    "Review this service change for reliability, security, migration risk, and missing test coverage.",
+    "Debug this backend incident using the available logs, traces, metrics, and recent deploy history.",
+    "Create a safe refactor plan for this backend module, including compatibility, rollout, and rollback."
+  ],
   "tags": [
     "backend",
     "api",

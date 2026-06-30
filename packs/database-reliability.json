@@ -10,6 +10,18 @@
   "stability": "experimental",
   "lastVerified": "2026-06-14",
   "reviewStatus": "reviewed",
+  "useCases": [
+    "Diagnose slow queries, lock contention, connection pool pressure, and replication lag.",
+    "Plan database migrations with backfill strategy, validation, rollback, and operational guardrails.",
+    "Review schema and index changes for reliability, performance, safety, and application impact.",
+    "Prepare backup, restore, failover, and observability runbooks for production databases."
+  ],
+  "examplePrompts": [
+    "Analyze this database performance issue and propose measured fixes for queries, indexes, or pools.",
+    "Create a safe migration plan with backfill steps, validation queries, rollout, and rollback.",
+    "Review this schema or index change for locking, data correctness, performance, and deploy risk.",
+    "Draft a database recovery runbook covering backup checks, restore steps, failover, and alerts."
+  ],
   "tags": [
     "database",
     "dba",

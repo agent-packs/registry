@@ -10,6 +10,18 @@
   "stability": "experimental",
   "lastVerified": "2026-06-16",
   "reviewStatus": "reviewed",
+  "useCases": [
+    "Create source-grounded docs for APIs, systems, workflows, and onboarding.",
+    "Turn codebase archaeology into concise architecture notes, diagrams, and ADRs.",
+    "Review technical docs for accuracy, audience fit, completeness, and maintenance risk.",
+    "Prepare agent-friendly prompts, runbooks, and references for Codex and Claude Code users."
+  ],
+  "examplePrompts": [
+    "Write source-grounded documentation for this feature, including behavior, configuration, and examples.",
+    "Create an ADR for this design decision with context, options, tradeoffs, and consequences.",
+    "Review these docs for technical accuracy, missing prerequisites, unclear steps, and stale claims.",
+    "Turn this codebase area into an onboarding guide with key files, flows, commands, and gotchas."
+  ],
   "tags": [
     "documentation",
     "technical-writing",

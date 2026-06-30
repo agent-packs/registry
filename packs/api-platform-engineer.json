@@ -10,6 +10,18 @@
   "stability": "experimental",
   "lastVerified": "2026-06-16",
   "reviewStatus": "reviewed",
+  "useCases": [
+    "Design REST or GraphQL APIs with stable contracts, versioning, validation, and clear ownership.",
+    "Implement platform API changes with contract tests, compatibility checks, and observability.",
+    "Review API migrations for breaking changes, client impact, security, and rollout readiness.",
+    "Create source-grounded docs and examples for local coding agents consuming internal APIs."
+  ],
+  "examplePrompts": [
+    "Design this API contract with endpoints or schema, validation rules, errors, versioning, and tests.",
+    "Implement this API platform change with contract tests, compatibility checks, and telemetry.",
+    "Review this API migration for breaking changes, client impact, auth gaps, and rollout risks.",
+    "Write concise API usage docs and examples grounded in the current implementation and tests."
+  ],
   "tags": [
     "api",
     "graphql",

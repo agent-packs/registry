@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T16:45:21.153544Z",
+  "generatedAt": "2026-06-30T17:21:38.39703Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -139,6 +139,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-16",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Design REST or GraphQL APIs with stable contracts, versioning, validation, and clear ownership.",
+        "Implement platform API changes with contract tests, compatibility checks, and observability.",
+        "Review API migrations for breaking changes, client impact, security, and rollout readiness.",
+        "Create source-grounded docs and examples for local coding agents consuming internal APIs."
+      ],
+      "examplePrompts": [
+        "Design this API contract with endpoints or schema, validation rules, errors, versioning, and tests.",
+        "Implement this API platform change with contract tests, compatibility checks, and telemetry.",
+        "Review this API migration for breaking changes, client impact, auth gaps, and rollout risks.",
+        "Write concise API usage docs and examples grounded in the current implementation and tests."
+      ],
       "tags": [
         "api",
         "graphql",
@@ -188,6 +200,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Implement backend service features with clear API contracts, data models, tests, and observability.",
+        "Review service changes for reliability, security, migration risk, and rollback readiness.",
+        "Debug production backend issues across logs, traces, metrics, queues, and database behavior.",
+        "Plan incremental refactors that improve service boundaries without broadening the change."
+      ],
+      "examplePrompts": [
+        "Implement this backend feature with API contract updates, persistence changes, tests, and observability.",
+        "Review this service change for reliability, security, migration risk, and missing test coverage.",
+        "Debug this backend incident using the available logs, traces, metrics, and recent deploy history.",
+        "Create a safe refactor plan for this backend module, including compatibility, rollout, and rollback."
+      ],
       "tags": [
         "backend",
         "api",
@@ -380,6 +404,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-14",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Diagnose slow queries, lock contention, connection pool pressure, and replication lag.",
+        "Plan database migrations with backfill strategy, validation, rollback, and operational guardrails.",
+        "Review schema and index changes for reliability, performance, safety, and application impact.",
+        "Prepare backup, restore, failover, and observability runbooks for production databases."
+      ],
+      "examplePrompts": [
+        "Analyze this database performance issue and propose measured fixes for queries, indexes, or pools.",
+        "Create a safe migration plan with backfill steps, validation queries, rollout, and rollback.",
+        "Review this schema or index change for locking, data correctness, performance, and deploy risk.",
+        "Draft a database recovery runbook covering backup checks, restore steps, failover, and alerts."
+      ],
       "tags": [
         "database",
         "dba",
@@ -1229,6 +1265,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-16",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Profile application hot paths and prioritize measurable performance fixes.",
+        "Design load, stress, and regression tests tied to service-level objectives.",
+        "Investigate web or backend latency regressions using traces, metrics, logs, and benchmarks.",
+        "Review performance-sensitive changes for resource use, caching, concurrency, and release risk."
+      ],
+      "examplePrompts": [
+        "Profile this performance issue and identify the highest-impact code, query, or caching fixes.",
+        "Design a load test plan with traffic model, metrics, thresholds, fixtures, and failure criteria.",
+        "Investigate this latency regression using available traces, metrics, logs, and recent changes.",
+        "Review this change for performance risk, including memory, CPU, I/O, caching, and concurrency."
+      ],
       "tags": [
         "performance",
         "profiling",
@@ -1276,6 +1324,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Build and maintain CI/CD, infrastructure, and developer tooling for local coding-agent workflows.",
+        "Review platform changes for reliability, security, cost, operability, and rollback readiness.",
+        "Create observability, alerting, and runbook improvements for services and shared infrastructure.",
+        "Plan migrations across monorepos, build systems, containers, and infrastructure-as-code."
+      ],
+      "examplePrompts": [
+        "Improve this CI/CD pipeline with faster feedback, stronger quality gates, and clear failure output.",
+        "Review this infrastructure change for security, reliability, cost, drift, and rollback risk.",
+        "Create an observability and alerting plan for this service, including dashboards and runbooks.",
+        "Plan this platform migration with dependency mapping, rollout phases, validation, and fallback."
+      ],
       "tags": [
         "platform",
         "infrastructure",
@@ -2256,6 +2316,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-16",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Create source-grounded docs for APIs, systems, workflows, and onboarding.",
+        "Turn codebase archaeology into concise architecture notes, diagrams, and ADRs.",
+        "Review technical docs for accuracy, audience fit, completeness, and maintenance risk.",
+        "Prepare agent-friendly prompts, runbooks, and references for Codex and Claude Code users."
+      ],
+      "examplePrompts": [
+        "Write source-grounded documentation for this feature, including behavior, configuration, and examples.",
+        "Create an ADR for this design decision with context, options, tradeoffs, and consequences.",
+        "Review these docs for technical accuracy, missing prerequisites, unclear steps, and stale claims.",
+        "Turn this codebase area into an onboarding guide with key files, flows, commands, and gotchas."
+      ],
       "tags": [
         "documentation",
         "technical-writing",
