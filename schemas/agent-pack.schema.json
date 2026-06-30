@@ -343,31 +343,6 @@
       "allOf": [
         {
           "if": {
-            "not": {
-              "properties": {
-                "type": {
-                  "enum": [
-                    "memory",
-                    "settings",
-                    "mcp",
-                    "command",
-                    "hook"
-                  ]
-                }
-              },
-              "required": [
-                "type"
-              ]
-            }
-          },
-          "then": {
-            "required": [
-              "source"
-            ]
-          }
-        },
-        {
-          "if": {
             "properties": {
               "type": {
                 "enum": [
