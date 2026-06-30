@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T02:16:15.140652Z",
+  "generatedAt": "2026-06-30T16:45:21.153544Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -791,6 +791,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Verify frontend changes across responsive layouts, browser behavior, interaction states, and visual polish before merge.",
+        "Audit accessibility coverage for keyboard flows, labels, focus order, contrast, motion, and screen reader behavior.",
+        "Use browser evidence and screenshots to catch regressions that unit tests or static review would miss.",
+        "Review performance risks in user-facing flows, including loading paths, bundle impact, rendering cost, and perceived speed."
+      ],
+      "examplePrompts": [
+        "Run a frontend quality review for this change, covering responsive states, interaction states, accessibility, and visual regressions.",
+        "Audit this UI for accessibility issues and propose the smallest fixes for keyboard, focus, labels, contrast, and semantics.",
+        "Create a browser verification plan with viewports, test data, screenshots, console checks, and release-blocking failures.",
+        "Review this frontend flow for performance risk, including bundle impact, rendering bottlenecks, loading UX, and measurement steps."
+      ],
       "tags": [
         "frontend",
         "browser",
@@ -961,6 +973,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Load project context and constraints before changing code so local agents follow the existing architecture.",
+        "Design stable APIs and module boundaries before implementation work crosses package or service seams.",
+        "Deliver features in small, test-backed increments that stay reviewable and easy to roll back.",
+        "Coordinate monorepo changes across packages, dependencies, build targets, and focused validation commands."
+      ],
+      "examplePrompts": [
+        "Read the relevant project context, identify existing patterns, then propose the smallest implementation plan for this change.",
+        "Design the API or interface for this feature, including types, error behavior, compatibility, and migration concerns.",
+        "Implement this feature incrementally with focused tests after each slice and avoid unrelated refactors.",
+        "Map the monorepo impact of this change, including affected packages, dependency edges, commands to run, and review risks."
+      ],
       "tags": [
         "implementation",
         "testing",
@@ -1553,6 +1577,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Turn ambiguous product ideas into crisp problem statements, users, goals, and non-goals before coding starts.",
+        "Prepare implementation-ready specs with scope, acceptance criteria, edge cases, and open questions for local agents.",
+        "Compare solution options and trade-offs so Codex or Claude Code can pursue the smallest valuable path.",
+        "Break discovery notes into sequenced engineering tasks that preserve product intent across implementation."
+      ],
+      "examplePrompts": [
+        "Interview me about this feature idea, then produce a concise problem statement, target users, goals, non-goals, and risks.",
+        "Turn these notes into an implementation-ready spec with acceptance criteria, edge cases, dependencies, and open questions.",
+        "Compare three viable solution approaches for this product problem and recommend the smallest useful first release.",
+        "Create a coding-agent task plan from this discovery brief, keeping scope tight and preserving unresolved product decisions."
+      ],
       "tags": [
         "product",
         "discovery",
@@ -1848,6 +1884,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Prepare release-ready branches with clean commits, clear PR summaries, and scoped review evidence.",
+        "Set up or repair CI/CD quality gates so tests, builds, linting, and deployment checks reflect real release risk.",
+        "Plan launches with rollout steps, observability, rollback, owner follow-ups, and customer-facing documentation.",
+        "Manage migrations and deprecations with compatibility windows, communication plans, and durable ADRs."
+      ],
+      "examplePrompts": [
+        "Prepare this branch for release: inspect git status, summarize changes, identify missing checks, and draft a PR description.",
+        "Review our CI/CD setup for this project and recommend the smallest quality gates needed before deployment.",
+        "Create a launch checklist for this feature with rollout, monitoring, rollback, documentation, owners, and post-launch follow-up.",
+        "Plan this migration or deprecation with compatibility risks, user communication, implementation phases, and an ADR outline."
+      ],
       "tags": [
         "release",
         "ci-cd",

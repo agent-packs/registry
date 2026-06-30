@@ -10,6 +10,18 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "useCases": [
+    "Turn ambiguous product ideas into crisp problem statements, users, goals, and non-goals before coding starts.",
+    "Prepare implementation-ready specs with scope, acceptance criteria, edge cases, and open questions for local agents.",
+    "Compare solution options and trade-offs so Codex or Claude Code can pursue the smallest valuable path.",
+    "Break discovery notes into sequenced engineering tasks that preserve product intent across implementation."
+  ],
+  "examplePrompts": [
+    "Interview me about this feature idea, then produce a concise problem statement, target users, goals, non-goals, and risks.",
+    "Turn these notes into an implementation-ready spec with acceptance criteria, edge cases, dependencies, and open questions.",
+    "Compare three viable solution approaches for this product problem and recommend the smallest useful first release.",
+    "Create a coding-agent task plan from this discovery brief, keeping scope tight and preserving unresolved product decisions."
+  ],
   "tags": [
     "product",
     "discovery",

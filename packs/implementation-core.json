@@ -10,6 +10,18 @@
   "stability": "experimental",
   "lastVerified": "2026-06-12",
   "reviewStatus": "reviewed",
+  "useCases": [
+    "Load project context and constraints before changing code so local agents follow the existing architecture.",
+    "Design stable APIs and module boundaries before implementation work crosses package or service seams.",
+    "Deliver features in small, test-backed increments that stay reviewable and easy to roll back.",
+    "Coordinate monorepo changes across packages, dependencies, build targets, and focused validation commands."
+  ],
+  "examplePrompts": [
+    "Read the relevant project context, identify existing patterns, then propose the smallest implementation plan for this change.",
+    "Design the API or interface for this feature, including types, error behavior, compatibility, and migration concerns.",
+    "Implement this feature incrementally with focused tests after each slice and avoid unrelated refactors.",
+    "Map the monorepo impact of this change, including affected packages, dependency edges, commands to run, and review risks."
+  ],
   "tags": [
     "implementation",
     "testing",

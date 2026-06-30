@@ -10,6 +10,18 @@
   "stability": "experimental",
   "lastVerified": "2026-06-12",
   "reviewStatus": "reviewed",
+  "useCases": [
+    "Verify frontend changes across responsive layouts, browser behavior, interaction states, and visual polish before merge.",
+    "Audit accessibility coverage for keyboard flows, labels, focus order, contrast, motion, and screen reader behavior.",
+    "Use browser evidence and screenshots to catch regressions that unit tests or static review would miss.",
+    "Review performance risks in user-facing flows, including loading paths, bundle impact, rendering cost, and perceived speed."
+  ],
+  "examplePrompts": [
+    "Run a frontend quality review for this change, covering responsive states, interaction states, accessibility, and visual regressions.",
+    "Audit this UI for accessibility issues and propose the smallest fixes for keyboard, focus, labels, contrast, and semantics.",
+    "Create a browser verification plan with viewports, test data, screenshots, console checks, and release-blocking failures.",
+    "Review this frontend flow for performance risk, including bundle impact, rendering bottlenecks, loading UX, and measurement steps."
+  ],
   "tags": [
     "frontend",
     "browser",
