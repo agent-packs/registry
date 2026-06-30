@@ -10,6 +10,31 @@
   "stability": "experimental",
   "lastVerified": "2026-06-12",
   "reviewStatus": "reviewed",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "compatible",
+      "lastVerified": "2026-06-29",
+      "notes": "Debugging, doubt-driven development, observability skills, and portable managed reliability prompts/templates/tools validate for Codex and local coding-agent workflows."
+    },
+    "claude-code": {
+      "status": "compatible",
+      "lastVerified": "2026-06-29",
+      "notes": "Agent Skills and portable managed reliability capabilities are compatible for Claude Code users."
+    }
+  },
+  "useCases": [
+    "Investigate production-like failures with hypotheses, evidence, repro steps, and targeted fixes.",
+    "Strengthen brittle code paths using tests, observability, defensive handling, and clear rollback plans.",
+    "Review risky changes for hidden assumptions, incident potential, monitoring gaps, and missing failure-mode coverage.",
+    "Help local coding agents debug methodically without masking symptoms or over-scoping the repair."
+  ],
+  "examplePrompts": [
+    "Debug this failure using a hypothesis-driven approach. Identify evidence, likely root cause, fix plan, and verification steps.",
+    "Review this change for reliability risks, missing observability, weak tests, and assumptions that could fail in production.",
+    "Create a minimal repro and test plan for this bug, then propose the smallest durable fix.",
+    "Turn this incident note into follow-up engineering work with owners, monitoring improvements, and regression tests."
+  ],
   "tags": [
     "debugging",
     "reliability",
@@ -22,6 +47,40 @@
     "doubt-driven-development",
     "security-and-hardening",
     "observability-and-monitoring"
+  ],
+  "capabilities": [
+    {
+      "type": "memory",
+      "name": "Reliability debugging pack guidance",
+      "content": "Use the Reliability Debugging Pack to help local coding agents debug with evidence instead of guesswork. Preserve the failing signal, form hypotheses, build the smallest repro, add regression tests, improve observability, and choose the smallest durable fix with rollback in mind.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Hypothesis-driven debugging",
+      "content": "Debug this failure using a hypothesis-driven workflow. State symptoms, known facts, unknowns, likely causes, evidence to collect, minimal repro, fix options, regression tests, observability improvements, and rollback plan. Avoid broad rewrites unless evidence demands them.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Debugging investigation brief",
+      "content": "# Debugging Investigation\n\n## Symptom\n\n## Impact\n\n## Known Facts\n\n## Hypotheses\n\n## Evidence Collected\n\n## Minimal Repro\n\n## Root Cause\n\n## Fix Plan\n\n## Regression Tests\n\n## Observability / Rollback\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "tool",
+      "name": "Reliability fix scorecard",
+      "content": "{\"name\":\"reliability-fix-scorecard\",\"description\":\"Portable non-executing descriptor for reviewing reliability fixes before merge.\",\"dimensions\":[\"symptom_preserved\",\"root_cause_evidence\",\"minimal_repro\",\"regression_tests\",\"observability\",\"blast_radius\",\"rollback\",\"durable_fix\"],\"nonExecuting\":true}",
+      "format": "json",
+      "trust": "official",
+      "license": "Apache-2.0"
+    }
   ],
   "categories": [
     "reliability",

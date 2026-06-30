@@ -15,12 +15,12 @@
     "claude-code": {
       "status": "verified",
       "lastVerified": "2026-06-28",
-      "notes": "Skills, Claude plugin wrappers, and portable managed capabilities validate and install through the supported target matrix."
+      "notes": "Skills, Claude plugin wrappers, and portable managed leadership capabilities validate and install through the supported target matrix."
     },
     "codex": {
       "status": "partial",
       "lastVerified": "2026-06-28",
-      "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable; Claude plugin wrappers are recorded but not natively installed for Codex."
+      "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable for Codex and local coding-agent planning; Claude plugin wrappers are recorded but not natively installed for Codex."
     }
   },
   "useCases": [

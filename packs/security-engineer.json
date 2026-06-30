@@ -10,6 +10,31 @@
   "stability": "experimental",
   "lastVerified": "2026-06-14",
   "reviewStatus": "reviewed",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "compatible",
+      "lastVerified": "2026-06-29",
+      "notes": "Security skills and portable managed threat-modeling prompts/templates/tools validate for Codex and local coding-agent workflows."
+    },
+    "claude-code": {
+      "status": "compatible",
+      "lastVerified": "2026-06-29",
+      "notes": "Agent Skills and portable managed security capabilities are compatible for Claude Code users."
+    }
+  },
+  "useCases": [
+    "Review application changes for threat-model gaps, unsafe input handling, secrets exposure, and dependency risk.",
+    "Create secure design guidance for APIs, auth flows, data access, logging, and operational controls.",
+    "Triage vulnerabilities with severity, exploitability, compensating controls, and owner/date remediation steps.",
+    "Help local coding agents apply security hardening without broadening the change beyond the risk being fixed."
+  ],
+  "examplePrompts": [
+    "Review this code change for application security risks, OWASP issues, secrets exposure, and missing tests.",
+    "Create a threat model for this feature, including assets, trust boundaries, abuse cases, mitigations, and open decisions.",
+    "Triage these dependency or scanner findings and separate urgent fixes from accepted or deferred risk.",
+    "Design a secure implementation plan for this API, covering auth, authorization, validation, logging, and rollback."
+  ],
   "tags": [
     "security",
     "appsec",
@@ -27,6 +52,40 @@
     "observability-and-monitoring",
     "code-review-and-quality",
     "documentation-and-adrs"
+  ],
+  "capabilities": [
+    {
+      "type": "memory",
+      "name": "Security engineer pack guidance",
+      "content": "Use the Security Engineer Pack to help local coding agents find and fix concrete application security risk. Focus on trust boundaries, authn/authz, input validation, secrets, dependency risk, logging, data exposure, operational controls, and tests that prove the mitigation.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Application security review",
+      "content": "Review this change for application security risk. Check authn/authz, input validation, injection, SSRF, XSS, CSRF, secrets exposure, unsafe logging, dependency risk, data access, privacy exposure, and missing tests. Prioritize exploitable findings and smallest safe fixes.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Threat model brief",
+      "content": "# Threat Model Brief\n\n## Feature / System\n\n## Assets\n\n## Trust Boundaries\n\n## Actors And Abuse Cases\n\n## Entry Points\n\n## Key Risks\n\n## Mitigations\n\n## Security Tests\n\n## Open Decisions\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "tool",
+      "name": "Security review scorecard",
+      "content": "{\"name\":\"security-review-scorecard\",\"description\":\"Portable non-executing descriptor for application security review readiness.\",\"dimensions\":[\"authn_authz\",\"input_validation\",\"injection\",\"secrets\",\"dependencies\",\"data_exposure\",\"logging\",\"security_tests\"],\"nonExecuting\":true}",
+      "format": "json",
+      "trust": "official",
+      "license": "Apache-2.0"
+    }
   ],
   "categories": [
     "security",

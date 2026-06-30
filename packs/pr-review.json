@@ -10,6 +10,31 @@
   "stability": "experimental",
   "lastVerified": "2026-06-12",
   "reviewStatus": "reviewed",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "verified",
+      "lastVerified": "2026-06-29",
+      "notes": "Skills, GitHub PR inspection metadata, and portable managed review prompts/templates/tools validate for Codex and local coding-agent workflows."
+    },
+    "claude-code": {
+      "status": "verified",
+      "lastVerified": "2026-06-29",
+      "notes": "Agent Skills, Claude review plugin wrapper, and portable managed review capabilities are supported for Claude Code users."
+    }
+  },
+  "useCases": [
+    "Review pull requests for correctness, regressions, maintainability, and missing tests before merge.",
+    "Summarize GitHub PR risk for human reviewers with clear findings, severity, and merge readiness.",
+    "Check CI failures, flaky tests, and quality gate gaps that should block or delay a change.",
+    "Help local coding agents prepare focused review notes without drifting into unrelated refactors."
+  ],
+  "examplePrompts": [
+    "Review this PR for correctness, regression risk, test gaps, and maintainability issues. Lead with blocking findings.",
+    "Summarize the merge readiness of this pull request, including CI status, risky files, missing tests, and owner follow-ups.",
+    "Inspect this diff as a senior reviewer and identify the smallest set of changes needed before approval.",
+    "Turn these review comments into actionable fixes, preserving the existing scope and avoiding unrelated cleanup."
+  ],
   "tags": [
     "github",
     "review",
@@ -31,6 +56,40 @@
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
       "trust": "official"
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "memory",
+      "name": "PR review pack guidance",
+      "content": "Use the PR Review Pack to help local coding agents review pull requests with reviewer discipline. Lead with correctness, regression risk, test coverage, maintainability, security/privacy exposure, CI health, and merge readiness. Keep feedback scoped to the diff unless a broader issue directly affects the change.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Senior PR review",
+      "content": "Review this PR as a senior engineer. Prioritize blocking correctness bugs, regressions, missing tests, security/privacy risks, data migration risk, and maintainability issues. Provide findings first with severity, file or area, why it matters, and the smallest acceptable fix. End with merge readiness.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "PR review summary",
+      "content": "# PR Review Summary\n\n## Merge Readiness\n\n## Blocking Findings\n\n## Non-Blocking Findings\n\n## Test And CI Gaps\n\n## Risk Areas\n\n## Owner / Date Follow-Ups\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "tool",
+      "name": "PR review scorecard",
+      "content": "{\"name\":\"pr-review-scorecard\",\"description\":\"Portable non-executing descriptor for pull request review readiness.\",\"dimensions\":[\"correctness\",\"regression_risk\",\"tests\",\"ci\",\"security_privacy\",\"maintainability\",\"scope_control\",\"merge_readiness\"],\"nonExecuting\":true}",
+      "format": "json",
+      "trust": "official",
+      "license": "Apache-2.0"
     }
   ],
   "categories": [

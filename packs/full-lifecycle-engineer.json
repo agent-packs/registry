@@ -10,6 +10,31 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "compatible",
+      "lastVerified": "2026-06-29",
+      "notes": "Composed packs, skills, GitHub inspection metadata, and portable managed lifecycle prompts/templates/tools validate for Codex and local coding-agent workflows."
+    },
+    "claude-code": {
+      "status": "compatible",
+      "lastVerified": "2026-06-29",
+      "notes": "Composed Agent Skills, Claude-compatible plugin metadata, and portable managed lifecycle capabilities are supported for Claude Code users."
+    }
+  },
+  "useCases": [
+    "Take a feature from product discovery through implementation, review, launch, and follow-up.",
+    "Coordinate multi-step coding-agent work where requirements, quality gates, release risk, and ownership all matter.",
+    "Prepare a scoped delivery plan that connects product intent to implementation tasks, PR review, and rollout checks.",
+    "Help local agents keep context across discovery notes, code changes, reliability checks, and shipping decisions."
+  ],
+  "examplePrompts": [
+    "Turn this feature idea into a lifecycle plan covering discovery questions, implementation steps, tests, review, launch, and follow-up.",
+    "Review this in-flight project and identify gaps across requirements, code quality, reliability, release readiness, and ownership.",
+    "Create a coding-agent work plan that moves from product context to PR-ready implementation without losing launch risks.",
+    "Summarize what must be true before this feature ships, including evidence, owners, rollback, and post-launch checks."
+  ],
   "tags": [
     "full-lifecycle",
     "engineering",
@@ -30,6 +55,40 @@
   ],
   "plugins": [
     "github-pr-inspection"
+  ],
+  "capabilities": [
+    {
+      "type": "memory",
+      "name": "Full lifecycle engineer pack guidance",
+      "content": "Use the Full Lifecycle Engineer Pack when a local coding agent needs to preserve product intent across discovery, implementation, review, launch, and follow-up. Keep the work anchored to user outcome, scope, risks, tests, rollout evidence, owners, and post-launch learning.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Feature lifecycle plan",
+      "content": "Turn this feature request into a full lifecycle engineering plan. Cover discovery questions, requirements, non-goals, implementation slices, tests, PR review gates, launch readiness, rollback, observability, documentation, and post-launch follow-up. End with owner/date actions.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Lifecycle delivery plan",
+      "content": "# Lifecycle Delivery Plan\n\n## User Outcome\n\n## Discovery Questions\n\n## Requirements And Non-Goals\n\n## Implementation Slices\n\n## Test Strategy\n\n## Review Gates\n\n## Launch / Rollback\n\n## Observability\n\n## Documentation\n\n## Post-Launch Follow-Up\n",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "tool",
+      "name": "Lifecycle readiness scorecard",
+      "content": "{\"name\":\"lifecycle-readiness-scorecard\",\"description\":\"Portable non-executing descriptor for checking feature readiness across discovery, implementation, review, launch, and learning.\",\"dimensions\":[\"user_outcome\",\"requirements\",\"implementation_plan\",\"tests\",\"review_gates\",\"launch_readiness\",\"rollback\",\"post_launch_learning\"],\"nonExecuting\":true}",
+      "format": "json",
+      "trust": "official",
+      "license": "Apache-2.0"
+    }
   ],
   "categories": [
     "engineering",

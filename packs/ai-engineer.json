@@ -15,12 +15,12 @@
     "codex": {
       "status": "verified",
       "lastVerified": "2026-06-29",
-      "notes": "Skills and portable managed AI prompts, templates, tools, and memory validate and install through dry-run planning."
+      "notes": "Skills and portable managed AI prompts, templates, tools, and memory validate and install through dry-run planning for Codex and local coding-agent workflows."
     },
     "claude-code": {
       "status": "compatible",
       "lastVerified": "2026-06-29",
-      "notes": "Agent Skills and portable managed capabilities are compatible; no Claude-specific plugin wrapper is required."
+      "notes": "Agent Skills and portable managed AI capabilities are compatible for Claude Code users; no Claude-specific plugin wrapper is required."
     }
   },
   "useCases": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T21:34:15.180072Z",
+  "generatedAt": "2026-06-30T02:16:15.140652Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -118,12 +118,12 @@
         "claude-code": {
           "status": "compatible",
           "lastVerified": "2026-06-29",
-          "notes": "Agent Skills and portable managed capabilities are compatible; no Claude-specific plugin wrapper is required."
+          "notes": "Agent Skills and portable managed AI capabilities are compatible for Claude Code users; no Claude-specific plugin wrapper is required."
         },
         "codex": {
           "status": "verified",
           "lastVerified": "2026-06-29",
-          "notes": "Skills and portable managed AI prompts, templates, tools, and memory validate and install through dry-run planning."
+          "notes": "Skills and portable managed AI prompts, templates, tools, and memory validate and install through dry-run planning for Codex and local coding-agent workflows."
         }
       },
       "freshness": "fresh"
@@ -597,12 +597,12 @@
         "claude-code": {
           "status": "verified",
           "lastVerified": "2026-06-28",
-          "notes": "Skills, Claude plugin wrappers, and portable managed capabilities validate and install through the supported target matrix."
+          "notes": "Skills, Claude plugin wrappers, and portable managed leadership capabilities validate and install through the supported target matrix."
         },
         "codex": {
           "status": "partial",
           "lastVerified": "2026-06-28",
-          "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable; Claude plugin wrappers are recorded but not natively installed for Codex."
+          "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable for Codex and local coding-agent planning; Claude plugin wrappers are recorded but not natively installed for Codex."
         }
       },
       "freshness": "fresh"
@@ -770,12 +770,12 @@
         "claude-code": {
           "status": "verified",
           "lastVerified": "2026-06-29",
-          "notes": "Agent Skills, Claude plugin wrapper, and portable managed capabilities are supported."
+          "notes": "Agent Skills, Claude plugin wrapper, and portable managed capabilities are supported for Claude Code users."
         },
         "codex": {
           "status": "verified",
           "lastVerified": "2026-06-29",
-          "notes": "Skills, browser-verification plugin metadata, and portable managed frontend prompts/templates/tools validate and install through dry-run planning."
+          "notes": "Skills, browser-verification plugin metadata, and portable managed frontend prompts/templates/tools validate and install through dry-run planning for Codex and local coding-agent workflows."
         }
       },
       "freshness": "fresh"
@@ -840,6 +840,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Take a feature from product discovery through implementation, review, launch, and follow-up.",
+        "Coordinate multi-step coding-agent work where requirements, quality gates, release risk, and ownership all matter.",
+        "Prepare a scoped delivery plan that connects product intent to implementation tasks, PR review, and rollout checks.",
+        "Help local agents keep context across discovery notes, code changes, reliability checks, and shipping decisions."
+      ],
+      "examplePrompts": [
+        "Turn this feature idea into a lifecycle plan covering discovery questions, implementation steps, tests, review, launch, and follow-up.",
+        "Review this in-flight project and identify gaps across requirements, code quality, reliability, release readiness, and ownership.",
+        "Create a coding-agent work plan that moves from product context to PR-ready implementation without losing launch risks.",
+        "Summarize what must be true before this feature ships, including evidence, owners, rollback, and post-launch checks."
+      ],
       "tags": [
         "full-lifecycle",
         "engineering",
@@ -869,10 +881,27 @@
       "plugins": [
         "github-pr-inspection"
       ],
-      "capabilities": 28,
+      "capabilities": 36,
       "capabilityTypes": {
+        "memory": 2,
         "plugin": 2,
-        "skill": 26
+        "prompt": 2,
+        "skill": 26,
+        "template": 2,
+        "tool": 2
+      },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "compatible",
+          "lastVerified": "2026-06-29",
+          "notes": "Composed Agent Skills, Claude-compatible plugin metadata, and portable managed lifecycle capabilities are supported for Claude Code users."
+        },
+        "codex": {
+          "status": "compatible",
+          "lastVerified": "2026-06-29",
+          "notes": "Composed packs, skills, GitHub inspection metadata, and portable managed lifecycle prompts/templates/tools validate for Codex and local coding-agent workflows."
+        }
       },
       "freshness": "fresh"
     },
@@ -1450,6 +1479,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Review pull requests for correctness, regressions, maintainability, and missing tests before merge.",
+        "Summarize GitHub PR risk for human reviewers with clear findings, severity, and merge readiness.",
+        "Check CI failures, flaky tests, and quality gate gaps that should block or delay a change.",
+        "Help local coding agents prepare focused review notes without drifting into unrelated refactors."
+      ],
+      "examplePrompts": [
+        "Review this PR for correctness, regression risk, test gaps, and maintainability issues. Lead with blocking findings.",
+        "Summarize the merge readiness of this pull request, including CI status, risky files, missing tests, and owner follow-ups.",
+        "Inspect this diff as a senior reviewer and identify the smallest set of changes needed before approval.",
+        "Turn these review comments into actionable fixes, preserving the existing scope and avoiding unrelated cleanup."
+      ],
       "tags": [
         "github",
         "review",
@@ -1477,10 +1518,27 @@
         "github-pr-inspection",
         "claude-code-review"
       ],
-      "capabilities": 4,
+      "capabilities": 8,
       "capabilityTypes": {
+        "memory": 1,
         "plugin": 2,
-        "skill": 2
+        "prompt": 1,
+        "skill": 2,
+        "template": 1,
+        "tool": 1
+      },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-06-29",
+          "notes": "Agent Skills, Claude review plugin wrapper, and portable managed review capabilities are supported for Claude Code users."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-06-29",
+          "notes": "Skills, GitHub PR inspection metadata, and portable managed review prompts/templates/tools validate for Codex and local coding-agent workflows."
+        }
       },
       "freshness": "fresh"
     },
@@ -1588,6 +1646,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Investigate production-like failures with hypotheses, evidence, repro steps, and targeted fixes.",
+        "Strengthen brittle code paths using tests, observability, defensive handling, and clear rollback plans.",
+        "Review risky changes for hidden assumptions, incident potential, monitoring gaps, and missing failure-mode coverage.",
+        "Help local coding agents debug methodically without masking symptoms or over-scoping the repair."
+      ],
+      "examplePrompts": [
+        "Debug this failure using a hypothesis-driven approach. Identify evidence, likely root cause, fix plan, and verification steps.",
+        "Review this change for reliability risks, missing observability, weak tests, and assumptions that could fail in production.",
+        "Create a minimal repro and test plan for this bug, then propose the smallest durable fix.",
+        "Turn this incident note into follow-up engineering work with owners, monitoring improvements, and regression tests."
+      ],
       "tags": [
         "debugging",
         "reliability",
@@ -1616,9 +1686,26 @@
         "security-and-hardening",
         "observability-and-monitoring"
       ],
-      "capabilities": 4,
+      "capabilities": 8,
       "capabilityTypes": {
-        "skill": 4
+        "memory": 1,
+        "prompt": 1,
+        "skill": 4,
+        "template": 1,
+        "tool": 1
+      },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "compatible",
+          "lastVerified": "2026-06-29",
+          "notes": "Agent Skills and portable managed reliability capabilities are compatible for Claude Code users."
+        },
+        "codex": {
+          "status": "compatible",
+          "lastVerified": "2026-06-29",
+          "notes": "Debugging, doubt-driven development, observability skills, and portable managed reliability prompts/templates/tools validate for Codex and local coding-agent workflows."
+        }
       },
       "freshness": "fresh"
     },
@@ -1682,6 +1769,18 @@
       "stability": "experimental",
       "lastVerified": "2026-06-14",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Review application changes for threat-model gaps, unsafe input handling, secrets exposure, and dependency risk.",
+        "Create secure design guidance for APIs, auth flows, data access, logging, and operational controls.",
+        "Triage vulnerabilities with severity, exploitability, compensating controls, and owner/date remediation steps.",
+        "Help local coding agents apply security hardening without broadening the change beyond the risk being fixed."
+      ],
+      "examplePrompts": [
+        "Review this code change for application security risks, OWASP issues, secrets exposure, and missing tests.",
+        "Create a threat model for this feature, including assets, trust boundaries, abuse cases, mitigations, and open decisions.",
+        "Triage these dependency or scanner findings and separate urgent fixes from accepted or deferred risk.",
+        "Design a secure implementation plan for this API, covering auth, authorization, validation, logging, and rollback."
+      ],
       "tags": [
         "security",
         "appsec",
@@ -1715,9 +1814,26 @@
         "code-review-and-quality",
         "documentation-and-adrs"
       ],
-      "capabilities": 6,
+      "capabilities": 10,
       "capabilityTypes": {
-        "skill": 6
+        "memory": 1,
+        "prompt": 1,
+        "skill": 6,
+        "template": 1,
+        "tool": 1
+      },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "compatible",
+          "lastVerified": "2026-06-29",
+          "notes": "Agent Skills and portable managed security capabilities are compatible for Claude Code users."
+        },
+        "codex": {
+          "status": "compatible",
+          "lastVerified": "2026-06-29",
+          "notes": "Security skills and portable managed threat-modeling prompts/templates/tools validate for Codex and local coding-agent workflows."
+        }
       },
       "freshness": "fresh"
     },

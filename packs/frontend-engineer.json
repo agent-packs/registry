@@ -15,12 +15,12 @@
     "codex": {
       "status": "verified",
       "lastVerified": "2026-06-29",
-      "notes": "Skills, browser-verification plugin metadata, and portable managed frontend prompts/templates/tools validate and install through dry-run planning."
+      "notes": "Skills, browser-verification plugin metadata, and portable managed frontend prompts/templates/tools validate and install through dry-run planning for Codex and local coding-agent workflows."
     },
     "claude-code": {
       "status": "verified",
       "lastVerified": "2026-06-29",
-      "notes": "Agent Skills, Claude plugin wrapper, and portable managed capabilities are supported."
+      "notes": "Agent Skills, Claude plugin wrapper, and portable managed capabilities are supported for Claude Code users."
     }
   },
   "useCases": [
