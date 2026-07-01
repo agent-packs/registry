@@ -84,13 +84,24 @@ class IndexDriftTest(unittest.TestCase):
     def test_index_scalar_fields_match_manifests(self):
         for pack_id, manifest in self.manifests.items():
             entry = self.index[pack_id]
-            for field in ("version", "description", "reviewStatus", "lastVerified", "useCases", "examplePrompts"):
+            for field in ("version", "description", "reviewStatus", "lastVerified", "recommendation", "useCases", "examplePrompts"):
                 with self.subTest(pack=pack_id, field=field):
                     self.assertEqual(
                         manifest.get(field),
                         entry.get(field),
                         f"{pack_id}.{field} differs between manifest and index",
                     )
+
+    def test_recommended_index_flag_matches_recommendation_metadata(self):
+        for pack_id, manifest in self.manifests.items():
+            entry = self.index[pack_id]
+            expected = bool(manifest.get("recommendation", {}).get("path"))
+            with self.subTest(pack=pack_id):
+                self.assertEqual(
+                    entry.get("recommended", False),
+                    expected,
+                    f"{pack_id} recommended flag differs from recommendation metadata",
+                )
 
     def test_index_skills_match_manifests(self):
         for pack_id, manifest in self.manifests.items():

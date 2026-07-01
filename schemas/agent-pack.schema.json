@@ -72,6 +72,9 @@
     "requirements": {
       "$ref": "#/$defs/requirements"
     },
+    "recommendation": {
+      "$ref": "#/$defs/recommendation"
+    },
     "useCases": {
       "type": "array",
       "items": {
@@ -603,6 +606,30 @@
           "additionalProperties": {
             "type": "string"
           }
+        }
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "required": [
+        "path"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "enum": [
+            "starter",
+            "role",
+            "workflow",
+            "integration"
+          ]
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reason": {
+          "type": "string"
         }
       }
     },

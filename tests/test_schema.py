@@ -102,6 +102,20 @@ def validate_pack(pack, schema):
                         if not isinstance(tool, str) or not isinstance(version, str):
                             errors.append("requirements.tools entries must be strings")
 
+    recommendation = pack.get("recommendation")
+    if recommendation is not None:
+        if not isinstance(recommendation, dict):
+            errors.append("recommendation must be an object")
+        else:
+            if "path" not in recommendation:
+                errors.append("recommendation.path is required")
+            elif recommendation["path"] not in ("starter", "role", "workflow", "integration"):
+                errors.append("recommendation.path is not allowed")
+            if "order" in recommendation and not isinstance(recommendation["order"], int):
+                errors.append("recommendation.order must be an integer")
+            if "reason" in recommendation and not isinstance(recommendation["reason"], str):
+                errors.append("recommendation.reason must be a string")
+
     refs = pack.get("packs")
     if refs is not None:
         if not isinstance(refs, list):

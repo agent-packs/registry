@@ -37,6 +37,17 @@ agent-packs validate plugins
 agent-packs publish --check --json
 ```
 
+When starting a new pack, prefer the CLI scaffold:
+
+```sh
+agent-packs new pack my-pack --dir packs
+```
+
+The scaffold is intentionally draft-safe: it includes requirements, categories,
+use cases, example prompts, tools, scope, and trust-bearing refs, but it does not
+claim `lastVerified` or verified compatibility until those checks are actually
+run.
+
 ## Regenerate the index
 
 `index.json` must be regenerated whenever packs change:
@@ -44,6 +55,24 @@ agent-packs publish --check --json
 ```sh
 AGENT_PACKS_REGISTRY=./packs agent-packs index --output index.json
 ```
+
+## Recommendation metadata
+
+Starter-path packs can declare a `recommendation` object:
+
+```json
+{
+  "recommendation": {
+    "path": "starter",
+    "order": 30,
+    "reason": "Best first role pack for APIs, services, data models, and reliability."
+  }
+}
+```
+
+The CLI projects this into `index.json` as both `recommendation` and a simple
+`recommended` boolean. The catalog uses it for the Starter path filter, and
+`agent-packs search --recommended --guidance` uses it for install guidance.
 
 ## Roadmap
 

@@ -23,6 +23,11 @@
       "notes": "Agent Skills, Claude review plugin wrapper, and portable managed review capabilities are supported for Claude Code users."
     }
   },
+  "recommendation": {
+    "path": "starter",
+    "order": 40,
+    "reason": "High-leverage first workflow for teams using agents on pull requests."
+  },
   "useCases": [
     "Review pull requests for correctness, regressions, maintainability, and missing tests before merge.",
     "Summarize GitHub PR risk for human reviewers with clear findings, severity, and merge readiness.",

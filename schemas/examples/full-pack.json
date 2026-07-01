@@ -29,6 +29,11 @@
       "claude-code": ">=0.0.0"
     }
   },
+  "recommendation": {
+    "path": "starter",
+    "order": 40,
+    "reason": "Complete example for understanding every supported capability type."
+  },
   "useCases": [
     "Review a full-stack pull request for quality, security, and release risk.",
     "Generate a concise PR report with findings, risks, and follow-up owners."

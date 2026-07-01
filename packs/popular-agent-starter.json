@@ -10,6 +10,11 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "recommendation": {
+    "path": "starter",
+    "order": 10,
+    "reason": "Broad first install for local coding-agent workflows."
+  },
   "tags": [
     "popular",
     "starter",

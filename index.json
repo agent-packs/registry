@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T17:21:38.39703Z",
+  "generatedAt": "2026-07-01T17:44:07.25583Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -200,6 +200,12 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "recommended": true,
+      "recommendation": {
+        "path": "starter",
+        "order": 30,
+        "reason": "Best first role pack for APIs, services, data models, and reliability."
+      },
       "useCases": [
         "Implement backend service features with clear API contracts, data models, tests, and observability.",
         "Review service changes for reliability, security, migration risk, and rollback readiness.",
@@ -749,6 +755,12 @@
       "stability": "experimental",
       "lastVerified": "2026-06-29",
       "reviewStatus": "verified",
+      "recommended": true,
+      "recommendation": {
+        "path": "starter",
+        "order": 20,
+        "reason": "Best first role pack for web UI and TypeScript frontend work."
+      },
       "useCases": [
         "Plan and implement polished frontend user flows with clear components, state models, and responsive behavior.",
         "Run pre-merge quality gates across loading, empty, error, success, permission, mobile, and keyboard states.",
@@ -1386,6 +1398,12 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "recommended": true,
+      "recommendation": {
+        "path": "starter",
+        "order": 10,
+        "reason": "Broad first install for local coding-agent workflows."
+      },
       "tags": [
         "popular",
         "starter",
@@ -1563,6 +1581,12 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "recommended": true,
+      "recommendation": {
+        "path": "starter",
+        "order": 40,
+        "reason": "High-leverage first workflow for teams using agents on pull requests."
+      },
       "useCases": [
         "Review pull requests for correctness, regressions, maintainability, and missing tests before merge.",
         "Summarize GitHub PR risk for human reviewers with clear findings, severity, and merge readiness.",
@@ -1742,6 +1766,12 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "recommended": true,
+      "recommendation": {
+        "path": "starter",
+        "order": 50,
+        "reason": "Useful early pack for debugging, test hardening, and incident prevention."
+      },
       "useCases": [
         "Investigate production-like failures with hypotheses, evidence, repro steps, and targeted fixes.",
         "Strengthen brittle code paths using tests, observability, defensive handling, and clear rollback plans.",
@@ -1865,6 +1895,12 @@
       "stability": "experimental",
       "lastVerified": "2026-06-14",
       "reviewStatus": "reviewed",
+      "recommended": true,
+      "recommendation": {
+        "path": "starter",
+        "order": 60,
+        "reason": "Useful early pack for application security review and threat modeling."
+      },
       "useCases": [
         "Review application changes for threat-model gaps, unsafe input handling, secrets exposure, and dependency risk.",
         "Create secure design guidance for APIs, auth flows, data access, logging, and operational controls.",

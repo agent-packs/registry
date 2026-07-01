@@ -23,6 +23,11 @@
       "notes": "Agent Skills and portable managed security capabilities are compatible for Claude Code users."
     }
   },
+  "recommendation": {
+    "path": "starter",
+    "order": 60,
+    "reason": "Useful early pack for application security review and threat modeling."
+  },
   "useCases": [
     "Review application changes for threat-model gaps, unsafe input handling, secrets exposure, and dependency risk.",
     "Create secure design guidance for APIs, auth flows, data access, logging, and operational controls.",

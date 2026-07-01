@@ -23,6 +23,11 @@
       "notes": "Agent Skills and portable managed reliability capabilities are compatible for Claude Code users."
     }
   },
+  "recommendation": {
+    "path": "starter",
+    "order": 50,
+    "reason": "Useful early pack for debugging, test hardening, and incident prevention."
+  },
   "useCases": [
     "Investigate production-like failures with hypotheses, evidence, repro steps, and targeted fixes.",
     "Strengthen brittle code paths using tests, observability, defensive handling, and clear rollback plans.",

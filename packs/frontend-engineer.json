@@ -23,6 +23,11 @@
       "notes": "Agent Skills, Claude plugin wrapper, and portable managed capabilities are supported for Claude Code users."
     }
   },
+  "recommendation": {
+    "path": "starter",
+    "order": 20,
+    "reason": "Best first role pack for web UI and TypeScript frontend work."
+  },
   "useCases": [
     "Plan and implement polished frontend user flows with clear components, state models, and responsive behavior.",
     "Run pre-merge quality gates across loading, empty, error, success, permission, mobile, and keyboard states.",

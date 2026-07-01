@@ -10,6 +10,11 @@
   "stability": "experimental",
   "lastVerified": "2026-06-12",
   "reviewStatus": "reviewed",
+  "recommendation": {
+    "path": "starter",
+    "order": 30,
+    "reason": "Best first role pack for APIs, services, data models, and reliability."
+  },
   "useCases": [
     "Implement backend service features with clear API contracts, data models, tests, and observability.",
     "Review service changes for reliability, security, migration risk, and rollback readiness.",

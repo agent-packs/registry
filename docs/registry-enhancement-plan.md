@@ -85,13 +85,18 @@ Make high-quality contributions predictable.
 - Extend contribution guidance with a curation rubric for target user, source
   provenance, trust, compatibility, verification commands, index regeneration,
   and review expectations.
-- Update `agent-packs new pack` so generated manifests include production-grade
-  recommended fields such as categories, requirements, review status,
-  `lastVerified`, and examples of trust-bearing object refs.
+- Keep `agent-packs new pack` aligned with publish-quality checks: generated
+  manifests should include draft-safe contributor metadata such as categories,
+  requirements, review status, use cases, example prompts, tools, scope, and
+  trust-bearing object refs, but should not invent `lastVerified` or verified
+  compatibility evidence.
 
 Reduce review churn.
 
 - Require `index.json` freshness for pack changes.
+- Keep starter-path recommendations manifest-driven through `recommendation`
+  metadata, with `index.json` projecting both the structured object and a simple
+  `recommended` flag for catalog clients.
 - Add docs/catalog drift checks for pack counts, starter-path copy, and public
   compatibility claims.
 - Keep registry README as the contributor-facing source for category and trust
