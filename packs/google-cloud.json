@@ -22,7 +22,7 @@
     {
       "id": "gcloud",
       "name": "gcloud CLI",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/gcloud",
+      "source": "https://github.com/google/skills/tree/bb697eb93d1d70bb4a51048b41d01b8dc4bffe2a/skills/cloud/gcloud",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -32,7 +32,7 @@
     {
       "id": "cloud-run-basics",
       "name": "Cloud Run basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/cloud-run-basics",
+      "source": "https://github.com/google/skills/tree/bb697eb93d1d70bb4a51048b41d01b8dc4bffe2a/skills/cloud/cloud-run-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -42,7 +42,7 @@
     {
       "id": "gke-basics",
       "name": "GKE basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/gke-basics",
+      "source": "https://github.com/google/skills/tree/bb697eb93d1d70bb4a51048b41d01b8dc4bffe2a/skills/cloud/gke-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -52,7 +52,7 @@
     {
       "id": "bigquery-basics",
       "name": "BigQuery basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/bigquery-basics",
+      "source": "https://github.com/google/skills/tree/bb697eb93d1d70bb4a51048b41d01b8dc4bffe2a/skills/cloud/bigquery-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -62,7 +62,7 @@
     {
       "id": "cloud-sql-basics",
       "name": "Cloud SQL basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/cloud-sql-basics",
+      "source": "https://github.com/google/skills/tree/bb697eb93d1d70bb4a51048b41d01b8dc4bffe2a/skills/cloud/cloud-sql-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -72,7 +72,7 @@
     {
       "id": "firebase-basics",
       "name": "Firebase basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/firebase-basics",
+      "source": "https://github.com/google/skills/tree/bb697eb93d1d70bb4a51048b41d01b8dc4bffe2a/skills/cloud/firebase-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -82,7 +82,7 @@
     {
       "id": "google-cloud-waf-security",
       "name": "Google Cloud WAF security",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/google-cloud-waf-security",
+      "source": "https://github.com/google/skills/tree/bb697eb93d1d70bb4a51048b41d01b8dc4bffe2a/skills/cloud/google-cloud-waf-security",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",

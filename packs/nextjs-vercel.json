@@ -22,7 +22,7 @@
     {
       "id": "react-best-practices",
       "name": "React best practices",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/react-best-practices",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -31,7 +31,7 @@
     {
       "id": "composition-patterns",
       "name": "Composition patterns",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/composition-patterns",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -40,7 +40,7 @@
     {
       "id": "web-design-guidelines",
       "name": "Web design guidelines",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/web-design-guidelines",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -49,7 +49,7 @@
     {
       "id": "deploy-to-vercel",
       "name": "Deploy to Vercel",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/deploy-to-vercel",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
@@ -58,7 +58,7 @@
     {
       "id": "vercel-optimize",
       "name": "Vercel optimize",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-optimize",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/vercel-optimize",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",

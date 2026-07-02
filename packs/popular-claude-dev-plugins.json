@@ -20,7 +20,7 @@
     {
       "id": "claude-code-setup",
       "name": "Claude Code Setup",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/claude-code-setup",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -35,7 +35,7 @@
     {
       "id": "code-review",
       "name": "Code Review",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/code-review",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -50,7 +50,7 @@
     {
       "id": "pr-review-toolkit",
       "name": "PR Review Toolkit",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/pr-review-toolkit",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -65,7 +65,7 @@
     {
       "id": "feature-dev",
       "name": "Feature Development",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/feature-dev",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -80,7 +80,7 @@
     {
       "id": "frontend-design",
       "name": "Frontend Design",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/frontend-design",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -95,7 +95,7 @@
     {
       "id": "code-simplifier",
       "name": "Code Simplifier",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/code-simplifier",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -110,7 +110,7 @@
     {
       "id": "security-guidance",
       "name": "Security Guidance",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/security-guidance",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -125,7 +125,7 @@
     {
       "id": "commit-commands",
       "name": "Commit Commands",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/commit-commands",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -140,7 +140,7 @@
     {
       "id": "session-report",
       "name": "Session Report",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/session-report",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/session-report",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -155,7 +155,7 @@
     {
       "id": "skill-creator",
       "name": "Skill Creator",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/skill-creator",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
