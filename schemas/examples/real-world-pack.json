@@ -14,7 +14,7 @@
     {
       "type": "plugin",
       "name": "Anthropic Claude Code code-review plugin",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/plugins/code-review",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",

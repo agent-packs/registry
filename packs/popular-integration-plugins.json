@@ -19,7 +19,7 @@
     {
       "id": "github",
       "name": "GitHub",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/external_plugins/github",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -34,7 +34,7 @@
     {
       "id": "gitlab",
       "name": "GitLab",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/gitlab",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/external_plugins/gitlab",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -49,7 +49,7 @@
     {
       "id": "playwright",
       "name": "Playwright",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/playwright",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/external_plugins/playwright",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -64,7 +64,7 @@
     {
       "id": "context7",
       "name": "Context7",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/context7",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/external_plugins/context7",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -79,7 +79,7 @@
     {
       "id": "linear",
       "name": "Linear",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/linear",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/external_plugins/linear",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -94,7 +94,7 @@
     {
       "id": "firebase",
       "name": "Firebase",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/firebase",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/external_plugins/firebase",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -109,7 +109,7 @@
     {
       "id": "terraform",
       "name": "Terraform",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/terraform",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/external_plugins/terraform",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -124,7 +124,7 @@
     {
       "id": "serena",
       "name": "Serena",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/serena",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/36cfea46b6b1d46111eb8d93ff595162a1a6cb56/external_plugins/serena",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
