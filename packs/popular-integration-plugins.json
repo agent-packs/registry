@@ -10,6 +10,20 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Connect Claude Code to repository hosts, project trackers, and infrastructure tools like GitHub, GitLab, Linear, and Terraform.",
+    "Add browser automation, documentation lookup, and semantic code navigation via Playwright, Context7, and Serena."
+  ],
+  "examplePrompts": [
+    "Install this pack, then use the GitHub plugin to triage my open pull requests.",
+    "Use Playwright from this pack to reproduce the bug report in a real browser."
+  ],
   "tags": [
     "popular",
     "integrations",

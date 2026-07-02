@@ -10,6 +10,22 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Author new agent skills that follow the Superpowers conventions and are validated by tests."
+  ],
+  "examplePrompts": [
+    "Use the writing-skills skill to turn this workflow I keep repeating into a new tested skill."
+  ],
   "tags": [
     "superpowers",
     "skills",

@@ -15,6 +15,20 @@
     "order": 10,
     "reason": "Broad first install for local coding-agent workflows."
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Bootstrap a new machine or project with popular engineering skills and common Claude Code plugins in one install.",
+    "Give a new agent setup a sensible default toolkit covering the full development lifecycle."
+  ],
+  "examplePrompts": [
+    "Install this starter pack, then use its planning skills to break down my first task in this repo."
+  ],
   "tags": [
     "popular",
     "starter",

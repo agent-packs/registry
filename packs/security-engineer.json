@@ -28,6 +28,16 @@
     "order": 60,
     "reason": "Useful early pack for application security review and threat modeling."
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Review application changes for threat-model gaps, unsafe input handling, secrets exposure, and dependency risk.",
     "Create secure design guidance for APIs, auth flows, data access, logging, and operational controls.",

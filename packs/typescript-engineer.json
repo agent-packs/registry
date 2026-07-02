@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-16",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Write strictly-typed TypeScript with precise type contracts between modules.",
+    "Design stable interfaces and evolve them without breaking consumers.",
+    "Keep dependencies and monorepo package boundaries healthy while scoping changes safely."
+  ],
+  "examplePrompts": [
+    "Tighten the types in this module — eliminate any, narrow the unions, and make invalid states unrepresentable.",
+    "Design the type contract between this frontend and its API client, then implement it test-first."
+  ],
   "tags": [
     "typescript",
     "types",

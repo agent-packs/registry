@@ -28,6 +28,13 @@
     "order": 40,
     "reason": "High-leverage first workflow for teams using agents on pull requests."
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
   "useCases": [
     "Review pull requests for correctness, regressions, maintainability, and missing tests before merge.",
     "Summarize GitHub PR risk for human reviewers with clear findings, severity, and merge readiness.",

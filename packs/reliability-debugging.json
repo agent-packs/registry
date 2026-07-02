@@ -28,6 +28,16 @@
     "order": 50,
     "reason": "Useful early pack for debugging, test hardening, and incident prevention."
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Investigate production-like failures with hypotheses, evidence, repro steps, and targeted fixes.",
     "Strengthen brittle code paths using tests, observability, defensive handling, and clear rollback plans.",

@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-13",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Design an ETL or streaming pipeline with explicit data-quality checks, schema contracts, and orchestration.",
+    "Evolve a warehouse or event schema safely without breaking downstream consumers.",
+    "Add observability to an existing pipeline and debug failed or late-arriving data runs."
+  ],
+  "examplePrompts": [
+    "Design an ingestion pipeline for this event stream, including schema management, data-quality checks, and backfill strategy.",
+    "This dbt/Airflow job produced inconsistent output — trace the root cause and propose tests that catch it."
+  ],
   "tags": [
     "data",
     "etl",

@@ -10,6 +10,16 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Prepare release-ready branches with clean commits, clear PR summaries, and scoped review evidence.",
     "Set up or repair CI/CD quality gates so tests, builds, linting, and deployment checks reflect real release risk.",

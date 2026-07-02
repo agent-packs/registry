@@ -10,6 +10,20 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Set up Claude Code with a curated baseline of official development plugins in one install.",
+    "Add structured code review, PR review, feature development, and commit workflows to Claude Code."
+  ],
+  "examplePrompts": [
+    "Install this pack, then use the code-review plugin to review my current branch.",
+    "Use the feature-dev workflow from this pack to plan and implement this feature."
+  ],
   "tags": [
     "popular",
     "claude-code",

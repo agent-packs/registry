@@ -10,6 +10,24 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Run the full Superpowers development loop: brainstorm and refine an idea, write a plan, execute it, and finish the branch.",
+    "Enforce test-driven development and verification before declaring work complete."
+  ],
+  "examplePrompts": [
+    "Use the brainstorming skill to refine this feature idea, then write an implementation plan I can execute.",
+    "Execute this plan test-first and run verification-before-completion before you call it done."
+  ],
   "tags": [
     "superpowers",
     "workflow",

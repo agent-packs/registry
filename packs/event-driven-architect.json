@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-16",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Design event-driven systems with well-chosen messaging patterns and resilient contracts between services.",
+    "Plan schema evolution for events without breaking existing consumers.",
+    "Debug eventual-consistency failures using observability across service boundaries."
+  ],
+  "examplePrompts": [
+    "Design the event flow for this order-processing system, including delivery guarantees, retries, and dead-letter handling.",
+    "Two services disagree about this entity's state — trace the event flow and find where consistency breaks."
+  ],
   "tags": [
     "event-driven",
     "distributed-systems",

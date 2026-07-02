@@ -10,6 +10,24 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Give a coding agent a full engineering lifecycle: spec, plan, implement incrementally, test, review, and ship.",
+    "Standardize how an agent approaches debugging, security, performance, and git workflow across projects."
+  ],
+  "examplePrompts": [
+    "Use the spec-driven and planning skills to turn this feature idea into an ordered implementation plan.",
+    "Implement this change test-first, then run a code-review pass before committing."
+  ],
   "tags": [
     "popular",
     "skills",

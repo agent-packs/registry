@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-13",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Build automated test suites spanning unit, contract, and browser tests.",
+    "Design and run load tests to validate performance before a release.",
+    "Reproduce, isolate, and verify fixes for reported bugs, including security-relevant input handling."
+  ],
+  "examplePrompts": [
+    "Write contract tests for this REST API so consumer and provider cannot drift apart.",
+    "Design a load-test plan for this endpoint ahead of launch, including realistic traffic shapes and pass/fail criteria."
+  ],
   "tags": [
     "qa",
     "testing",

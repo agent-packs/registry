@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T17:44:07.25583Z",
+  "generatedAt": "2026-07-02T22:35:36.130934Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -12,6 +12,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-16",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Audit a UI against WCAG 2.2 AA and produce a prioritized remediation plan.",
+        "Implement accessible components with correct semantics, keyboard support, and focus management.",
+        "Verify accessibility fixes in the browser and document the decisions for reviewers."
+      ],
+      "examplePrompts": [
+        "Audit this page against WCAG 2.2 AA and list violations with severity, affected users, and concrete fixes.",
+        "Make this modal dialog fully keyboard- and screen-reader-accessible, then verify it in the browser."
+      ],
       "tags": [
         "accessibility",
         "a11y",
@@ -267,6 +276,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-13",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Provision cloud infrastructure with Terraform or similar IaC, including safe plan/apply workflows.",
+        "Containerize a workload and write hardened Kubernetes manifests for it.",
+        "Add security hardening, observability, and CI/CD automation to existing cloud infrastructure."
+      ],
+      "examplePrompts": [
+        "Write Terraform for this service's infrastructure with least-privilege IAM and a safe rollout plan.",
+        "Review these Kubernetes manifests for security and reliability issues before we deploy to production."
+      ],
       "tags": [
         "cloud",
         "aws",
@@ -317,6 +335,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-15",
       "reviewStatus": "draft",
+      "useCases": [
+        "Produce on-brand visual assets like posters, banners, and social cards from brand guidelines.",
+        "Generate algorithmic or generative art and reusable visual themes.",
+        "Build shareable single-file web artifacts for landing pages, demos, or announcements."
+      ],
+      "examplePrompts": [
+        "Design a launch poster for this feature that follows our brand guidelines.",
+        "Build a shareable web artifact that presents this announcement with an on-brand theme."
+      ],
       "tags": [
         "design",
         "branding",
@@ -360,6 +387,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-13",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Design an ETL or streaming pipeline with explicit data-quality checks, schema contracts, and orchestration.",
+        "Evolve a warehouse or event schema safely without breaking downstream consumers.",
+        "Add observability to an existing pipeline and debug failed or late-arriving data runs."
+      ],
+      "examplePrompts": [
+        "Design an ingestion pipeline for this event stream, including schema management, data-quality checks, and backfill strategy.",
+        "This dbt/Airflow job produced inconsistent output — trace the root cause and propose tests that catch it."
+      ],
       "tags": [
         "data",
         "etl",
@@ -474,6 +510,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-14",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Design SDKs and internal tools with ergonomic, stable interfaces.",
+        "Write developer documentation, onboarding guides, and API references that contributors can follow.",
+        "Automate contributor workflows with CI checks and healthy dependency management."
+      ],
+      "examplePrompts": [
+        "Review this SDK's public API for ergonomics and consistency, and propose improvements with migration notes.",
+        "Write an onboarding guide for this repository that gets a new contributor to a merged PR."
+      ],
       "tags": [
         "devex",
         "developer-experience",
@@ -525,6 +570,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-15",
       "reviewStatus": "draft",
+      "useCases": [
+        "Create polished Word, PowerPoint, Excel, or PDF deliverables from source content.",
+        "Extract text, tables, and structure from existing office documents.",
+        "Edit existing documents: fill PDF forms, update decks, restructure spreadsheets, merge or split files."
+      ],
+      "examplePrompts": [
+        "Turn these meeting notes into a formatted Word report with a table of contents and headings.",
+        "Extract every table from this PDF into a clean Excel spreadsheet."
+      ],
       "tags": [
         "documents",
         "pdf",
@@ -660,6 +714,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Add structured logging, metrics, and traces to a service that lacks observability.",
+        "Design or review a database schema change and its migration path.",
+        "Tighten TypeScript typing, accessibility, or monorepo hygiene across an existing codebase."
+      ],
+      "examplePrompts": [
+        "Review this schema migration for safety, then add the observability we would need to catch a bad rollout.",
+        "Audit this package for TypeScript strictness and accessibility issues and fix the highest-impact ones."
+      ],
       "tags": [
         "observability",
         "database",
@@ -707,6 +770,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-16",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Design event-driven systems with well-chosen messaging patterns and resilient contracts between services.",
+        "Plan schema evolution for events without breaking existing consumers.",
+        "Debug eventual-consistency failures using observability across service boundaries."
+      ],
+      "examplePrompts": [
+        "Design the event flow for this order-processing system, including delivery guarantees, retries, and dead-letter handling.",
+        "Two services disagree about this entity's state — trace the event flow and find where consistency breaks."
+      ],
       "tags": [
         "event-driven",
         "distributed-systems",
@@ -976,6 +1048,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-15",
       "reviewStatus": "draft",
+      "useCases": [
+        "Deploy and operate workloads on Cloud Run and GKE using gcloud and Google's recommended patterns.",
+        "Query and model data in BigQuery and manage Cloud SQL and Firebase resources.",
+        "Apply Google Cloud Well-Architected security guidance to a project's infrastructure."
+      ],
+      "examplePrompts": [
+        "Deploy this containerized service to Cloud Run with the right service account, scaling, and monitoring settings.",
+        "Review this GCP project against Well-Architected security guidance and list the highest-risk gaps."
+      ],
       "tags": [
         "cloud",
         "gcp",
@@ -1079,6 +1160,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-14",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Make ML experiments reproducible with tracked hyperparameters, metrics, artifacts, and environments.",
+        "Design data pipelines and serving APIs for training and inference workloads.",
+        "Add observability and tests around model training and serving to catch regressions."
+      ],
+      "examplePrompts": [
+        "Set up experiment tracking for this training script so runs are reproducible and comparable.",
+        "Design a serving API for this model, including input validation, monitoring, and rollback strategy."
+      ],
       "tags": [
         "ml",
         "machine-learning",
@@ -1130,6 +1220,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-13",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Build React Native or Flutter screens with production-quality UI and accessibility.",
+        "Implement offline-first data handling and platform permission flows correctly.",
+        "Profile and fix mobile performance issues and prepare an app for store submission."
+      ],
+      "examplePrompts": [
+        "Implement this screen in React Native with offline support and proper permission handling.",
+        "This Flutter list view janks on low-end Android devices — profile it and fix the performance problems."
+      ],
       "tags": [
         "mobile",
         "react-native",
@@ -1179,6 +1278,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-15",
       "reviewStatus": "draft",
+      "useCases": [
+        "Build React and Next.js features following Vercel's official best practices and composition patterns.",
+        "Apply web design guidelines to produce polished, consistent UI.",
+        "Deploy to Vercel and optimize runtime performance of an existing deployment."
+      ],
+      "examplePrompts": [
+        "Refactor this Next.js page using the recommended composition patterns, then deploy a preview to Vercel.",
+        "Audit this app against the web design guidelines and fix the layout and typography issues."
+      ],
       "tags": [
         "frontend",
         "react",
@@ -1223,6 +1331,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-13",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Review incoming pull requests for regressions, missing tests, and maintainability.",
+        "Write and maintain project documentation, changelogs, and contributor onboarding material.",
+        "Plan safe deprecations, dependency upgrades, and security advisories for a public project."
+      ],
+      "examplePrompts": [
+        "Review this external PR for behavioral regressions and missing tests, and draft a constructive review comment.",
+        "Plan the deprecation of this public API, including timeline, changelog entries, and migration guide."
+      ],
       "tags": [
         "open-source",
         "maintainer",
@@ -1404,6 +1521,13 @@
         "order": 10,
         "reason": "Broad first install for local coding-agent workflows."
       },
+      "useCases": [
+        "Bootstrap a new machine or project with popular engineering skills and common Claude Code plugins in one install.",
+        "Give a new agent setup a sensible default toolkit covering the full development lifecycle."
+      ],
+      "examplePrompts": [
+        "Install this starter pack, then use its planning skills to break down my first task in this repo."
+      ],
       "tags": [
         "popular",
         "starter",
@@ -1439,6 +1563,14 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Set up Claude Code with a curated baseline of official development plugins in one install.",
+        "Add structured code review, PR review, feature development, and commit workflows to Claude Code."
+      ],
+      "examplePrompts": [
+        "Install this pack, then use the code-review plugin to review my current branch.",
+        "Use the feature-dev workflow from this pack to plan and implement this feature."
+      ],
       "tags": [
         "popular",
         "claude-code",
@@ -1485,6 +1617,14 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Give a coding agent a full engineering lifecycle: spec, plan, implement incrementally, test, review, and ship.",
+        "Standardize how an agent approaches debugging, security, performance, and git workflow across projects."
+      ],
+      "examplePrompts": [
+        "Use the spec-driven and planning skills to turn this feature idea into an ordered implementation plan.",
+        "Implement this change test-first, then run a code-review pass before committing."
+      ],
       "tags": [
         "popular",
         "skills",
@@ -1539,6 +1679,14 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Connect Claude Code to repository hosts, project trackers, and infrastructure tools like GitHub, GitLab, Linear, and Terraform.",
+        "Add browser automation, documentation lookup, and semantic code navigation via Playwright, Context7, and Serena."
+      ],
+      "examplePrompts": [
+        "Install this pack, then use the GitHub plugin to triage my open pull requests.",
+        "Use Playwright from this pack to reproduce the bug report in a real browser."
+      ],
       "tags": [
         "popular",
         "integrations",
@@ -1716,6 +1864,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-13",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Build automated test suites spanning unit, contract, and browser tests.",
+        "Design and run load tests to validate performance before a release.",
+        "Reproduce, isolate, and verify fixes for reported bugs, including security-relevant input handling."
+      ],
+      "examplePrompts": [
+        "Write contract tests for this REST API so consumer and provider cannot drift apart.",
+        "Design a load-test plan for this endpoint ahead of launch, including realistic traffic shapes and pass/fail criteria."
+      ],
       "tags": [
         "qa",
         "testing",
@@ -1846,6 +2003,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-14",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Write idiomatic Rust with sound ownership, lifetime, and trait design.",
+        "Build async services with Tokio and design safe abstractions over unsafe code.",
+        "Clean up error handling and Clippy warnings across a Rust codebase."
+      ],
+      "examplePrompts": [
+        "Refactor this module to fix the borrow-checker fights with idiomatic ownership patterns instead of clones.",
+        "Review this unsafe block and wrap it in a safe, documented abstraction with tests."
+      ],
       "tags": [
         "rust",
         "systems",
@@ -2036,6 +2202,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-13",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Operate containerized workloads with infrastructure as code, observability, and automated delivery.",
+        "Respond to incidents with systematic debugging and post-incident hardening.",
+        "Validate reliability with load tests, performance tuning, and security hardening."
+      ],
+      "examplePrompts": [
+        "This service is paging on latency — walk through the debugging evidence and propose a fix plus alerting improvements.",
+        "Review this Kubernetes and Terraform setup for reliability risks before we take on more traffic."
+      ],
       "tags": [
         "sre",
         "reliability",
@@ -2088,6 +2263,14 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Install the complete obra/superpowers skill library — workflow, debugging, collaboration, and authoring — in one pack.",
+        "Give a coding agent the full Superpowers methodology from idea refinement through verified, reviewed completion."
+      ],
+      "examplePrompts": [
+        "Use the Superpowers workflow to take this feature from brainstorm to a finished, verified branch.",
+        "Apply systematic-debugging from this pack to find the root cause of this failing test."
+      ],
       "tags": [
         "superpowers",
         "skills",
@@ -2130,6 +2313,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Work on parallel changes safely using isolated git worktrees.",
+        "Dispatch subagents to implement, review, and iterate on changes in parallel.",
+        "Run structured code-review request and response workflows between agents."
+      ],
+      "examplePrompts": [
+        "Set up a git worktree for this refactor and dispatch subagents to implement the plan in parallel.",
+        "Request a code review of this branch and address the feedback using the receiving-code-review skill."
+      ],
       "tags": [
         "superpowers",
         "subagents",
@@ -2176,6 +2368,14 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Run the full Superpowers development loop: brainstorm and refine an idea, write a plan, execute it, and finish the branch.",
+        "Enforce test-driven development and verification before declaring work complete."
+      ],
+      "examplePrompts": [
+        "Use the brainstorming skill to refine this feature idea, then write an implementation plan I can execute.",
+        "Execute this plan test-first and run verification-before-completion before you call it done."
+      ],
       "tags": [
         "superpowers",
         "workflow",
@@ -2224,6 +2424,13 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Install the Superpowers skill library through the native plugin or extension for your coding agent.",
+        "Track the official Superpowers distribution manifests for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode."
+      ],
+      "examplePrompts": [
+        "Install the Superpowers plugin for my editor from this pack and confirm its skills are available."
+      ],
       "tags": [
         "superpowers",
         "plugins",
@@ -2271,6 +2478,12 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Author new agent skills that follow the Superpowers conventions and are validated by tests."
+      ],
+      "examplePrompts": [
+        "Use the writing-skills skill to turn this workflow I keep repeating into a new tested skill."
+      ],
       "tags": [
         "superpowers",
         "skills",
@@ -2311,6 +2524,12 @@
       "stability": "experimental",
       "lastVerified": "2026-06-06",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Investigate bugs with the Superpowers systematic-debugging methodology instead of guess-and-check fixes."
+      ],
+      "examplePrompts": [
+        "Use systematic debugging to find the root cause of this intermittent failure before proposing any fix."
+      ],
       "tags": [
         "superpowers",
         "debugging",
@@ -2410,6 +2629,15 @@
       "stability": "experimental",
       "lastVerified": "2026-06-16",
       "reviewStatus": "reviewed",
+      "useCases": [
+        "Write strictly-typed TypeScript with precise type contracts between modules.",
+        "Design stable interfaces and evolve them without breaking consumers.",
+        "Keep dependencies and monorepo package boundaries healthy while scoping changes safely."
+      ],
+      "examplePrompts": [
+        "Tighten the types in this module — eliminate any, narrow the unions, and make invalid states unrepresentable.",
+        "Design the type contract between this frontend and its API client, then implement it test-first."
+      ],
       "tags": [
         "typescript",
         "types",
