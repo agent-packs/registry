@@ -5,7 +5,8 @@ license: MIT
 compatibility: Works with coding agents that support Agent Skills. Upstream source is Addy Osmani's agent-skills repository.
 metadata:
   agentpacks.version: "0.1.0"
-  agentpacks.source: https://github.com/addyosmani/agent-skills/tree/main/skills/security-and-hardening
+  agentpacks.source: https://github.com/addyosmani/agent-skills/tree/076af17226cf896ba6fbfe7bd2ae3c0b1b33e2f7/skills/security-and-hardening
+  agentpacks.upstreamSource: https://github.com/addyosmani/agent-skills/tree/main/skills/security-and-hardening
   agentpacks.upstream: addyosmani/agent-skills/security-and-hardening
 ---
 

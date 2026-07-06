@@ -38,10 +38,7 @@
     "testing"
   ],
   "skills": [
-    "accessibility-audit",
-    "frontend-ui-engineering",
     "frontend-implementation-guidance",
-    "browser-testing-with-devtools",
     "code-review-and-quality",
     "technical-writing"
   ],
@@ -60,5 +57,8 @@
   "scope": [
     "global",
     "project"
+  ],
+  "packs": [
+    "frontend-core"
   ]
 }

@@ -39,38 +39,42 @@
     {
       "id": "pdf",
       "name": "PDF",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/pdf",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/pdf"
     },
     {
       "id": "docx",
       "name": "Word documents (docx)",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/docx",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/docx",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/docx"
     },
     {
       "id": "pptx",
       "name": "PowerPoint (pptx)",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/pptx",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/pptx"
     },
     {
       "id": "xlsx",
       "name": "Excel spreadsheets (xlsx)",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/xlsx",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/xlsx"
     }
   ],
   "categories": [

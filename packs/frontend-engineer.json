@@ -57,10 +57,7 @@
   ],
   "skills": [
     "frontend-implementation-guidance",
-    "accessibility-audit",
     "typescript-best-practices",
-    "frontend-ui-engineering",
-    "browser-testing-with-devtools",
     "test-driven-development"
   ],
   "plugins": [
@@ -143,5 +140,8 @@
   "scope": [
     "global",
     "project"
+  ],
+  "packs": [
+    "frontend-core"
   ]
 }

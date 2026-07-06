@@ -40,10 +40,6 @@
   ],
   "skills": [
     "containerization",
-    "infrastructure-as-code",
-    "observability-and-monitoring",
-    "ci-cd-and-automation",
-    "security-and-hardening",
     "performance-optimization",
     "debugging-and-error-recovery",
     "load-testing"
@@ -63,5 +59,8 @@
   "scope": [
     "global",
     "project"
+  ],
+  "packs": [
+    "ops-core"
   ]
 }

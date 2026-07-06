@@ -41,13 +41,9 @@
     "reliability"
   ],
   "skills": [
-    "ci-cd-and-automation",
-    "observability-and-monitoring",
     "monorepo-workflows",
-    "security-and-hardening",
     "deprecation-and-migration",
-    "documentation-and-adrs",
-    "infrastructure-as-code"
+    "documentation-and-adrs"
   ],
   "categories": [
     "platform",
@@ -64,5 +60,8 @@
   "scope": [
     "global",
     "project"
+  ],
+  "packs": [
+    "ops-core"
   ]
 }
