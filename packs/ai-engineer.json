@@ -23,6 +23,16 @@
       "notes": "Agent Skills and portable managed AI capabilities are compatible for Claude Code users; no Claude-specific plugin wrapper is required."
     }
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Turn an AI feature idea into a production-ready requirements, evaluation, and rollout plan.",
     "Review prompt and system-instruction changes for behavior drift, safety risk, and missing regression cases.",

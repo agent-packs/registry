@@ -10,6 +10,20 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Connect Claude Code to repository hosts, project trackers, and infrastructure tools like GitHub, GitLab, Linear, and Terraform.",
+    "Add browser automation, documentation lookup, and semantic code navigation via Playwright, Context7, and Serena."
+  ],
+  "examplePrompts": [
+    "Install this pack, then use the GitHub plugin to triage my open pull requests.",
+    "Use Playwright from this pack to reproduce the bug report in a real browser."
+  ],
   "tags": [
     "popular",
     "integrations",
@@ -19,7 +33,7 @@
     {
       "id": "github",
       "name": "GitHub",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/external_plugins/github",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -29,12 +43,13 @@
         "marketplace": "claude-plugins-official",
         "package": "github"
       },
-      "trust": "verified"
+      "trust": "verified",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github"
     },
     {
       "id": "gitlab",
       "name": "GitLab",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/gitlab",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/external_plugins/gitlab",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -44,12 +59,13 @@
         "marketplace": "claude-plugins-official",
         "package": "gitlab"
       },
-      "trust": "verified"
+      "trust": "verified",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/gitlab"
     },
     {
       "id": "playwright",
       "name": "Playwright",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/playwright",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/external_plugins/playwright",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -59,12 +75,13 @@
         "marketplace": "claude-plugins-official",
         "package": "playwright"
       },
-      "trust": "verified"
+      "trust": "verified",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/playwright"
     },
     {
       "id": "context7",
       "name": "Context7",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/context7",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/external_plugins/context7",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -74,12 +91,13 @@
         "marketplace": "claude-plugins-official",
         "package": "context7"
       },
-      "trust": "verified"
+      "trust": "verified",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/context7"
     },
     {
       "id": "linear",
       "name": "Linear",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/linear",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/external_plugins/linear",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -89,12 +107,13 @@
         "marketplace": "claude-plugins-official",
         "package": "linear"
       },
-      "trust": "verified"
+      "trust": "verified",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/linear"
     },
     {
       "id": "firebase",
       "name": "Firebase",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/firebase",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/external_plugins/firebase",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -104,12 +123,13 @@
         "marketplace": "claude-plugins-official",
         "package": "firebase"
       },
-      "trust": "verified"
+      "trust": "verified",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/firebase"
     },
     {
       "id": "terraform",
       "name": "Terraform",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/terraform",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/external_plugins/terraform",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -119,12 +139,13 @@
         "marketplace": "claude-plugins-official",
         "package": "terraform"
       },
-      "trust": "verified"
+      "trust": "verified",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/terraform"
     },
     {
       "id": "serena",
       "name": "Serena",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/serena",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/external_plugins/serena",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -134,7 +155,8 @@
         "marketplace": "claude-plugins-official",
         "package": "serena"
       },
-      "trust": "verified"
+      "trust": "verified",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/serena"
     }
   ],
   "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins",

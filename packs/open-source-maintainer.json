@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-13",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Review incoming pull requests for regressions, missing tests, and maintainability.",
+    "Write and maintain project documentation, changelogs, and contributor onboarding material.",
+    "Plan safe deprecations, dependency upgrades, and security advisories for a public project."
+  ],
+  "examplePrompts": [
+    "Review this external PR for behavioral regressions and missing tests, and draft a constructive review comment.",
+    "Plan the deprecation of this public API, including timeline, changelog entries, and migration guide."
+  ],
   "tags": [
     "open-source",
     "maintainer",

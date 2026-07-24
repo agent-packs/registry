@@ -28,6 +28,13 @@
     "order": 20,
     "reason": "Best first role pack for web UI and TypeScript frontend work."
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
   "useCases": [
     "Plan and implement polished frontend user flows with clear components, state models, and responsive behavior.",
     "Run pre-merge quality gates across loading, empty, error, success, permission, mobile, and keyboard states.",
@@ -50,10 +57,7 @@
   ],
   "skills": [
     "frontend-implementation-guidance",
-    "accessibility-audit",
     "typescript-best-practices",
-    "frontend-ui-engineering",
-    "browser-testing-with-devtools",
     "test-driven-development"
   ],
   "plugins": [
@@ -136,5 +140,8 @@
   "scope": [
     "global",
     "project"
+  ],
+  "packs": [
+    "frontend-core"
   ]
 }

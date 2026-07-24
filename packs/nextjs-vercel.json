@@ -10,6 +10,22 @@
   "stability": "experimental",
   "lastVerified": "2026-06-15",
   "reviewStatus": "draft",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Build React and Next.js features following Vercel's official best practices and composition patterns.",
+    "Apply web design guidelines to produce polished, consistent UI.",
+    "Deploy to Vercel and optimize runtime performance of an existing deployment."
+  ],
+  "examplePrompts": [
+    "Refactor this Next.js page using the recommended composition patterns, then deploy a preview to Vercel.",
+    "Audit this app against the web design guidelines and fix the layout and typography issues."
+  ],
   "tags": [
     "frontend",
     "react",
@@ -22,47 +38,52 @@
     {
       "id": "react-best-practices",
       "name": "React best practices",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/react-best-practices",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/vercel-labs/agent-skills"
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "upstreamSource": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices"
     },
     {
       "id": "composition-patterns",
       "name": "Composition patterns",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/composition-patterns",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/vercel-labs/agent-skills"
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "upstreamSource": "https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns"
     },
     {
       "id": "web-design-guidelines",
       "name": "Web design guidelines",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/web-design-guidelines",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/vercel-labs/agent-skills"
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "upstreamSource": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines"
     },
     {
       "id": "deploy-to-vercel",
       "name": "Deploy to Vercel",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/deploy-to-vercel",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/vercel-labs/agent-skills"
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "upstreamSource": "https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel"
     },
     {
       "id": "vercel-optimize",
       "name": "Vercel optimize",
-      "source": "https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-optimize",
+      "source": "https://github.com/vercel-labs/agent-skills/tree/f8a72b9603728bb92a217a879b7e62e43ad76c81/skills/vercel-optimize",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/vercel-labs/agent-skills"
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "upstreamSource": "https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-optimize"
     }
   ],
   "categories": [

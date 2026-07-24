@@ -23,6 +23,13 @@
       "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable for Codex and local coding-agent planning; Claude plugin wrappers are recorded but not natively installed for Codex."
     }
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
   "useCases": [
     "Create and review engineering strategy for a team, platform, migration, or multi-quarter investment.",
     "Run weekly, monthly, and quarterly engineering operating reviews with clear owners and decisions.",

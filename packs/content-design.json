@@ -10,6 +10,22 @@
   "stability": "experimental",
   "lastVerified": "2026-06-15",
   "reviewStatus": "draft",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Produce on-brand visual assets like posters, banners, and social cards from brand guidelines.",
+    "Generate algorithmic or generative art and reusable visual themes.",
+    "Build shareable single-file web artifacts for landing pages, demos, or announcements."
+  ],
+  "examplePrompts": [
+    "Design a launch poster for this feature that follows our brand guidelines.",
+    "Build a shareable web artifact that presents this announcement with an on-brand theme."
+  ],
   "tags": [
     "design",
     "branding",
@@ -21,47 +37,52 @@
     {
       "id": "brand-guidelines",
       "name": "Brand guidelines",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/brand-guidelines",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines"
     },
     {
       "id": "canvas-design",
       "name": "Canvas design",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/canvas-design",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/canvas-design"
     },
     {
       "id": "algorithmic-art",
       "name": "Algorithmic art",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/algorithmic-art",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art"
     },
     {
       "id": "theme-factory",
       "name": "Theme factory",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/theme-factory",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/theme-factory",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/theme-factory"
     },
     {
       "id": "web-artifacts-builder",
       "name": "Web artifacts builder",
-      "source": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder",
+      "source": "https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/web-artifacts-builder",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
-      "repository": "https://github.com/anthropics/skills"
+      "repository": "https://github.com/anthropics/skills",
+      "upstreamSource": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder"
     }
   ],
   "categories": [

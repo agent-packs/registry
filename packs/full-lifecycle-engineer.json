@@ -23,6 +23,16 @@
       "notes": "Composed Agent Skills, Claude-compatible plugin metadata, and portable managed lifecycle capabilities are supported for Claude Code users."
     }
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Take a feature from product discovery through implementation, review, launch, and follow-up.",
     "Coordinate multi-step coding-agent work where requirements, quality gates, release risk, and ownership all matter.",

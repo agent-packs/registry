@@ -2,7 +2,7 @@
   "id": "frontend-quality",
   "name": "Frontend Quality Pack",
   "version": "0.2.0",
-  "description": "Build, verify, and optimize user-facing interfaces with UI engineering, accessibility, browser evidence, and performance checks.",
+  "description": "DEPRECATED: use the frontend-engineer pack instead. Build, verify, and optimize user-facing interfaces with UI engineering, accessibility, browser evidence, and performance checks.",
   "license": "Apache-2.0",
   "maintainers": [
     "sandeshh"
@@ -10,6 +10,16 @@
   "stability": "experimental",
   "lastVerified": "2026-06-12",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Verify frontend changes across responsive layouts, browser behavior, interaction states, and visual polish before merge.",
     "Audit accessibility coverage for keyboard flows, labels, focus order, contrast, motion, and screen reader behavior.",
@@ -52,5 +62,7 @@
   "scope": [
     "global",
     "project"
-  ]
+  ],
+  "deprecated": true,
+  "replacement": "frontend-engineer"
 }

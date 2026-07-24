@@ -1,0 +1,58 @@
+{
+  "id": "frontend-core",
+  "name": "Frontend Core Pack",
+  "description": "The shared frontend foundation: production-quality UI engineering, WCAG accessibility auditing, and browser/DevTools-based verification. Composed by the frontend and accessibility engineer packs; installable on its own for a minimal frontend baseline.",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "maintainers": [
+    "sandeshh"
+  ],
+  "stability": "experimental",
+  "lastVerified": "2026-07-06",
+  "reviewStatus": "draft",
+  "trust": "community",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "tools": [
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "opencode"
+  ],
+  "scope": [
+    "global",
+    "project"
+  ],
+  "categories": [
+    "engineering"
+  ],
+  "useCases": [
+    "Give a coding agent the baseline frontend skills shared by UI and accessibility work: UI engineering, a11y auditing, and browser verification.",
+    "Start from a minimal frontend foundation and layer persona packs on top."
+  ],
+  "examplePrompts": [
+    "Build this component to production quality and verify it in the browser, including keyboard and screen-reader behavior.",
+    "Audit this page against WCAG 2.2 AA and fix the violations you find."
+  ],
+  "tags": [
+    "frontend",
+    "ui",
+    "accessibility",
+    "browser-testing",
+    "core"
+  ],
+  "skills": [
+    "frontend-ui-engineering",
+    "accessibility-audit",
+    "browser-testing-with-devtools"
+  ]
+}

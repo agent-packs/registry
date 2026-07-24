@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-14",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Write idiomatic Rust with sound ownership, lifetime, and trait design.",
+    "Build async services with Tokio and design safe abstractions over unsafe code.",
+    "Clean up error handling and Clippy warnings across a Rust codebase."
+  ],
+  "examplePrompts": [
+    "Refactor this module to fix the borrow-checker fights with idiomatic ownership patterns instead of clones.",
+    "Review this unsafe block and wrap it in a safe, documented abstraction with tests."
+  ],
   "tags": [
     "rust",
     "systems",

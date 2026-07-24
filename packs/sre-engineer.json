@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-13",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Operate containerized workloads with infrastructure as code, observability, and automated delivery.",
+    "Respond to incidents with systematic debugging and post-incident hardening.",
+    "Validate reliability with load tests, performance tuning, and security hardening."
+  ],
+  "examplePrompts": [
+    "This service is paging on latency — walk through the debugging evidence and propose a fix plus alerting improvements.",
+    "Review this Kubernetes and Terraform setup for reliability risks before we take on more traffic."
+  ],
   "tags": [
     "sre",
     "reliability",
@@ -21,10 +40,6 @@
   ],
   "skills": [
     "containerization",
-    "infrastructure-as-code",
-    "observability-and-monitoring",
-    "ci-cd-and-automation",
-    "security-and-hardening",
     "performance-optimization",
     "debugging-and-error-recovery",
     "load-testing"
@@ -44,5 +59,8 @@
   "scope": [
     "global",
     "project"
+  ],
+  "packs": [
+    "ops-core"
   ]
 }

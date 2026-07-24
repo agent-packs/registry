@@ -10,6 +10,16 @@
   "stability": "experimental",
   "lastVerified": "2026-06-14",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Diagnose slow queries, lock contention, connection pool pressure, and replication lag.",
     "Plan database migrations with backfill strategy, validation, rollback, and operational guardrails.",

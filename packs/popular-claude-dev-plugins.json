@@ -10,6 +10,20 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Set up Claude Code with a curated baseline of official development plugins in one install.",
+    "Add structured code review, PR review, feature development, and commit workflows to Claude Code."
+  ],
+  "examplePrompts": [
+    "Install this pack, then use the code-review plugin to review my current branch.",
+    "Use the feature-dev workflow from this pack to plan and implement this feature."
+  ],
   "tags": [
     "popular",
     "claude-code",
@@ -20,7 +34,7 @@
     {
       "id": "claude-code-setup",
       "name": "Claude Code Setup",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/claude-code-setup",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -30,12 +44,13 @@
         "marketplace": "claude-plugins-official",
         "package": "claude-code-setup"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup"
     },
     {
       "id": "code-review",
       "name": "Code Review",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/code-review",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -45,12 +60,13 @@
         "marketplace": "claude-plugins-official",
         "package": "code-review"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review"
     },
     {
       "id": "pr-review-toolkit",
       "name": "PR Review Toolkit",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/pr-review-toolkit",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -60,12 +76,13 @@
         "marketplace": "claude-plugins-official",
         "package": "pr-review-toolkit"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit"
     },
     {
       "id": "feature-dev",
       "name": "Feature Development",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/feature-dev",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -75,12 +92,13 @@
         "marketplace": "claude-plugins-official",
         "package": "feature-dev"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev"
     },
     {
       "id": "frontend-design",
       "name": "Frontend Design",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/frontend-design",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -90,12 +108,13 @@
         "marketplace": "claude-plugins-official",
         "package": "frontend-design"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design"
     },
     {
       "id": "code-simplifier",
       "name": "Code Simplifier",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/code-simplifier",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -105,12 +124,13 @@
         "marketplace": "claude-plugins-official",
         "package": "code-simplifier"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier"
     },
     {
       "id": "security-guidance",
       "name": "Security Guidance",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/security-guidance",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -120,12 +140,13 @@
         "marketplace": "claude-plugins-official",
         "package": "security-guidance"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance"
     },
     {
       "id": "commit-commands",
       "name": "Commit Commands",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/commit-commands",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -135,12 +156,13 @@
         "marketplace": "claude-plugins-official",
         "package": "commit-commands"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands"
     },
     {
       "id": "session-report",
       "name": "Session Report",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/session-report",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/session-report",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -150,12 +172,13 @@
         "marketplace": "claude-plugins-official",
         "package": "session-report"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/session-report"
     },
     {
       "id": "skill-creator",
       "name": "Skill Creator",
-      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/b47ef13563948b2e5fa99451b3ead4f670a3bef8/plugins/skill-creator",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",
@@ -165,7 +188,8 @@
         "marketplace": "claude-plugins-official",
         "package": "skill-creator"
       },
-      "trust": "official"
+      "trust": "official",
+      "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator"
     }
   ],
   "upstreamSource": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins",
