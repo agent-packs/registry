@@ -1,8 +1,8 @@
 {
   "name": "eng-leader-workflows",
   "displayName": "Engineering Leader Workflows",
-  "version": "0.1.0",
-  "description": "Claude Code plugin wrapper for engineering leadership workflows, quality gates, planning, ADRs, delivery, launch, security, and performance reviews.",
+  "version": "0.2.0",
+  "description": "Claude Code plugin wrapper for evidence-based engineering leadership, portfolio, capacity, delivery, architecture, launch, AI adoption, and operating-health reviews.",
   "author": {
     "name": "Agent Packs contributors"
   },
@@ -11,6 +11,9 @@
   "license": "Apache-2.0",
   "keywords": [
     "engineering-leadership",
+    "portfolio",
+    "capacity",
+    "ai-adoption",
     "planning",
     "delivery",
     "architecture",

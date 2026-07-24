@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decisive Decision Making"
+  short_description: "Make stronger decisions with the WRAP process"
+  default_prompt: "Use $decisive-decision-making to structure this decision, challenge assumptions, and define review triggers."
