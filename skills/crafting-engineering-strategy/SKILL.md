@@ -1,10 +1,10 @@
 ---
 name: crafting-engineering-strategy
-description: Create, critique, and operationalize engineering strategy documents using diagnosis, tradeoff exploration, guiding policy, coherent actions, and operating cadence. Use when an engineering leader needs strategy for a team, platform, architecture, migration, reliability program, or multi-quarter technical investment.
+description: Create, critique, and operationalize engineering strategy and investment portfolios using diagnosis, evidence, explicit tradeoffs, guiding policy, capacity-aware actions, and operating cadence. Use when an engineering leader needs strategy for a team, platform, architecture, migration, reliability program, portfolio, or multi-quarter technical investment.
 license: Apache-2.0
 compatibility: Works with coding agents that support Agent Skills.
 metadata:
-  agentpacks.version: "0.1.0"
+  agentpacks.version: "0.2.0"
   agentpacks.reference: https://craftingengstrategy.com/
   agentpacks.referenceTitle: Crafting Engineering Strategy
 ---
@@ -24,7 +24,8 @@ This skill is original Agent Packs content informed by the public Crafting Engin
 
 2. Diagnose the situation.
    - Summarize the current system, constraints, bottlenecks, risks, and relevant history.
-   - Distinguish facts from assumptions.
+   - Distinguish facts from assumptions and rate confidence in decision-critical evidence.
+   - State what new evidence would materially change the diagnosis.
    - Look for the limiting factor: delivery throughput, reliability, architecture, developer experience, staffing, product ambiguity, operational load, or dependency drag.
 
 3. Explore strategic options.
@@ -38,14 +39,21 @@ This skill is original Agent Packs content informed by the public Crafting Engin
    - Prefer policies that can be tested by asking, "What would this make us stop doing?"
 
 5. Define coherent actions.
-   - List the initiatives, owners, dependencies, milestones, and first irreversible decisions.
+   - List the initiatives, owners, dependencies, milestones, capacity required, and first irreversible decisions.
    - Include what changes in architecture, process, staffing, tooling, quality gates, and operating cadence.
    - Tie every action back to the diagnosis and policy.
+   - Make room for the strategy by naming work to stop, defer, or reduce.
 
 6. Operationalize the strategy.
-   - Define review cadence, decision forums, metrics, and refresh triggers.
+   - Define review cadence, decision forums, baselines, outcome metrics, counter-metrics, and refresh triggers.
    - Name risks that require escalation and signals that mean the strategy is no longer working.
    - Translate the strategy into the next 30, 60, and 90 days of action.
+
+7. Reconcile the portfolio.
+   - Compare proposed investments with actual capacity after operational load and interruption work.
+   - Classify existing initiatives as continue, accelerate, reshape, defer, or stop.
+   - Surface cross-team dependencies and sequence work around the system constraint.
+   - Record the decision owner, decision date, and trigger for revisiting each major allocation.
 
 ## Strategy Memo Shape
 
@@ -60,6 +68,8 @@ Use this structure unless the user provides another format:
 
 ## Diagnosis
 
+## Evidence And Confidence
+
 ## Strategic Options
 
 ## Recommended Strategy
@@ -67,6 +77,8 @@ Use this structure unless the user provides another format:
 ## Guiding Policy
 
 ## Coherent Actions
+
+## Portfolio And Capacity
 
 ## Tradeoffs And Non-Goals
 
@@ -87,6 +99,9 @@ Use this structure unless the user provides another format:
 - Does the guiding policy help teams make future decisions?
 - Are the actions coherent, sequenced, and owned?
 - Are risks, assumptions, and refresh triggers visible?
+- Does the investment portfolio fit actual capacity after operational load?
+- Does each metric have a baseline, intended outcome, and counter-metric?
+- Is it clear what evidence would cause leaders to revisit the decision?
 - Can an executive understand the strategy without reading implementation details?
 - Can an engineer understand how their daily work should change?
 
@@ -97,7 +112,8 @@ When creating a strategy, produce:
 - one concise executive summary;
 - the full strategy memo;
 - a decision table comparing options;
+- a portfolio table showing continue, accelerate, reshape, defer, or stop decisions;
 - owner/date actions for the next 30 days;
-- explicit assumptions and missing evidence.
+- explicit assumptions, evidence confidence, and missing signals.
 
 When reviewing a strategy, lead with the strongest finding first, then list gaps by severity. Avoid generic leadership advice; ground feedback in the diagnosis, choices, sequencing, and operating model.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T22:58:37.594094Z",
+  "generatedAt": "2026-07-24T22:01:34.262262Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -613,25 +613,33 @@
     {
       "id": "eng-leader",
       "name": "Engineering Leader Pack",
-      "version": "0.1.0",
-      "description": "A leadership-focused Agent Pack for engineering strategy, planning, quality gates, architecture decisions, delivery health, launch readiness, security risk, and performance health.",
+      "version": "0.2.0",
+      "description": "A leadership-focused Agent Pack for structured decision-making, engineering strategy, portfolio and capacity choices, delivery health, architecture governance, launch readiness, organizational learning, and responsible AI-assisted engineering adoption.",
       "maintainers": [
         "sandeshh"
       ],
       "stability": "experimental",
-      "lastVerified": "2026-06-28",
+      "lastVerified": "2026-07-24",
       "reviewStatus": "verified",
       "useCases": [
         "Create and review engineering strategy for a team, platform, migration, or multi-quarter investment.",
         "Run weekly, monthly, and quarterly engineering operating reviews with clear owners and decisions.",
         "Assess launch readiness, architecture tradeoffs, incident updates, and executive engineering communication.",
-        "Review engineering org health, productivity signals, ownership clarity, and leadership operating cadence."
+        "Review engineering org health, productivity signals, ownership clarity, and leadership operating cadence.",
+        "Rebalance an engineering portfolio using outcomes, capacity, dependencies, risk, and explicit stop-or-defer decisions.",
+        "Evaluate AI-assisted engineering adoption using delivery outcomes, quality, security, cost, and developer experience rather than activity metrics.",
+        "Structure consequential engineering decisions with the Decisive WRAP process and explicit evidence, tripwires, and review dates.",
+        "Run a monthly engineering retrospective that turns appreciation and small improvements into owned follow-through."
       ],
       "examplePrompts": [
         "Review this quarterly engineering strategy and tell me where the diagnosis, tradeoffs, or operating cadence are weak.",
         "Run a weekly engineering leadership review for this initiative using delivery status, risks, decisions, and owner/date actions.",
         "Create an executive engineering update for this launch, including customer impact, delivery confidence, top risks, and leadership asks.",
-        "Use DORA and SPACE as leadership signals to identify the highest-leverage system improvements for this team."
+        "Use the current DORA and SPACE frameworks as leadership signals to identify the highest-leverage system improvements for this team.",
+        "Review this engineering portfolio and recommend what to continue, stop, defer, or sequence differently within our actual capacity.",
+        "Assess our AI coding-tool rollout using outcome, quality, security, cost, and developer-experience evidence, then recommend the next bounded experiment.",
+        "Use the Decisive WRAP process to evaluate this engineering decision and produce a recommendation with assumptions, tripwires, and a review date.",
+        "Facilitate our monthly engineering retrospective using appreciations, what went well, 10% improvements across people/product/process, actions, and prior follow-ups."
       ],
       "tags": [
         "engineering-leadership",
@@ -643,7 +651,14 @@
         "launch-readiness",
         "security",
         "performance",
-        "operating-rhythm"
+        "operating-rhythm",
+        "portfolio-management",
+        "capacity-planning",
+        "ai-adoption",
+        "decision-governance",
+        "decisive",
+        "retrospectives",
+        "continuous-improvement"
       ],
       "categories": [
         "engineering",
@@ -663,6 +678,7 @@
       ],
       "skills": [
         "crafting-engineering-strategy",
+        "decisive-decision-making",
         "eng-leader-strategy",
         "eng-leader-planning",
         "eng-leader-quality-review",
@@ -676,27 +692,27 @@
         "eng-leader-workflows",
         "github-pr-inspection"
       ],
-      "capabilities": 30,
+      "capabilities": 36,
       "capabilityTypes": {
         "mcp": 1,
         "memory": 2,
         "plugin": 2,
-        "prompt": 7,
-        "skill": 9,
+        "prompt": 10,
+        "skill": 10,
         "subagent": 1,
-        "template": 6,
+        "template": 8,
         "tool": 2
       },
       "trust": "community",
       "compatibility": {
         "claude-code": {
           "status": "verified",
-          "lastVerified": "2026-06-28",
-          "notes": "Skills, Claude plugin wrappers, and portable managed leadership capabilities validate and install through the supported target matrix."
+          "lastVerified": "2026-07-24",
+          "notes": "Skills, Claude plugin wrappers, and portable leadership capabilities validate and install through the supported target matrix."
         },
         "codex": {
           "status": "partial",
-          "lastVerified": "2026-06-28",
+          "lastVerified": "2026-07-24",
           "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable for Codex and local coding-agent planning; Claude plugin wrappers are recorded but not natively installed for Codex."
         }
       },
