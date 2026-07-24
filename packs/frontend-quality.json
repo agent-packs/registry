@@ -2,7 +2,7 @@
   "id": "frontend-quality",
   "name": "Frontend Quality Pack",
   "version": "0.2.0",
-  "description": "Build, verify, and optimize user-facing interfaces with UI engineering, accessibility, browser evidence, and performance checks.",
+  "description": "DEPRECATED: use the frontend-engineer pack instead. Build, verify, and optimize user-facing interfaces with UI engineering, accessibility, browser evidence, and performance checks.",
   "license": "Apache-2.0",
   "maintainers": [
     "sandeshh"
@@ -62,5 +62,7 @@
   "scope": [
     "global",
     "project"
-  ]
+  ],
+  "deprecated": true,
+  "replacement": "frontend-engineer"
 }

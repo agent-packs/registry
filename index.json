@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T22:35:36.130934Z",
+  "generatedAt": "2026-07-06T22:58:37.594094Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -46,10 +46,7 @@
         "project"
       ],
       "skills": [
-        "accessibility-audit",
-        "frontend-ui-engineering",
         "frontend-implementation-guidance",
-        "browser-testing-with-devtools",
         "code-review-and-quality",
         "technical-writing"
       ],
@@ -269,11 +266,13 @@
       "id": "cloud-infrastructure",
       "name": "Cloud Infrastructure Pack",
       "version": "0.1.0",
-      "description": "Workflows for provisioning and operating cloud infrastructure on AWS, GCP, or Azure: infrastructure as code, container orchestration, security hardening, observability, and automated delivery.",
+      "description": "DEPRECATED: use the platform-engineer pack instead. Workflows for provisioning and operating cloud infrastructure on AWS, GCP, or Azure: infrastructure as code, container orchestration, security hardening, observability, and automated delivery.",
       "maintainers": [
         "sandeshh"
       ],
       "stability": "experimental",
+      "deprecated": true,
+      "replacement": "platform-engineer",
       "lastVerified": "2026-06-13",
       "reviewStatus": "reviewed",
       "useCases": [
@@ -817,6 +816,58 @@
       "freshness": "fresh"
     },
     {
+      "id": "frontend-core",
+      "name": "Frontend Core Pack",
+      "version": "0.1.0",
+      "description": "The shared frontend foundation: production-quality UI engineering, WCAG accessibility auditing, and browser/DevTools-based verification. Composed by the frontend and accessibility engineer packs; installable on its own for a minimal frontend baseline.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-07-06",
+      "reviewStatus": "draft",
+      "useCases": [
+        "Give a coding agent the baseline frontend skills shared by UI and accessibility work: UI engineering, a11y auditing, and browser verification.",
+        "Start from a minimal frontend foundation and layer persona packs on top."
+      ],
+      "examplePrompts": [
+        "Build this component to production quality and verify it in the browser, including keyboard and screen-reader behavior.",
+        "Audit this page against WCAG 2.2 AA and fix the violations you find."
+      ],
+      "tags": [
+        "frontend",
+        "ui",
+        "accessibility",
+        "browser-testing",
+        "core"
+      ],
+      "categories": [
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "frontend-ui-engineering",
+        "accessibility-audit",
+        "browser-testing-with-devtools"
+      ],
+      "capabilities": 3,
+      "capabilityTypes": {
+        "skill": 3
+      },
+      "trust": "community",
+      "freshness": "fresh"
+    },
+    {
       "id": "frontend-engineer",
       "name": "Frontend Engineer Pack",
       "version": "0.2.0",
@@ -867,10 +918,7 @@
       ],
       "skills": [
         "frontend-implementation-guidance",
-        "accessibility-audit",
         "typescript-best-practices",
-        "frontend-ui-engineering",
-        "browser-testing-with-devtools",
         "test-driven-development"
       ],
       "plugins": [
@@ -904,11 +952,13 @@
       "id": "frontend-quality",
       "name": "Frontend Quality Pack",
       "version": "0.2.0",
-      "description": "Build, verify, and optimize user-facing interfaces with UI engineering, accessibility, browser evidence, and performance checks.",
+      "description": "DEPRECATED: use the frontend-engineer pack instead. Build, verify, and optimize user-facing interfaces with UI engineering, accessibility, browser evidence, and performance checks.",
       "maintainers": [
         "sandeshh"
       ],
       "stability": "experimental",
+      "deprecated": true,
+      "replacement": "frontend-engineer",
       "lastVerified": "2026-06-12",
       "reviewStatus": "reviewed",
       "useCases": [
@@ -1384,6 +1434,61 @@
       "freshness": "fresh"
     },
     {
+      "id": "ops-core",
+      "name": "Ops Core Pack",
+      "version": "0.1.0",
+      "description": "The shared operations foundation: infrastructure as code, CI/CD automation, observability, and security hardening. Composed by the SRE and platform engineer packs; installable on its own for a minimal ops baseline.",
+      "maintainers": [
+        "sandeshh"
+      ],
+      "stability": "experimental",
+      "lastVerified": "2026-07-06",
+      "reviewStatus": "draft",
+      "useCases": [
+        "Give a coding agent the baseline ops skills shared by SRE and platform work: IaC, CI/CD, observability, and hardening.",
+        "Start from a minimal operations foundation and layer persona packs on top."
+      ],
+      "examplePrompts": [
+        "Write Terraform for this service and a CI pipeline that plans and applies it safely.",
+        "Add the logging, metrics, and alerts this service needs before it takes production traffic."
+      ],
+      "tags": [
+        "ops",
+        "infrastructure",
+        "iac",
+        "ci-cd",
+        "observability",
+        "security",
+        "core"
+      ],
+      "categories": [
+        "engineering"
+      ],
+      "tools": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini",
+        "opencode"
+      ],
+      "scope": [
+        "global",
+        "project"
+      ],
+      "skills": [
+        "infrastructure-as-code",
+        "ci-cd-and-automation",
+        "observability-and-monitoring",
+        "security-and-hardening"
+      ],
+      "capabilities": 4,
+      "capabilityTypes": {
+        "skill": 4
+      },
+      "trust": "community",
+      "freshness": "fresh"
+    },
+    {
       "id": "performance-engineer",
       "name": "Performance Engineer Pack",
       "version": "0.1.0",
@@ -1490,13 +1595,9 @@
         "project"
       ],
       "skills": [
-        "ci-cd-and-automation",
-        "observability-and-monitoring",
         "monorepo-workflows",
-        "security-and-hardening",
         "deprecation-and-migration",
-        "documentation-and-adrs",
-        "infrastructure-as-code"
+        "documentation-and-adrs"
       ],
       "capabilities": 7,
       "capabilityTypes": {
@@ -2238,10 +2339,6 @@
       ],
       "skills": [
         "containerization",
-        "infrastructure-as-code",
-        "observability-and-monitoring",
-        "ci-cd-and-automation",
-        "security-and-hardening",
         "performance-optimization",
         "debugging-and-error-recovery",
         "load-testing"

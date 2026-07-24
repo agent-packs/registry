@@ -2,7 +2,7 @@
   "id": "cloud-infrastructure",
   "name": "Cloud Infrastructure Pack",
   "version": "0.1.0",
-  "description": "Workflows for provisioning and operating cloud infrastructure on AWS, GCP, or Azure: infrastructure as code, container orchestration, security hardening, observability, and automated delivery.",
+  "description": "DEPRECATED: use the platform-engineer pack instead. Workflows for provisioning and operating cloud infrastructure on AWS, GCP, or Azure: infrastructure as code, container orchestration, security hardening, observability, and automated delivery.",
   "license": "Apache-2.0",
   "maintainers": [
     "sandeshh"
@@ -61,5 +61,7 @@
   "scope": [
     "global",
     "project"
-  ]
+  ],
+  "deprecated": true,
+  "replacement": "platform-engineer"
 }

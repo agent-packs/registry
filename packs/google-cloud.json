@@ -38,72 +38,79 @@
     {
       "id": "gcloud",
       "name": "gcloud CLI",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/gcloud",
+      "source": "https://github.com/google/skills/tree/1e2062f5e83e49c8b842dbe9de0f9e592044e52c/skills/cloud/gcloud",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
       "license": "Apache-2.0",
-      "repository": "https://github.com/google/skills"
+      "repository": "https://github.com/google/skills",
+      "upstreamSource": "https://github.com/google/skills/tree/main/skills/cloud/gcloud"
     },
     {
       "id": "cloud-run-basics",
       "name": "Cloud Run basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/cloud-run-basics",
+      "source": "https://github.com/google/skills/tree/1e2062f5e83e49c8b842dbe9de0f9e592044e52c/skills/cloud/cloud-run-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
       "license": "Apache-2.0",
-      "repository": "https://github.com/google/skills"
+      "repository": "https://github.com/google/skills",
+      "upstreamSource": "https://github.com/google/skills/tree/main/skills/cloud/cloud-run-basics"
     },
     {
       "id": "gke-basics",
       "name": "GKE basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/gke-basics",
+      "source": "https://github.com/google/skills/tree/1e2062f5e83e49c8b842dbe9de0f9e592044e52c/skills/cloud/gke-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
       "license": "Apache-2.0",
-      "repository": "https://github.com/google/skills"
+      "repository": "https://github.com/google/skills",
+      "upstreamSource": "https://github.com/google/skills/tree/main/skills/cloud/gke-basics"
     },
     {
       "id": "bigquery-basics",
       "name": "BigQuery basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/bigquery-basics",
+      "source": "https://github.com/google/skills/tree/1e2062f5e83e49c8b842dbe9de0f9e592044e52c/skills/cloud/bigquery-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
       "license": "Apache-2.0",
-      "repository": "https://github.com/google/skills"
+      "repository": "https://github.com/google/skills",
+      "upstreamSource": "https://github.com/google/skills/tree/main/skills/cloud/bigquery-basics"
     },
     {
       "id": "cloud-sql-basics",
       "name": "Cloud SQL basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/cloud-sql-basics",
+      "source": "https://github.com/google/skills/tree/1e2062f5e83e49c8b842dbe9de0f9e592044e52c/skills/cloud/cloud-sql-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
       "license": "Apache-2.0",
-      "repository": "https://github.com/google/skills"
+      "repository": "https://github.com/google/skills",
+      "upstreamSource": "https://github.com/google/skills/tree/main/skills/cloud/cloud-sql-basics"
     },
     {
       "id": "firebase-basics",
       "name": "Firebase basics",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/firebase-basics",
+      "source": "https://github.com/google/skills/tree/1e2062f5e83e49c8b842dbe9de0f9e592044e52c/skills/cloud/firebase-basics",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
       "license": "Apache-2.0",
-      "repository": "https://github.com/google/skills"
+      "repository": "https://github.com/google/skills",
+      "upstreamSource": "https://github.com/google/skills/tree/main/skills/cloud/firebase-basics"
     },
     {
       "id": "google-cloud-waf-security",
       "name": "Google Cloud WAF security",
-      "source": "https://github.com/google/skills/tree/main/skills/cloud/google-cloud-waf-security",
+      "source": "https://github.com/google/skills/tree/1e2062f5e83e49c8b842dbe9de0f9e592044e52c/skills/cloud/google-cloud-waf-security",
       "format": "agent-skill",
       "entry": "SKILL.md",
       "trust": "official",
       "license": "Apache-2.0",
-      "repository": "https://github.com/google/skills"
+      "repository": "https://github.com/google/skills",
+      "upstreamSource": "https://github.com/google/skills/tree/main/skills/cloud/google-cloud-waf-security"
     }
   ],
   "categories": [
