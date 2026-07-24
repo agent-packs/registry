@@ -10,6 +10,16 @@
   "stability": "experimental",
   "lastVerified": "2026-06-12",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Load project context and constraints before changing code so local agents follow the existing architecture.",
     "Design stable APIs and module boundaries before implementation work crosses package or service seams.",

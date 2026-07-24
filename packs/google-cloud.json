@@ -10,6 +10,22 @@
   "stability": "experimental",
   "lastVerified": "2026-06-15",
   "reviewStatus": "draft",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Deploy and operate workloads on Cloud Run and GKE using gcloud and Google's recommended patterns.",
+    "Query and model data in BigQuery and manage Cloud SQL and Firebase resources.",
+    "Apply Google Cloud Well-Architected security guidance to a project's infrastructure."
+  ],
+  "examplePrompts": [
+    "Deploy this containerized service to Cloud Run with the right service account, scaling, and monitoring settings.",
+    "Review this GCP project against Well-Architected security guidance and list the highest-risk gaps."
+  ],
   "tags": [
     "cloud",
     "gcp",

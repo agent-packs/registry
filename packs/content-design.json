@@ -10,6 +10,22 @@
   "stability": "experimental",
   "lastVerified": "2026-06-15",
   "reviewStatus": "draft",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Produce on-brand visual assets like posters, banners, and social cards from brand guidelines.",
+    "Generate algorithmic or generative art and reusable visual themes.",
+    "Build shareable single-file web artifacts for landing pages, demos, or announcements."
+  ],
+  "examplePrompts": [
+    "Design a launch poster for this feature that follows our brand guidelines.",
+    "Build a shareable web artifact that presents this announcement with an on-brand theme."
+  ],
   "tags": [
     "design",
     "branding",

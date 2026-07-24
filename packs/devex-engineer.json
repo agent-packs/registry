@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-14",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Design SDKs and internal tools with ergonomic, stable interfaces.",
+    "Write developer documentation, onboarding guides, and API references that contributors can follow.",
+    "Automate contributor workflows with CI checks and healthy dependency management."
+  ],
+  "examplePrompts": [
+    "Review this SDK's public API for ergonomics and consistency, and propose improvements with migration notes.",
+    "Write an onboarding guide for this repository that gets a new contributor to a merged PR."
+  ],
   "tags": [
     "devex",
     "developer-experience",

@@ -10,6 +10,23 @@
   "stability": "experimental",
   "lastVerified": "2026-06-06",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Install the Superpowers skill library through the native plugin or extension for your coding agent.",
+    "Track the official Superpowers distribution manifests for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode."
+  ],
+  "examplePrompts": [
+    "Install the Superpowers plugin for my editor from this pack and confirm its skills are available."
+  ],
   "tags": [
     "superpowers",
     "plugins",

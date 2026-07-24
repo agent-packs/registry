@@ -10,6 +10,22 @@
   "stability": "experimental",
   "lastVerified": "2026-06-15",
   "reviewStatus": "draft",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest"
+    }
+  },
+  "useCases": [
+    "Create polished Word, PowerPoint, Excel, or PDF deliverables from source content.",
+    "Extract text, tables, and structure from existing office documents.",
+    "Edit existing documents: fill PDF forms, update decks, restructure spreadsheets, merge or split files."
+  ],
+  "examplePrompts": [
+    "Turn these meeting notes into a formatted Word report with a table of contents and headings.",
+    "Extract every table from this PDF into a clean Excel spreadsheet."
+  ],
   "tags": [
     "documents",
     "pdf",

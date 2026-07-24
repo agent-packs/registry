@@ -15,6 +15,16 @@
     "order": 30,
     "reason": "Best first role pack for APIs, services, data models, and reliability."
   },
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
   "useCases": [
     "Implement backend service features with clear API contracts, data models, tests, and observability.",
     "Review service changes for reliability, security, migration risk, and rollback readiness.",

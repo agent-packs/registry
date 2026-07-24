@@ -10,6 +10,25 @@
   "stability": "experimental",
   "lastVerified": "2026-06-14",
   "reviewStatus": "reviewed",
+  "requirements": {
+    "agentPacks": ">=0.1.0",
+    "tools": {
+      "codex": "latest",
+      "claude-code": "latest",
+      "cursor": "latest",
+      "gemini": "latest",
+      "opencode": "latest"
+    }
+  },
+  "useCases": [
+    "Make ML experiments reproducible with tracked hyperparameters, metrics, artifacts, and environments.",
+    "Design data pipelines and serving APIs for training and inference workloads.",
+    "Add observability and tests around model training and serving to catch regressions."
+  ],
+  "examplePrompts": [
+    "Set up experiment tracking for this training script so runs are reproducible and comparable.",
+    "Design a serving API for this model, including input validation, monitoring, and rollback strategy."
+  ],
   "tags": [
     "ml",
     "machine-learning",
