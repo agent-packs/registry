@@ -9,8 +9,26 @@ jobs:
   validate:
     name: Validate registry
     runs-on: ubuntu-latest
+    env:
+      AGENT_PACKS_REGISTRY: ${{ github.workspace }}/packs
+      AGENT_PACKS_BIN: ${{ github.workspace }}/bin/agent-packs
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+
+      - name: Check out Agent Packs CLI
+        uses: actions/checkout@v7
+        with:
+          repository: agent-packs/cli
+          path: cli-source
+
+      - uses: actions/setup-go@v6
+        with:
+          go-version: "1.26"
+          cache-dependency-path: cli-source/go.sum
+
+      - name: Build registry contract CLI
+        working-directory: cli-source
+        run: go build -o "$GITHUB_WORKSPACE/bin/agent-packs" ./cmd/agent-packs
 
       - uses: actions/setup-python@v5
         with:
@@ -23,3 +41,22 @@ jobs:
 
       - name: Validate manifests against JSON Schema
         run: .venv/bin/python -m unittest discover -s tests
+
+      - name: Validate every registry surface with the CLI
+        run: |
+          bin/agent-packs validate packs
+          bin/agent-packs validate skills
+          bin/agent-packs validate plugins
+          bin/agent-packs validate schemas/examples
+
+      - name: Enforce catalog quality and provenance
+        run: |
+          bin/agent-packs lint --all
+          bin/agent-packs verify --all
+          bin/agent-packs publish --check --policy policy/ci.json
+          bin/agent-packs index --check --output index.json
+
+      - name: Exercise flagship install plans
+        run: |
+          bin/agent-packs install eng-leader --agent codex --mode copy --dry-run
+          bin/agent-packs install superpowers --agent codex --mode copy --dry-run

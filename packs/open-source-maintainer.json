@@ -51,7 +51,6 @@
     {
       "id": "claude-code-review",
       "name": "Claude Code Review",
-      "source": "https://github.com/agent-packs/registry/tree/main/plugins/claude-code-review",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "repository": "https://github.com/anthropics/claude-plugins-official",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T22:01:34.262262Z",
+  "generatedAt": "2026-07-25T20:07:22.662541Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -613,14 +613,20 @@
     {
       "id": "eng-leader",
       "name": "Engineering Leader Pack",
-      "version": "0.2.0",
-      "description": "A leadership-focused Agent Pack for structured decision-making, engineering strategy, portfolio and capacity choices, delivery health, architecture governance, launch readiness, organizational learning, and responsible AI-assisted engineering adoption.",
+      "version": "0.3.0",
+      "description": "A decision-ready operating system for engineering leaders covering strategy, portfolio and capacity choices, delivery health, architecture and modernization, talent and succession, cost and vendors, launch readiness, organizational learning, and responsible AI-assisted engineering adoption.",
       "maintainers": [
         "sandeshh"
       ],
-      "stability": "experimental",
-      "lastVerified": "2026-07-24",
+      "stability": "stable",
+      "lastVerified": "2026-07-25",
       "reviewStatus": "verified",
+      "recommended": true,
+      "recommendation": {
+        "path": "role",
+        "order": 10,
+        "reason": "Flagship decision and operating suite for engineering managers, directors, and heads of engineering."
+      },
       "useCases": [
         "Create and review engineering strategy for a team, platform, migration, or multi-quarter investment.",
         "Run weekly, monthly, and quarterly engineering operating reviews with clear owners and decisions.",
@@ -628,6 +634,8 @@
         "Review engineering org health, productivity signals, ownership clarity, and leadership operating cadence.",
         "Rebalance an engineering portfolio using outcomes, capacity, dependencies, risk, and explicit stop-or-defer decisions.",
         "Evaluate AI-assisted engineering adoption using delivery outcomes, quality, security, cost, and developer experience rather than activity metrics.",
+        "Run evidence-based talent, succession, modernization, and engineering cost reviews without turning activity metrics into individual performance scores.",
+        "Plan engineering changes with stakeholder-specific communication, feedback loops, and adoption measures.",
         "Structure consequential engineering decisions with the Decisive WRAP process and explicit evidence, tripwires, and review dates.",
         "Run a monthly engineering retrospective that turns appreciation and small improvements into owned follow-through."
       ],
@@ -638,6 +646,10 @@
         "Use the current DORA and SPACE frameworks as leadership signals to identify the highest-leverage system improvements for this team.",
         "Review this engineering portfolio and recommend what to continue, stop, defer, or sequence differently within our actual capacity.",
         "Assess our AI coding-tool rollout using outcome, quality, security, cost, and developer-experience evidence, then recommend the next bounded experiment.",
+        "Review succession risk for this engineering organization and propose fair development, coverage, and hiring actions with owners and dates.",
+        "Prioritize this technical debt and modernization portfolio against customer impact, risk, capacity, cost of delay, and migration reversibility.",
+        "Review our engineering vendors and cloud spend, then recommend renew, renegotiate, replace, or retire decisions with exit triggers.",
+        "Create a stakeholder communication plan for this engineering operating-model change, including objections, feedback channels, and adoption signals.",
         "Use the Decisive WRAP process to evaluate this engineering decision and produce a recommendation with assumptions, tripwires, and a review date.",
         "Facilitate our monthly engineering retrospective using appreciations, what went well, 10% improvements across people/product/process, actions, and prior follow-ups."
       ],
@@ -658,7 +670,12 @@
         "decision-governance",
         "decisive",
         "retrospectives",
-        "continuous-improvement"
+        "continuous-improvement",
+        "talent-management",
+        "succession-planning",
+        "modernization",
+        "engineering-economics",
+        "change-management"
       ],
       "categories": [
         "engineering",
@@ -679,6 +696,7 @@
       "skills": [
         "crafting-engineering-strategy",
         "decisive-decision-making",
+        "engineering-leadership-operating-system",
         "eng-leader-strategy",
         "eng-leader-planning",
         "eng-leader-quality-review",
@@ -692,28 +710,28 @@
         "eng-leader-workflows",
         "github-pr-inspection"
       ],
-      "capabilities": 36,
+      "capabilities": 41,
       "capabilityTypes": {
         "mcp": 1,
         "memory": 2,
         "plugin": 2,
-        "prompt": 10,
-        "skill": 10,
+        "prompt": 13,
+        "skill": 11,
         "subagent": 1,
-        "template": 8,
+        "template": 9,
         "tool": 2
       },
-      "trust": "community",
+      "trust": "verified",
       "compatibility": {
         "claude-code": {
           "status": "verified",
-          "lastVerified": "2026-07-24",
-          "notes": "Skills, Claude plugin wrappers, and portable leadership capabilities validate and install through the supported target matrix."
+          "lastVerified": "2026-07-25",
+          "notes": "The agent-neutral leadership operating skill, portable capabilities, and optional Claude plugin wrappers validate and install through the supported target matrix."
         },
         "codex": {
-          "status": "partial",
-          "lastVerified": "2026-07-24",
-          "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable for Codex and local coding-agent planning; Claude plugin wrappers are recorded but not natively installed for Codex."
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "The agent-neutral leadership operating skill plus memory, prompts, templates, tools, and MCP metadata validate and install for Codex; optional Claude plugin wrappers remain reference-only."
         }
       },
       "freshness": "fresh"
@@ -2368,21 +2386,29 @@
     {
       "id": "superpowers",
       "name": "Superpowers Pack",
-      "version": "0.1.0",
-      "description": "A composed Agent Pack for obra/superpowers, aggregating its core workflow, quality, collaboration, meta authoring, and plugin distribution packs.",
+      "version": "0.2.0",
+      "description": "The complete pinned obra/superpowers engineering workflow: discovery, planning, test-first implementation, systematic debugging, parallel collaboration, review, verification, branch completion, skill authoring, and agent distribution descriptors.",
       "maintainers": [
         "sandeshh"
       ],
-      "stability": "experimental",
-      "lastVerified": "2026-06-06",
-      "reviewStatus": "reviewed",
+      "stability": "stable",
+      "lastVerified": "2026-07-25",
+      "reviewStatus": "verified",
+      "recommended": true,
+      "recommendation": {
+        "path": "workflow",
+        "order": 10,
+        "reason": "Flagship end-to-end engineering workflow from discovery through verified, reviewed completion."
+      },
       "useCases": [
         "Install the complete obra/superpowers skill library — workflow, debugging, collaboration, and authoring — in one pack.",
-        "Give a coding agent the full Superpowers methodology from idea refinement through verified, reviewed completion."
+        "Give a coding agent the full Superpowers methodology from idea refinement through verified, reviewed completion.",
+        "Use one portable workflow suite across Codex, Claude Code, Cursor, Gemini CLI, OpenCode, and Copilot targets while retaining upstream provenance."
       ],
       "examplePrompts": [
         "Use the Superpowers workflow to take this feature from brainstorm to a finished, verified branch.",
-        "Apply systematic-debugging from this pack to find the root cause of this failing test."
+        "Apply systematic-debugging from this pack to find the root cause of this failing test.",
+        "Break this approved plan into independent tasks, dispatch parallel agents safely, request code review, and verify the branch before completion."
       ],
       "tags": [
         "superpowers",
@@ -2402,7 +2428,8 @@
         "claude-code",
         "cursor",
         "gemini",
-        "opencode"
+        "opencode",
+        "copilot"
       ],
       "scope": [
         "global",
@@ -2413,19 +2440,52 @@
         "plugin": 5,
         "skill": 14
       },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Claude Code target."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Codex target."
+        },
+        "copilot": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills can be installed for the Copilot target."
+        },
+        "cursor": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native distribution remains agent-managed."
+        },
+        "gemini": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native extension behavior remains agent-managed."
+        },
+        "opencode": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native plugin behavior remains agent-managed."
+        }
+      },
       "freshness": "fresh"
     },
     {
       "id": "superpowers-collaboration-subagents",
       "name": "Superpowers Collaboration Subagents Pack",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "description": "Superpowers skills for isolated worktrees, parallel agent dispatch, subagent-driven implementation, and code review workflows.",
       "maintainers": [
         "sandeshh"
       ],
-      "stability": "experimental",
-      "lastVerified": "2026-06-06",
-      "reviewStatus": "reviewed",
+      "stability": "stable",
+      "lastVerified": "2026-07-25",
+      "reviewStatus": "verified",
       "useCases": [
         "Work on parallel changes safely using isolated git worktrees.",
         "Dispatch subagents to implement, review, and iterate on changes in parallel.",
@@ -2451,7 +2511,8 @@
         "claude-code",
         "cursor",
         "gemini",
-        "opencode"
+        "opencode",
+        "copilot"
       ],
       "scope": [
         "global",
@@ -2468,19 +2529,52 @@
       "capabilityTypes": {
         "skill": 5
       },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Claude Code target."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Codex target."
+        },
+        "copilot": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills can be installed for the Copilot target."
+        },
+        "cursor": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native distribution remains agent-managed."
+        },
+        "gemini": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native extension behavior remains agent-managed."
+        },
+        "opencode": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native plugin behavior remains agent-managed."
+        }
+      },
       "freshness": "fresh"
     },
     {
       "id": "superpowers-core-workflow",
       "name": "Superpowers Core Workflow Pack",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "description": "Core Superpowers methodology skills for moving from idea refinement through planning, implementation, TDD, verification, and branch completion.",
       "maintainers": [
         "sandeshh"
       ],
-      "stability": "experimental",
-      "lastVerified": "2026-06-06",
-      "reviewStatus": "reviewed",
+      "stability": "stable",
+      "lastVerified": "2026-07-25",
+      "reviewStatus": "verified",
       "useCases": [
         "Run the full Superpowers development loop: brainstorm and refine an idea, write a plan, execute it, and finish the branch.",
         "Enforce test-driven development and verification before declaring work complete."
@@ -2505,7 +2599,8 @@
         "claude-code",
         "cursor",
         "gemini",
-        "opencode"
+        "opencode",
+        "copilot"
       ],
       "scope": [
         "global",
@@ -2524,22 +2619,56 @@
       "capabilityTypes": {
         "skill": 7
       },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Claude Code target."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Codex target."
+        },
+        "copilot": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills can be installed for the Copilot target."
+        },
+        "cursor": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native distribution remains agent-managed."
+        },
+        "gemini": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native extension behavior remains agent-managed."
+        },
+        "opencode": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native plugin behavior remains agent-managed."
+        }
+      },
       "freshness": "fresh"
     },
     {
       "id": "superpowers-distribution-plugins",
       "name": "Superpowers Distribution Plugins Pack",
-      "version": "0.1.0",
-      "description": "References the Superpowers plugin and extension distribution manifests for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode.",
+      "version": "0.2.0",
+      "description": "Pinned Superpowers plugin and extension descriptors for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode, plus portable skill installation for Copilot.",
       "maintainers": [
         "sandeshh"
       ],
-      "stability": "experimental",
-      "lastVerified": "2026-06-06",
-      "reviewStatus": "reviewed",
+      "stability": "stable",
+      "lastVerified": "2026-07-25",
+      "reviewStatus": "verified",
       "useCases": [
         "Install the Superpowers skill library through the native plugin or extension for your coding agent.",
-        "Track the official Superpowers distribution manifests for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode."
+        "Track immutable Superpowers distribution descriptors for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode.",
+        "Use the parent suite's portable skill path for Copilot without claiming a native plugin that upstream does not publish."
       ],
       "examplePrompts": [
         "Install the Superpowers plugin for my editor from this pack and confirm its skills are available."
@@ -2551,7 +2680,8 @@
         "codex",
         "cursor",
         "gemini",
-        "opencode"
+        "opencode",
+        "copilot"
       ],
       "categories": [
         "platform"
@@ -2561,7 +2691,8 @@
         "claude-code",
         "cursor",
         "gemini",
-        "opencode"
+        "opencode",
+        "copilot"
       ],
       "scope": [
         "global",
@@ -2578,19 +2709,52 @@
       "capabilityTypes": {
         "plugin": 5
       },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "The pinned Claude Code plugin descriptor resolves safely and remains reference-only unless explicitly installed."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "The pinned Codex plugin descriptor resolves safely and remains reference-only unless explicitly installed."
+        },
+        "copilot": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Copilot consumes the portable skills from the parent suite; no separate upstream plugin descriptor is claimed."
+        },
+        "cursor": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "The pinned Cursor plugin descriptor is compatible; native installation remains agent-managed."
+        },
+        "gemini": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "The pinned Gemini extension descriptor is compatible; native installation remains agent-managed."
+        },
+        "opencode": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "The pinned OpenCode installation descriptor is compatible; native installation remains agent-managed."
+        }
+      },
       "freshness": "fresh"
     },
     {
       "id": "superpowers-meta-authoring",
       "name": "Superpowers Meta Authoring Pack",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "description": "Superpowers meta skills for authoring new tested skills.",
       "maintainers": [
         "sandeshh"
       ],
-      "stability": "experimental",
-      "lastVerified": "2026-06-06",
-      "reviewStatus": "reviewed",
+      "stability": "stable",
+      "lastVerified": "2026-07-25",
+      "reviewStatus": "verified",
       "useCases": [
         "Author new agent skills that follow the Superpowers conventions and are validated by tests."
       ],
@@ -2611,7 +2775,8 @@
         "claude-code",
         "cursor",
         "gemini",
-        "opencode"
+        "opencode",
+        "copilot"
       ],
       "scope": [
         "global",
@@ -2624,19 +2789,52 @@
       "capabilityTypes": {
         "skill": 1
       },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Claude Code target."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Codex target."
+        },
+        "copilot": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills can be installed for the Copilot target."
+        },
+        "cursor": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native distribution remains agent-managed."
+        },
+        "gemini": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native extension behavior remains agent-managed."
+        },
+        "opencode": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native plugin behavior remains agent-managed."
+        }
+      },
       "freshness": "fresh"
     },
     {
       "id": "superpowers-quality-debugging",
       "name": "Superpowers Quality Debugging Pack",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "description": "Superpowers skills for root-cause debugging and disciplined issue investigation.",
       "maintainers": [
         "sandeshh"
       ],
-      "stability": "experimental",
-      "lastVerified": "2026-06-06",
-      "reviewStatus": "reviewed",
+      "stability": "stable",
+      "lastVerified": "2026-07-25",
+      "reviewStatus": "verified",
       "useCases": [
         "Investigate bugs with the Superpowers systematic-debugging methodology instead of guess-and-check fixes."
       ],
@@ -2658,7 +2856,8 @@
         "claude-code",
         "cursor",
         "gemini",
-        "opencode"
+        "opencode",
+        "copilot"
       ],
       "scope": [
         "global",
@@ -2670,6 +2869,39 @@
       "capabilities": 1,
       "capabilityTypes": {
         "skill": 1
+      },
+      "trust": "community",
+      "compatibility": {
+        "claude-code": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Claude Code target."
+        },
+        "codex": {
+          "status": "verified",
+          "lastVerified": "2026-07-25",
+          "notes": "Pinned skills validate and install through the Codex target."
+        },
+        "copilot": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills can be installed for the Copilot target."
+        },
+        "cursor": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native distribution remains agent-managed."
+        },
+        "gemini": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native extension behavior remains agent-managed."
+        },
+        "opencode": {
+          "status": "compatible",
+          "lastVerified": "2026-07-25",
+          "notes": "Portable Agent Skills are compatible; native plugin behavior remains agent-managed."
+        }
       },
       "freshness": "fresh"
     },

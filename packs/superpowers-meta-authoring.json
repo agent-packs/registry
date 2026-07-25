@@ -1,15 +1,48 @@
 {
   "id": "superpowers-meta-authoring",
   "name": "Superpowers Meta Authoring Pack",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Superpowers meta skills for authoring new tested skills.",
   "license": "MIT",
   "maintainers": [
     "sandeshh"
   ],
-  "stability": "experimental",
-  "lastVerified": "2026-06-06",
-  "reviewStatus": "reviewed",
+  "stability": "stable",
+  "lastVerified": "2026-07-25",
+  "reviewStatus": "verified",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "verified",
+      "lastVerified": "2026-07-25",
+      "notes": "Pinned skills validate and install through the Codex target."
+    },
+    "claude-code": {
+      "status": "verified",
+      "lastVerified": "2026-07-25",
+      "notes": "Pinned skills validate and install through the Claude Code target."
+    },
+    "cursor": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Portable Agent Skills are compatible; native distribution remains agent-managed."
+    },
+    "gemini": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Portable Agent Skills are compatible; native extension behavior remains agent-managed."
+    },
+    "opencode": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Portable Agent Skills are compatible; native plugin behavior remains agent-managed."
+    },
+    "copilot": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Portable Agent Skills can be installed for the Copilot target."
+    }
+  },
   "requirements": {
     "agentPacks": ">=0.1.0",
     "tools": {
@@ -17,7 +50,8 @@
       "claude-code": "latest",
       "cursor": "latest",
       "gemini": "latest",
-      "opencode": "latest"
+      "opencode": "latest",
+      "copilot": "latest"
     }
   },
   "useCases": [
@@ -36,10 +70,10 @@
     {
       "id": "superpowers-writing-skills",
       "name": "Writing Skills",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/skills/writing-skills",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/writing-skills",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "agent-skill",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "SKILL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -56,7 +90,8 @@
     "claude-code",
     "cursor",
     "gemini",
-    "opencode"
+    "opencode",
+    "copilot"
   ],
   "scope": [
     "global",

@@ -1,15 +1,48 @@
 {
   "id": "superpowers-core-workflow",
   "name": "Superpowers Core Workflow Pack",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Core Superpowers methodology skills for moving from idea refinement through planning, implementation, TDD, verification, and branch completion.",
   "license": "MIT",
   "maintainers": [
     "sandeshh"
   ],
-  "stability": "experimental",
-  "lastVerified": "2026-06-06",
-  "reviewStatus": "reviewed",
+  "stability": "stable",
+  "lastVerified": "2026-07-25",
+  "reviewStatus": "verified",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "verified",
+      "lastVerified": "2026-07-25",
+      "notes": "Pinned skills validate and install through the Codex target."
+    },
+    "claude-code": {
+      "status": "verified",
+      "lastVerified": "2026-07-25",
+      "notes": "Pinned skills validate and install through the Claude Code target."
+    },
+    "cursor": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Portable Agent Skills are compatible; native distribution remains agent-managed."
+    },
+    "gemini": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Portable Agent Skills are compatible; native extension behavior remains agent-managed."
+    },
+    "opencode": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Portable Agent Skills are compatible; native plugin behavior remains agent-managed."
+    },
+    "copilot": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Portable Agent Skills can be installed for the Copilot target."
+    }
+  },
   "requirements": {
     "agentPacks": ">=0.1.0",
     "tools": {
@@ -17,7 +50,8 @@
       "claude-code": "latest",
       "cursor": "latest",
       "gemini": "latest",
-      "opencode": "latest"
+      "opencode": "latest",
+      "copilot": "latest"
     }
   },
   "useCases": [
@@ -39,10 +73,10 @@
     {
       "id": "superpowers-using-superpowers",
       "name": "Using Superpowers",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/skills/using-superpowers",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/using-superpowers",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "agent-skill",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "SKILL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -52,10 +86,10 @@
     {
       "id": "superpowers-brainstorming",
       "name": "Brainstorming",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/skills/brainstorming",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/brainstorming",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "agent-skill",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "SKILL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -65,10 +99,10 @@
     {
       "id": "superpowers-writing-plans",
       "name": "Writing Plans",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/skills/writing-plans",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/writing-plans",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "agent-skill",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "SKILL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -78,10 +112,10 @@
     {
       "id": "superpowers-executing-plans",
       "name": "Executing Plans",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/skills/executing-plans",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/executing-plans",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "agent-skill",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "SKILL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -91,10 +125,10 @@
     {
       "id": "superpowers-test-driven-development",
       "name": "Test-Driven Development",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/skills/test-driven-development",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/test-driven-development",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "agent-skill",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "SKILL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -104,10 +138,10 @@
     {
       "id": "superpowers-verification-before-completion",
       "name": "Verification Before Completion",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/skills/verification-before-completion",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/verification-before-completion",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "agent-skill",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "SKILL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -117,10 +151,10 @@
     {
       "id": "superpowers-finishing-a-development-branch",
       "name": "Finishing a Development Branch",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/skills/finishing-a-development-branch",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/skills/finishing-a-development-branch",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "agent-skill",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "SKILL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -138,7 +172,8 @@
     "claude-code",
     "cursor",
     "gemini",
-    "opencode"
+    "opencode",
+    "copilot"
   ],
   "scope": [
     "global",

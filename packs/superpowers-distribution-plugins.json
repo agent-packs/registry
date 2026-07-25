@@ -1,15 +1,48 @@
 {
   "id": "superpowers-distribution-plugins",
   "name": "Superpowers Distribution Plugins Pack",
-  "version": "0.1.0",
-  "description": "References the Superpowers plugin and extension distribution manifests for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode.",
+  "version": "0.2.0",
+  "description": "Pinned Superpowers plugin and extension descriptors for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode, plus portable skill installation for Copilot.",
   "license": "MIT",
   "maintainers": [
     "sandeshh"
   ],
-  "stability": "experimental",
-  "lastVerified": "2026-06-06",
-  "reviewStatus": "reviewed",
+  "stability": "stable",
+  "lastVerified": "2026-07-25",
+  "reviewStatus": "verified",
+  "trust": "community",
+  "compatibility": {
+    "codex": {
+      "status": "verified",
+      "lastVerified": "2026-07-25",
+      "notes": "The pinned Codex plugin descriptor resolves safely and remains reference-only unless explicitly installed."
+    },
+    "claude-code": {
+      "status": "verified",
+      "lastVerified": "2026-07-25",
+      "notes": "The pinned Claude Code plugin descriptor resolves safely and remains reference-only unless explicitly installed."
+    },
+    "cursor": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "The pinned Cursor plugin descriptor is compatible; native installation remains agent-managed."
+    },
+    "gemini": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "The pinned Gemini extension descriptor is compatible; native installation remains agent-managed."
+    },
+    "opencode": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "The pinned OpenCode installation descriptor is compatible; native installation remains agent-managed."
+    },
+    "copilot": {
+      "status": "compatible",
+      "lastVerified": "2026-07-25",
+      "notes": "Copilot consumes the portable skills from the parent suite; no separate upstream plugin descriptor is claimed."
+    }
+  },
   "requirements": {
     "agentPacks": ">=0.1.0",
     "tools": {
@@ -17,12 +50,14 @@
       "claude-code": "latest",
       "cursor": "latest",
       "gemini": "latest",
-      "opencode": "latest"
+      "opencode": "latest",
+      "copilot": "latest"
     }
   },
   "useCases": [
     "Install the Superpowers skill library through the native plugin or extension for your coding agent.",
-    "Track the official Superpowers distribution manifests for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode."
+    "Track immutable Superpowers distribution descriptors for Claude Code, Codex, Cursor, Gemini CLI, and OpenCode.",
+    "Use the parent suite's portable skill path for Copilot without claiming a native plugin that upstream does not publish."
   ],
   "examplePrompts": [
     "Install the Superpowers plugin for my editor from this pack and confirm its skills are available."
@@ -34,16 +69,17 @@
     "codex",
     "cursor",
     "gemini",
-    "opencode"
+    "opencode",
+    "copilot"
   ],
   "plugins": [
     {
       "id": "superpowers-claude-code-plugin",
       "name": "Superpowers Claude Code Plugin",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/.claude-plugin",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/.claude-plugin",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "anthropic-plugin",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "plugin.json",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -58,10 +94,10 @@
     {
       "id": "superpowers-codex-plugin",
       "name": "Superpowers Codex Plugin",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/.codex-plugin",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/.codex-plugin",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "codex-plugin",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "plugin.json",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -75,10 +111,10 @@
     {
       "id": "superpowers-cursor-plugin",
       "name": "Superpowers Cursor Plugin",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/.cursor-plugin",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/.cursor-plugin",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "other",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "plugin.json",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -92,10 +128,10 @@
     {
       "id": "superpowers-gemini-extension",
       "name": "Superpowers Gemini CLI Extension",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "other",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "gemini-extension.json",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -109,10 +145,10 @@
     {
       "id": "superpowers-opencode-plugin",
       "name": "Superpowers OpenCode Plugin",
-      "source": "https://github.com/obra/superpowers/tree/6fd4507659784c351abbd2bc264c7162cfd386dc/.opencode",
+      "source": "https://github.com/obra/superpowers/tree/d884ae04edebef577e82ff7c4e143debd0bbec99/.opencode",
       "upstreamSource": "https://github.com/obra/superpowers",
       "format": "other",
-      "version": "5.1.0",
+      "version": "6.1.1",
       "entry": "INSTALL.md",
       "repository": "https://github.com/obra/superpowers",
       "homepage": "https://github.com/obra/superpowers",
@@ -133,7 +169,8 @@
     "claude-code",
     "cursor",
     "gemini",
-    "opencode"
+    "opencode",
+    "copilot"
   ],
   "scope": [
     "global",

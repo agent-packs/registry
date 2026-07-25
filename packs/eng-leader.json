@@ -1,27 +1,32 @@
 {
   "id": "eng-leader",
   "name": "Engineering Leader Pack",
-  "version": "0.2.0",
-  "description": "A leadership-focused Agent Pack for structured decision-making, engineering strategy, portfolio and capacity choices, delivery health, architecture governance, launch readiness, organizational learning, and responsible AI-assisted engineering adoption.",
+  "version": "0.3.0",
+  "description": "A decision-ready operating system for engineering leaders covering strategy, portfolio and capacity choices, delivery health, architecture and modernization, talent and succession, cost and vendors, launch readiness, organizational learning, and responsible AI-assisted engineering adoption.",
   "license": "Apache-2.0",
   "maintainers": [
     "sandeshh"
   ],
-  "stability": "experimental",
-  "lastVerified": "2026-07-24",
+  "stability": "stable",
+  "lastVerified": "2026-07-25",
   "reviewStatus": "verified",
-  "trust": "community",
+  "trust": "verified",
   "compatibility": {
     "claude-code": {
       "status": "verified",
-      "lastVerified": "2026-07-24",
-      "notes": "Skills, Claude plugin wrappers, and portable leadership capabilities validate and install through the supported target matrix."
+      "lastVerified": "2026-07-25",
+      "notes": "The agent-neutral leadership operating skill, portable capabilities, and optional Claude plugin wrappers validate and install through the supported target matrix."
     },
     "codex": {
-      "status": "partial",
-      "lastVerified": "2026-07-24",
-      "notes": "Skills, memory, prompts, templates, tools, and MCP metadata are portable for Codex and local coding-agent planning; Claude plugin wrappers are recorded but not natively installed for Codex."
+      "status": "verified",
+      "lastVerified": "2026-07-25",
+      "notes": "The agent-neutral leadership operating skill plus memory, prompts, templates, tools, and MCP metadata validate and install for Codex; optional Claude plugin wrappers remain reference-only."
     }
+  },
+  "recommendation": {
+    "path": "role",
+    "order": 10,
+    "reason": "Flagship decision and operating suite for engineering managers, directors, and heads of engineering."
   },
   "requirements": {
     "agentPacks": ">=0.1.0",
@@ -37,6 +42,8 @@
     "Review engineering org health, productivity signals, ownership clarity, and leadership operating cadence.",
     "Rebalance an engineering portfolio using outcomes, capacity, dependencies, risk, and explicit stop-or-defer decisions.",
     "Evaluate AI-assisted engineering adoption using delivery outcomes, quality, security, cost, and developer experience rather than activity metrics.",
+    "Run evidence-based talent, succession, modernization, and engineering cost reviews without turning activity metrics into individual performance scores.",
+    "Plan engineering changes with stakeholder-specific communication, feedback loops, and adoption measures.",
     "Structure consequential engineering decisions with the Decisive WRAP process and explicit evidence, tripwires, and review dates.",
     "Run a monthly engineering retrospective that turns appreciation and small improvements into owned follow-through."
   ],
@@ -47,6 +54,10 @@
     "Use the current DORA and SPACE frameworks as leadership signals to identify the highest-leverage system improvements for this team.",
     "Review this engineering portfolio and recommend what to continue, stop, defer, or sequence differently within our actual capacity.",
     "Assess our AI coding-tool rollout using outcome, quality, security, cost, and developer-experience evidence, then recommend the next bounded experiment.",
+    "Review succession risk for this engineering organization and propose fair development, coverage, and hiring actions with owners and dates.",
+    "Prioritize this technical debt and modernization portfolio against customer impact, risk, capacity, cost of delay, and migration reversibility.",
+    "Review our engineering vendors and cloud spend, then recommend renew, renegotiate, replace, or retire decisions with exit triggers.",
+    "Create a stakeholder communication plan for this engineering operating-model change, including objections, feedback channels, and adoption signals.",
     "Use the Decisive WRAP process to evaluate this engineering decision and produce a recommendation with assumptions, tripwires, and a review date.",
     "Facilitate our monthly engineering retrospective using appreciations, what went well, 10% improvements across people/product/process, actions, and prior follow-ups."
   ],
@@ -67,11 +78,22 @@
     "decision-governance",
     "decisive",
     "retrospectives",
-    "continuous-improvement"
+    "continuous-improvement",
+    "talent-management",
+    "succession-planning",
+    "modernization",
+    "engineering-economics",
+    "change-management"
   ],
   "skills": [
     "crafting-engineering-strategy",
     "decisive-decision-making",
+    {
+      "id": "engineering-leadership-operating-system",
+      "trust": "official",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/agent-packs/registry"
+    },
     {
       "id": "eng-leader-strategy",
       "name": "Engineering leader strategy",
@@ -157,20 +179,20 @@
     {
       "id": "eng-leader-workflows",
       "name": "Engineering Leader Workflows",
-      "source": "https://github.com/agent-packs/registry/tree/main/plugins/eng-leader-workflows",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "trust": "official",
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "repository": "https://github.com/agent-packs/registry"
     },
     {
       "id": "github-pr-inspection",
       "name": "GitHub PR Inspection",
-      "source": "https://github.com/agent-packs/registry/tree/main/plugins/github-pr-inspection",
       "format": "anthropic-plugin",
       "entry": ".claude-plugin/plugin.json",
       "trust": "official",
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "repository": "https://github.com/agent-packs/registry"
     }
   ],
   "capabilities": [
@@ -277,6 +299,38 @@
       "type": "prompt",
       "name": "Monthly engineering retrospective",
       "content": "Facilitate a blameless monthly engineering retrospective and capture these sections in order. 1. Appreciations: who or what helped the team, and why did it matter? 2. What did we do well? Identify repeatable behaviors and evidence, not only outcomes. 3. What can we improve by 10%? Examine people, product, and process separately; prefer small system improvements over blame or vague transformation goals. 4. Action items: select at most three improvements, each with an owner, due date, intended signal, and first step. 5. Follow-ups from the previous retrospective: review every prior action as done, continuing, blocked, or dropped, with evidence and the next owner/date where needed. End with the themes, decisions, action table, and items to revisit next month.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Engineering talent and succession review",
+      "content": "Run an evidence-based engineering talent and succession review. Map critical roles and capabilities, current coverage, single points of failure, manager load, retention signals, readiness horizons, and development opportunities. Separate role evidence from assumptions and system constraints; do not use commits, tickets, lines of code, or tool usage as individual performance measures. Identify near-term coverage, development, hiring, and knowledge-transfer actions with owners and dates. Flag decisions that require HR, legal, or executive partnership.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Technical debt and modernization portfolio review",
+      "content": "Review this technical debt and modernization portfolio as an investment decision. For each item, assess customer and business impact, reliability and security exposure, developer friction, cost of delay, dependency risk, migration reversibility, capacity, and evidence confidence. Classify work as accelerate, sequence, contain, defer, or retire. Recommend incremental migration slices, explicit stop conditions, outcome and counter-metrics, owners, and review dates; avoid a vague rewrite recommendation.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "prompt",
+      "name": "Engineering cost and vendor review",
+      "content": "Run an engineering cost and vendor review. Establish the decision and baseline total cost, including licenses, cloud or infrastructure, integration and migration work, operational burden, support, security and compliance exposure, lock-in, and opportunity cost. Compare renew, renegotiate, consolidate, replace, build, and retire options. Recommend a path with savings or value assumptions, service and risk guardrails, contract or exit triggers, accountable owners, and a review date.",
+      "format": "markdown",
+      "trust": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "type": "template",
+      "name": "Engineering change communication plan",
+      "content": "# Engineering Change Communication Plan\n\n## Change And Decision\n\n## Why Now And Intended Outcome\n\n## What Is Not Changing\n\n## Audience And Impact Map\n\n| Audience | Impact | Likely Questions Or Objections | Owner | Channel | Timing |\n| --- | --- | --- | --- | --- | --- |\n\n## Core Narrative And Supporting Evidence\n\n## Leadership And Manager Enablement\n\n## Rollout Milestones\n\n## Feedback And Escalation Channels\n\n## Adoption Signals And Counter-Metrics\n\n## Risks, Mitigations, And Review Date\n",
       "format": "markdown",
       "trust": "official",
       "license": "Apache-2.0"

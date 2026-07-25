@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Leadership Operating System"
+  short_description: "Decision-ready engineering leadership reviews"
+  default_prompt: "Use $engineering-leadership-operating-system to review this engineering initiative and produce a decision-ready leadership brief."

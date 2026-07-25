@@ -74,6 +74,29 @@ The CLI projects this into `index.json` as both `recommendation` and a simple
 `recommended` boolean. The catalog uses it for the Starter path filter, and
 `agent-packs search --recommended --guidance` uses it for install guidance.
 
+## Flagship suites
+
+Two suites provide the strongest opinionated starting points:
+
+- `eng-leader` is the role suite for engineering managers, directors, and heads
+  of engineering. Its agent-neutral operating skill routes strategy, portfolio,
+  delivery, architecture, modernization, talent, cost, launch, incident, AI
+  adoption, and change work into decision-ready leadership artifacts.
+- `superpowers` is the workflow suite for taking engineering work from discovery
+  through plans, test-first implementation, debugging, parallel collaboration,
+  review, and verified branch completion. All upstream skills and plugin
+  descriptors are pinned to the immutable `obra/superpowers` v6.1.1 release.
+
+A flagship pack can be `stable` only when its sources are reproducible, schema
+and policy checks pass, compatibility evidence is current, the index is fresh,
+and a supported CLI target can produce a successful dry-run install plan. Pack
+trust describes the curation of the assembled pack; each capability retains its
+own source trust and attribution.
+
+Registry CI builds the current Agent Packs CLI and enforces the full contract:
+schema tests, `validate`, `lint --all`, `verify --all`, `publish --check`,
+`index --check`, and dry-run installs of the flagship suites.
+
 ## Roadmap
 
 See [Registry Enhancement Plan](docs/registry-enhancement-plan.md) for the
