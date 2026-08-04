@@ -1,4 +1,15 @@
 interface:
   display_name: "Data Engineering"
   short_description: "Build and verify reliable data pipelines"
-  default_prompt: "Use $data-engineering to build and verify a reliable data pipeline."
+  default_prompt: |
+    Use $data-engineering to build and verify a reliable data pipeline.
+
+    Fill in what you know; state "unknown" for the rest and I will propose the
+    smallest reasonable assumption and encode it as a test.
+
+    - Source(s): paths, tables, or systems, and approximate volume
+    - Destination: where output is published, and who consumes it
+    - Grain: what exactly one output row represents, and its key
+    - Update behavior: full refresh or incremental; how reruns, late data,
+      corrections, and deletions must be handled
+    - Constraints: freshness, runtime, engine or dependency limits

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T15:25:07.301516Z",
+  "generatedAt": "2026-08-04T19:28:29.844442Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -378,7 +378,7 @@
     {
       "id": "data-engineer",
       "name": "Data Engineer Pack",
-      "version": "0.2.0",
+      "version": "0.2.2",
       "description": "Workflows for coding agents building data pipelines, ETL systems, and streaming architectures: pipeline design, data quality, schema management, and orchestration.",
       "maintainers": [
         "sandeshh"
