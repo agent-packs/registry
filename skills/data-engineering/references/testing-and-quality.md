@@ -9,6 +9,8 @@ Related: [ingestion.md](ingestion.md), [incremental-and-publication.md](incremen
 Keep SQL independently readable and testable. Store substantial queries in `.sql` files when that matches repository conventions. Keep orchestration functions small:
 
 ```python
+from __future__ import annotations
+
 from pathlib import Path
 
 import duckdb
@@ -113,33 +115,48 @@ Check output schemas through engine metadata instead of inferring them from Pyth
 A validation query is only a guard if something reads its result and raises:
 
 ```python
+from __future__ import annotations
+
+from pathlib import Path
+
 import duckdb
 
 
-def assert_contract(connection: duckdb.DuckDBPyConnection, relation: str) -> None:
-    """Raise unless `relation` satisfies the dataset contract."""
+def assert_parquet_contract(
+    connection: duckdb.DuckDBPyConnection,
+    source_path: str | Path,
+    *,
+    min_rows: int | None = None,
+) -> None:
+    """Raise unless a Parquet file or glob satisfies the orders contract."""
+    if min_rows is not None and min_rows < 0:
+        raise ValueError("min_rows must be non-negative or None")
+
     row_count, null_keys, duplicate_keys, negative_amounts = connection.execute(
-        f"""
+        """
         SELECT
             count(*)                                        AS row_count,
             count(*) FILTER (WHERE order_id IS NULL)        AS null_keys,
             count(order_id) - count(DISTINCT order_id)      AS duplicate_keys,
             count(*) FILTER (WHERE amount < 0)              AS negative_amounts
-        FROM {relation}
-        """  # noqa: S608 - relation comes from an allowlist, never user input
+        FROM read_parquet($source_path)
+        """,
+        {"source_path": str(source_path)},
     ).fetchone()
 
     problems = {
-        "empty output": row_count == 0,
+        "below minimum rows": min_rows is not None and row_count < min_rows,
         "null keys": null_keys,
         "duplicate keys": duplicate_keys,
         "negative amounts": negative_amounts,
     }
     failed = {name: value for name, value in problems.items() if value}
     if failed:
-        raise ValueError(f"{relation} failed contract: {failed}")
+        raise ValueError(f"{source_path} failed contract: {failed}")
 ```
 
 Count duplicates with `count(order_id) - count(DISTINCT order_id)`, not `count(*) - count(DISTINCT order_id)`. `count(DISTINCT ...)` ignores nulls while `count(*)` does not, so the `count(*)` form reports every null key as a duplicate as well — three null keys and no actual duplicates yields a duplicate count of three. Nulls are already reported by their own check; counting them twice obscures which invariant actually broke.
 
-Interpolating `relation` is only safe because it is an internal identifier. Values must still be bound as parameters.
+Empty output is valid for many contracts, including an incremental interval with no arrivals. Require rows only when the contract does by passing `min_rows`; do not hard-code non-emptiness into a reusable assertion.
+
+Do not accept a free-form SQL `relation` and interpolate it into the assertion query. File paths routinely contain quotes and other SQL syntax, and an allowlist mentioned only in a comment is not enforcement. Bind paths as above. For tables, accept only identifiers matched against an explicit code-level allowlist and quote them with an engine-provided identifier API; for other sources, write a constant query with bound values.

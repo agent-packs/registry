@@ -109,29 +109,45 @@ Three properties constrain how these tables can be used.
 
 DuckDB creates `reject_errors` and `reject_scans` as temporary tables scoped to the connection. They are gone at disconnect, so they are a diagnostic surface, not durable evidence.
 
-Persisting them requires all three of the following, or the evidence is still lost:
+Persisting them requires all four of the following, or the evidence is still lost or duplicated:
 
 1. A **persistent database file** — `duckdb.connect("warehouse.duckdb")`, not `duckdb.connect()`. Copying rejects into a table on an in-memory connection preserves nothing.
 2. **Append semantics** — `INSERT INTO`, not `CREATE TABLE AS`, which fails or replaces on the second run and silently discards prior runs' evidence.
-3. **Run and source identity** — without these, rows from different runs and files are indistinguishable and cannot be traced back.
+3. **Logical-run, attempt, and source identity** — keep `run_id` stable across retries, generate a new `attempt_id` for each execution, and use a stable `source_id` such as an object version or content hash rather than a mutable path alone.
+4. **Idempotent writes** — retrying the same logical run must not append the same error event twice.
 
 ```sql
 -- Once, as part of schema setup.
 CREATE TABLE IF NOT EXISTS quarantine_orders(
     quarantined_at TIMESTAMPTZ,
     run_id         VARCHAR,
+    attempt_id     VARCHAR,
+    source_id      VARCHAR,
     source_path    VARCHAR,
     line           BIGINT,
     column_name    VARCHAR,
-    error_type     VARCHAR
+    error_type     VARCHAR,
+    PRIMARY KEY (run_id, source_id, line, column_name, error_type)
 );
 
--- Per run, on a persistent connection. Deliberately excludes csv_line.
-INSERT INTO quarantine_orders
-SELECT current_timestamp, $run_id, s.file_path, e.line, e.column_name, e.error_type
+-- Per attempt, on a persistent connection. Deliberately excludes csv_line.
+-- The stable key makes a retry of the same logical run idempotent; attempt_id
+-- records which execution first persisted the event.
+INSERT OR IGNORE INTO quarantine_orders
+SELECT
+    current_timestamp,
+    $run_id,
+    $attempt_id,
+    $source_id,
+    s.file_path,
+    e.line,
+    e.column_name,
+    e.error_type
 FROM reject_errors AS e
 JOIN reject_scans  AS s USING (scan_id, file_id);
 ```
+
+Record attempt-level diagnostics separately when every retry must remain observable. Do not weaken the quarantine key merely to retain attempts: a retry history and a set of unique rejected source events are different datasets with different grains.
 
 Retain `csv_line` only when the data classification permits it and the store has the same access controls as the source. When it must be kept for debugging, write it to the quarantine location alongside the source, never into run logs or agent output.
 

@@ -10,10 +10,23 @@ Write to a unique staging path, validate it, then swap it into place.
 
 ```python
 import os
+import fcntl
 import uuid
+from contextlib import contextmanager
 from pathlib import Path
 
 import duckdb
+
+
+@contextmanager
+def exclusive_publish_lock(lock_path: Path):
+    """Enforce one local publisher for this destination."""
+    with lock_path.open("a+") as lock_file:
+        fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
 
 
 def build_orders(source: Path, destination: Path, cutoff: str) -> None:
@@ -27,35 +40,37 @@ def build_orders(source: Path, destination: Path, cutoff: str) -> None:
     staging = destination.with_name(
         f".{destination.name}.{os.getpid()}.{uuid.uuid4().hex}.staging"
     )
-    try:
-        with duckdb.connect() as connection:
-            connection.execute("SET TimeZone = 'UTC'")
-            connection.execute(
-                """
-                COPY (
-                    WITH typed AS (
-                        SELECT
-                            CAST(order_id AS VARCHAR) AS order_id,
-                            CAST(customer_id AS VARCHAR) AS customer_id,
-                            CAST(amount AS DECIMAL(18, 2)) AS amount,
-                            CAST(ordered_at AS TIMESTAMPTZ) AS ordered_at
-                        FROM read_parquet($source_path)
-                    )
-                    SELECT * FROM typed
-                    WHERE ordered_at >= CAST($cutoff AS TIMESTAMPTZ)
-                ) TO $destination_path (FORMAT PARQUET)
-                """,
-                {
-                    "source_path": str(source),
-                    "cutoff": cutoff,
-                    "destination_path": str(staging),
-                },
-            )
-            # Publish only what has been checked. Raises on violation.
-            assert_contract(connection, f"read_parquet('{staging}')")
-        os.replace(staging, destination)
-    finally:
-        staging.unlink(missing_ok=True)
+    lock_path = destination.with_name(f".{destination.name}.publish.lock")
+    with exclusive_publish_lock(lock_path):
+        try:
+            with duckdb.connect() as connection:
+                connection.execute("SET TimeZone = 'UTC'")
+                connection.execute(
+                    """
+                    COPY (
+                        WITH typed AS (
+                            SELECT
+                                CAST(order_id AS VARCHAR) AS order_id,
+                                CAST(customer_id AS VARCHAR) AS customer_id,
+                                CAST(amount AS DECIMAL(18, 2)) AS amount,
+                                CAST(ordered_at AS TIMESTAMPTZ) AS ordered_at
+                            FROM read_parquet($source_path)
+                        )
+                        SELECT * FROM typed
+                        WHERE ordered_at >= CAST($cutoff AS TIMESTAMPTZ)
+                    ) TO $destination_path (FORMAT PARQUET)
+                    """,
+                    {
+                        "source_path": str(source),
+                        "cutoff": cutoff,
+                        "destination_path": str(staging),
+                    },
+                )
+                # Bind the path; never interpolate it into validation SQL.
+                assert_parquet_contract(connection, staging)
+            os.replace(staging, destination)
+        finally:
+            staging.unlink(missing_ok=True)
 ```
 
 Filtering happens inside the CTE so the predicate applies to the cast `TIMESTAMPTZ`, not the raw column. Filtering before the cast compares whatever type the file happens to hold against a `TIMESTAMPTZ`, which for a naive `TIMESTAMP` column silently applies the session timezone and shifts the boundary.
@@ -68,6 +83,8 @@ Three properties make the pattern work, and the ordering between them matters.
 
 **Keep staging on the destination's filesystem.** `os.replace` is atomic only within one filesystem; across devices it raises `OSError` with `EXDEV` ("Invalid cross-device link"). It does not silently fall back to a copy, so the failure is loud — but it fails after the expensive write, so choose the path correctly up front.
 
+**Serialize local publishers.** Atomic replacement prevents partial visibility but does not decide which concurrent run should win. The example holds an advisory `fcntl` lock for the build and swap. This is suitable for cooperating processes on one POSIX filesystem; use a platform lock, lease, or transactional compare-and-swap elsewhere.
+
 DuckDB in practice leaves an existing single-file `COPY` target intact when the query fails partway through, so the naive version is less immediately destructive than it looks. Do not rely on that: it is not a documented guarantee, it does not extend to directory writes, and it does not hold across engines. The validation step needs staging regardless.
 
 ## Publishing a partitioned dataset
@@ -77,20 +94,41 @@ DuckDB in practice leaves an existing single-file `COPY` target intact when the 
 Publish immutable versioned directories and swap a pointer instead:
 
 ```python
+from __future__ import annotations
+
 import os
+import re
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
 import duckdb
 
+RUN_ID_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,63}")
+
+
+def _current_version(pointer: Path) -> str | None:
+    if pointer.is_symlink():
+        return os.readlink(pointer)
+    if pointer.exists():
+        raise ValueError(f"publication pointer is not a symlink: {pointer}")
+    return None
+
 
 def publish_partitioned(
     connection: duckdb.DuckDBPyConnection, root: Path, run_id: str
 ) -> Path:
+    root = root.resolve()
     root.mkdir(parents=True, exist_ok=True)
+    if RUN_ID_PATTERN.fullmatch(run_id) is None:
+        raise ValueError("run_id must contain only letters, digits, dot, underscore, or hyphen")
+
+    pointer = root / "current"
+    expected_current = _current_version(pointer)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    version = root / f"v_{stamp}_{run_id}"          # never reused, never mutated
+    version = (root / f"v_{stamp}_{run_id}_{uuid.uuid4().hex}").resolve()
+    if version.parent != root:
+        raise ValueError("version path escaped the publication root")
 
     connection.execute(
         """
@@ -99,19 +137,26 @@ def publish_partitioned(
         """,
         {"out": str(version)},
     )
-    assert_contract(connection, f"read_parquet('{version}/**/*.parquet')")
+    assert_parquet_contract(connection, str(version / "**/*.parquet"))
 
-    # Atomic pointer swap: replacing a symlink is a rename of the link itself.
-    pointer = root / "current"
+    # Atomic replacement is not concurrency control. Compare the pointer seen
+    # before the build with the live pointer under the publication lock.
     staged_pointer = root / f".current.{uuid.uuid4().hex}.tmp"
-    staged_pointer.symlink_to(version.name)
-    os.replace(staged_pointer, pointer)
+    lock_path = root / ".publish.lock"
+    with exclusive_publish_lock(lock_path):
+        if _current_version(pointer) != expected_current:
+            raise RuntimeError("current publication changed while this version was building")
+        try:
+            staged_pointer.symlink_to(version.name)
+            os.replace(staged_pointer, pointer)
+        finally:
+            staged_pointer.unlink(missing_ok=True)
     return version
 ```
 
 Readers resolve `root/current` and are never exposed to a partially written version. A reader that opened the previous version keeps a consistent view until it finishes, which is why old versions must not be deleted immediately — retain them for at least the longest expected read, then prune oldest-first.
 
-Where symlinks are unavailable — object stores in particular — publish an atomically replaced **manifest** instead: write the version's file list to a single small object, then replace the manifest object in one operation. Readers read the manifest, then the files it names. A transactional catalog (Iceberg, Delta, DuckLake) provides the same guarantee with snapshot isolation and retention built in; prefer it over hand-rolled pointers when the project already has one.
+The local pointer swap uses the `exclusive_publish_lock` helper from the single-file example. On Windows, distributed filesystems, and object stores, use the platform's lease or compare-and-swap facility. Replacing a manifest object atomically is not sufficient by itself: condition the write on the previously observed object version or ETag so a stale build cannot become current. A transactional catalog (Iceberg, Delta, DuckLake) provides snapshot isolation and conflict detection; prefer it over hand-rolled pointers when the project already has one.
 
 ## Incremental processing
 
@@ -146,18 +191,28 @@ import duckdb
 MERGE_ORDERS = """
 MERGE INTO curated_orders AS target
 USING staging_orders AS source ON target.order_id = source.order_id
-WHEN MATCHED THEN UPDATE SET
+WHEN MATCHED AND source.source_version > target.source_version THEN UPDATE SET
     customer_id = source.customer_id,   -- corrections apply to every mutable
     amount      = source.amount,        -- column, not just the obvious ones
-    ordered_at  = source.ordered_at
+    ordered_at  = source.ordered_at,
+    source_version = source.source_version
 WHEN NOT MATCHED THEN
-    INSERT (order_id, customer_id, amount, ordered_at)   -- never positional
-    VALUES (source.order_id, source.customer_id, source.amount, source.ordered_at)
+    INSERT (order_id, customer_id, amount, ordered_at, source_version)
+    VALUES (
+        source.order_id,
+        source.customer_id,
+        source.amount,
+        source.ordered_at,
+        source.source_version
+    )
 """
 
 
 def publish_increment(
-    connection: duckdb.DuckDBPyConnection, pipeline: str, interval_end: str
+    connection: duckdb.DuckDBPyConnection,
+    pipeline: str,
+    expected_start: str,
+    interval_end: str,
 ) -> None:
     connection.execute("BEGIN TRANSACTION")
     try:
@@ -179,28 +234,27 @@ def publish_increment(
         # 2. Publish.
         connection.execute(MERGE_ORDERS)
 
-        # 3. Advance the watermark in the same transaction.
-        connection.execute(
+        # 3. Advance with compare-and-swap semantics. This rejects an old retry,
+        #    an overlapping publisher, and a boundary that moves backward.
+        advanced = connection.execute(
             """
             UPDATE pipeline_watermark
             SET processed_through = CAST($interval_end AS TIMESTAMPTZ)
             WHERE pipeline_name = $pipeline
+              AND processed_through = CAST($expected_start AS TIMESTAMPTZ)
+              AND CAST($interval_end AS TIMESTAMPTZ) > processed_through
+            RETURNING pipeline_name
             """,
-            {"interval_end": interval_end, "pipeline": pipeline},
-        )
-
-        # 4. Confirm it actually moved. An UPDATE matching zero rows succeeds
-        #    silently, which would commit data with a stale boundary.
-        advanced = connection.execute(
-            """
-            SELECT count(*) FROM pipeline_watermark
-            WHERE pipeline_name = $pipeline
-              AND processed_through = CAST($interval_end AS TIMESTAMPTZ)
-            """,
-            {"interval_end": interval_end, "pipeline": pipeline},
-        ).fetchone()[0]
-        if advanced != 1:
-            raise ValueError(f"watermark for {pipeline} did not advance")
+            {
+                "expected_start": expected_start,
+                "interval_end": interval_end,
+                "pipeline": pipeline,
+            },
+        ).fetchall()
+        if len(advanced) != 1:
+            raise ValueError(
+                f"watermark for {pipeline} changed concurrently or did not advance"
+            )
 
         connection.execute("COMMIT")
     except Exception:
@@ -215,6 +269,7 @@ Three details in the `MERGE` are load-bearing:
 - **Deduplicate staging before merging.** DuckDB does not raise on a source with duplicate merge keys — it silently applies one arbitrary row, so the result is non-deterministic and reruns need not reproduce it. Uniqueness must be asserted, as in step 1.
 - **Update every mutable column.** Omitting one pins it at its first-seen value, so corrections to that field are accepted, reported as merged, and discarded. Columns absent from `UPDATE SET` should be absent by decision, not oversight.
 - **List target columns in the `INSERT`.** Positional inserts bind to current column order, so adding or reordering a target column silently shifts values into the wrong fields, with no error whenever types remain compatible.
+- **Compare source versions before updating.** A retry for an older interval may overlap newer rows. Without a monotonic source version, older values can overwrite a correction during a legitimate lookback or backfill. If the source has no version coordinate, define and test a deterministic precedence rule before using a merge.
 
 ### Deriving the watermark from published data
 
