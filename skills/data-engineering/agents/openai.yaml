@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Engineering"
+  short_description: "Build and verify reliable data pipelines"
+  default_prompt: "Use $data-engineering to build and verify a reliable data pipeline."

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T22:01:34.262262Z",
+  "generatedAt": "2026-08-04T15:25:07.301516Z",
   "packs": [
     {
       "id": "accessibility-engineer",
@@ -378,13 +378,13 @@
     {
       "id": "data-engineer",
       "name": "Data Engineer Pack",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "description": "Workflows for coding agents building data pipelines, ETL systems, and streaming architectures: pipeline design, data quality, schema management, and orchestration.",
       "maintainers": [
         "sandeshh"
       ],
       "stability": "experimental",
-      "lastVerified": "2026-06-13",
+      "lastVerified": "2026-08-04",
       "reviewStatus": "reviewed",
       "useCases": [
         "Design an ETL or streaming pipeline with explicit data-quality checks, schema contracts, and orchestration.",
@@ -421,6 +421,7 @@
         "project"
       ],
       "skills": [
+        "data-engineering",
         "data-pipeline-engineering",
         "event-driven-architecture",
         "database-schema-design",
@@ -428,9 +429,9 @@
         "api-and-interface-design",
         "test-driven-development"
       ],
-      "capabilities": 6,
+      "capabilities": 7,
       "capabilityTypes": {
-        "skill": 6
+        "skill": 7
       },
       "freshness": "fresh"
     },
