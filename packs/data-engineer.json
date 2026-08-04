@@ -1,7 +1,7 @@
 {
   "id": "data-engineer",
   "name": "Data Engineer Pack",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Workflows for coding agents building data pipelines, ETL systems, and streaming architectures: pipeline design, data quality, schema management, and orchestration.",
   "license": "Apache-2.0",
   "maintainers": [
